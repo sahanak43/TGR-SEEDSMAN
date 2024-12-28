@@ -1,0 +1,3 @@
+export {
+    default, WYSIWYG_MEDIA, PRODUCT_MEDIA, CATEGORY_MEDIA, BRAND_LOGO_MEDIA
+} from './Media';

@@ -1,0 +1,768 @@
+/* stylelint-disable declaration-block-no-duplicate-properties */
+
+.Main_Affiliate_Container {
+    max-width: var(--content-wrapper-width);
+    margin: 30px auto;
+
+    .Wrapper {
+        width: 100%;
+        margin: auto;
+        max-width: var(--content-wrapper-width);
+    }
+
+    .Weeds_Affiliate {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        padding-block-end: 40px;
+
+        @include mobile {
+            padding-block-end: 0;
+        }
+
+        .Weeds_Affiliate_image {
+            width: 484px;
+            height: 465px;
+
+            @include mobile {
+                padding-inline: 15px;
+            }
+
+            .Weeds_community_image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .Weeds_Affiliate_text {
+            padding: 47px 15px;
+
+            @include mobile {
+                padding: 23px 15px;
+            }
+
+            .Weeds_Affiliate_header {
+                font-size: 30px;
+                letter-spacing: 0px;
+                color: #000000; 
+                text-transform: unset;
+
+                @include desktop {
+                    line-height: 41px;
+                }
+     
+
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+
+            .weeds_Affiliate_header_list {
+                font-size: 14px;
+                letter-spacing: 0px;
+                width: 100%;
+               
+                p {
+                    color: #000000;
+                }
+
+                @include desktop {
+                    margin-block-start: 28px;
+                }
+
+                @include mobile {
+                    margin-block-start: 20px;
+                }
+
+                .weeds_Affiliate {
+                    line-height: 20px;
+                }
+            }
+
+            .Affiliate_button button {
+                background-color: #739536;
+                border: none;
+                font-size: 14px;
+                color: white;
+                max-width: 100%;
+                cursor: pointer;
+
+                @include desktop {
+                    margin-block-start: 28px;
+                    width: 317px;
+                    height: 50px;
+                }
+
+                @include mobile {
+                    height: 45px;
+                    width: 70%;
+                    margin-block-start: 6px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .Seedsman_Affiliate {
+        background-color: #f2faf7;
+        width: 100vw;
+        margin-inline-start: calc(50% - 50vw);
+        margin-block-end: 75px;
+        height: auto;
+       
+
+        @include mobile {
+            margin-block-end: 0px;
+        }
+
+        .Seedsman_Affiliate_wrap {
+            padding: 1% 0% 1% 0%;
+
+            .Seedsman_Affiliate_header {
+                font-size: 30px;
+                margin: 40px 0;
+               
+
+
+                @include mobile {
+                    font-size: 16px;
+                    margin-inline-start: 20px;
+                    margin: 23px 0;
+               
+
+                    h2 {
+                        font-size: 16px;
+                        color: #000000;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        color: #000000;
+                    }
+                }
+
+                h2 {
+                    color: #000000;
+                }
+
+                p {
+                    color: #000000;
+                }
+            }
+
+            .Seedsman_Affiliate_content {
+                display: none;
+
+                @include mobile {
+                    display: block;
+                    padding-inline-end: 20px;
+                    line-height: 22px;
+                }
+            }
+
+            .Seedsman_Affiliate_Content {
+                display: flex;
+                column-gap: 60px;
+
+                @include mobile {
+                    display: grid;
+                    grid-template-columns: repeat(3, 250px);
+                    margin: 20px;
+                    overflow-x: scroll;
+                    scroll-behavior: smooth;
+                    column-gap: 20px;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                .Affiliate_block {
+                    @include mobile {
+                        background-color: #fff;
+                        padding: 20px ;
+                    }
+                    
+                    .Affiliate_img {
+                        width: 45px;
+                        height: 40px;
+                    }
+                }
+
+                .Affiliate_header {
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin: 14px 0;
+
+                    p {
+                        font-weight: 600;
+                    }
+                }
+
+                .Affiliate_description {
+                    width: 87%;
+                    line-height: 20px;
+                    max-width: 100%;
+                    font-size: 14px;
+                
+
+                    p {
+                        color: #000000;
+
+                        @include mobile {
+                            font-size: 12px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Seedsman_affiliate_container {
+        margin-block-end: 50px;
+
+        @include mobile {
+            margin-block-end: 0;
+        }
+
+        .affiliate_section {
+            display: flex;
+            gap: 10%;
+
+            @include mobile {
+                padding: 20px;
+            }
+
+            .section_text {
+                h2.Section_header {
+                    font-size: 30px;
+                    color: #000000;
+                    margin-block-start: 0;
+                    margin-block-end: 28px;
+                    line-height: 44px;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                }
+    
+                .Section_description {
+                    width: 333px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    height: auto;
+                
+
+                    p {
+                        font-size: 14px;
+                        margin: 30px 0;
+                        line-height: 20px;
+                        color: #000000;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .section_image img {
+            width: 691px;
+            height: 583px;
+        }
+    }
+
+    .Affiliate_Frequent_Content {
+        .Affilate_Frequent_header {
+            display: flex;
+            gap: 10%;
+
+            @include mobile {
+                flex-direction: column-reverse;
+                padding: 20px;
+            }
+
+            .Frequent_Image_Button {
+                .Frequent_Image {
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+
+                    .Frequent_Header_Button {
+                        position: absolute;
+                        inset-block-start: 50%;
+                        inset-inline-start: 50%;
+                        transform: translate(-50%,-50%);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .Frequent_header {
+                            color: white;
+                            font-size: 20px;
+                            width: 15vw;
+                            text-align: center;
+
+                            @include mobile {
+                                width: 100%;
+                                font-size: 16px;
+                            }
+                        }
+
+                        .Frequent_Button {
+                            cursor: pointer;
+                            width: 201px;
+                            height: 41px;
+                            border: none;
+                            background-color: #739536;
+                            color: white;
+                            font-size: 14px;
+
+                            @include mobile {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Frequent_section_text {
+                .Frequent_text_percentage {
+                    display: flex;
+                    gap: 25%;
+
+                    @include mobile {
+                        gap: 15%;
+                    }
+
+                    .Frequent_commission_per {
+                        font-size: 36px;
+                        line-height: 1px;
+                        color: #000000;
+
+                        @include mobile {
+                            font-size: 34px;
+
+                            p {
+                                color: #000000;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    .Frequent_commission_para {
+                        font-size: 16px;
+
+                        @include mobile {
+                            font-size: 14px;
+                            color: #000000;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .Frequent_text_list {
+                    .Feequent_list {
+                        font-size: 16px;
+                        line-height: 56px;
+
+                        @include mobile {
+                            padding-inline: 25px;
+                        }
+
+                        li {
+                            list-style: inherit;
+                            margin-block-start: 20px;
+                            color: #000000;
+
+                            @include mobile {
+                                font-size: 12px;
+                                font-weight: 600;
+                            }
+
+                            &::before {
+                                display: none;
+                            }
+                        }
+
+                        ::marker {
+                            color: #739536;
+                            font-size: 32px;
+
+                            @include mobile {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tools_resource_container {
+        background-color: #f4f4f4;
+        margin-block-start: 4rem;
+        width: 100vw;
+        margin-inline-start: calc(50% - 50vw);
+
+        @include mobile {
+            margin-block-start: 0;
+        }
+
+        .Affiliate_tools {
+            padding: 3rem;
+
+            @include mobile {
+                padding: 15px;
+            }
+
+            .tools_resource_heading {
+                font-size: 30px;
+
+                h2 {
+                    color: #000000;
+                }
+            }
+
+            .tools_resource_section {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                margin-block-start: 2rem;
+
+                @include mobile {
+                    grid-template-columns: repeat(3, 300px);
+                    overflow-x: scroll;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                .tools_resource_col {
+                    @include mobile {
+                        background: #fff;
+                        padding: 20px;
+                        display: grid;
+                    }
+
+                    .tools_image_resource_button {
+                        .tools_image {
+                            position: relative;
+                            width: 100%;
+                            height: auto;
+
+                            .tools_Resource_button {
+                                position: absolute;
+                                inset-block-end: 5px;
+
+                                button {
+                                    background-color: #5858585d;
+                                    color: white;
+                                    border: none;
+                                    width: 147px;
+                                    height: 36px;
+                                }
+                            }
+                        }
+                    }
+
+                    .tools_heading h3 {
+                        margin: 1rem 0rem;
+                        width: 80%;
+                        font-size: 20px;
+
+                        @include mobile {
+                            font-size: 16px;
+                        }
+
+                        letter-spacing: 0px;
+                        color: #000000;
+                    }
+
+                    .tools_para p {
+                        letter-spacing: 0px;
+                        color: #000000;
+                        width: 275px;
+                        font-size: 14px;
+                        line-height: 19px;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .tools_link h4 {
+                        margin-block-start: 1rem;
+                        text-decoration: underline;
+                        font-size: 16px;
+                        letter-spacing: 0px;
+                        color: #000000;
+                        text-transform: capitalize;
+
+                        @include mobile {
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+                    }
+
+                    .tools_link {
+                        @include mobile {
+                            margin-block-start: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Affiliate_People_review {
+        margin-block-start: 3rem;
+
+        .People_review {
+            .People_Review_header {
+                text-align: center;
+
+                .Affiliate_people_heading {
+                    font-size: 30px;
+                    letter-spacing: 0px;
+                    color: #000000;
+
+                    @include mobile {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        color: #000000;
+                    }
+                }
+
+                .Affiliate_people_description {
+                    font-size: 16px;
+                    text-align: center;
+                    max-width: 450px;
+                    margin: auto;
+                    color: #000000;
+
+                    @include mobile {
+                        padding: 1rem;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .Affiliate_people_review_content {
+                display: flex;
+                column-gap: 4%;
+                padding: 2rem;
+
+                .Affiliate_people_Image {
+                    img {
+                        width: 586px;
+                        height: 366px;
+                    }
+                }
+
+                .Affiliate_people_review_section {
+                    .Affiliate_people_user {
+                        .Affiliate_user_review_header_img {
+                            @include desktop {
+                                display: flex;
+                            }
+            
+                            @include mobile {
+                                display: grid;
+                            }
+
+                            margin-block-end: 30px;
+
+                            .Affiliate_user_review_img {
+                                @include mobile {
+                                    margin: auto;
+                                }
+
+                                img {
+                                    width: 75px;
+                                    height: 75px;
+                                }
+                            }
+
+                            .Affiliate_user_header {
+                                line-height: 0;
+
+                                @include mobile {
+                                    margin: auto;
+                                }
+
+                                .Affiliate_main_header {
+                                    font-size: 16px;
+                                    margin-block: 0;
+                                    color: #000000;
+
+                                    @include mobile {
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                .review_star_img {
+                                    width: 160px;
+                                    height: 45px;
+                                }
+                            }
+                        }
+                    }
+
+                    .Affiliate_user_para {
+                        .Affiliate_user_description {
+                            font-size: 14px;
+                            color: #000000;
+                            line-height: 23px;
+                            margin-block-end: 22px;
+
+                            @include mobile {
+                                text-align: center;
+                                font-size: 12px;
+                            }
+                        }
+
+                        .Affiliate_user_name {
+                            font-size: 16px;
+                            color: #000000;
+                            font-weight: bold;
+
+                            @include mobile {
+                                font-size: 12px;
+                                text-align: center;
+                            }
+                        }
+
+                        .Affiliate_user_date {
+                            line-height: 0;
+                            font-size: 12px;
+                            color: #888888;
+
+                            @include mobile {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .Main_Affiliate_Container {
+        .Wrapper {
+            width: unset;
+            flex-direction: column;
+        }
+
+        .Weeds_Affiliate {
+            display: block;
+            width: 100%;
+            margin: auto;
+            grid-gap: 12%;
+
+            @include desktop {
+                margin-block-end: 20px;
+            }
+
+            p {
+                font-size: 12px;
+                color: #000000;
+            }
+
+            .Weeds_Affiliate_image {
+                width: 100%;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .Seedsman_Affiliate {
+            .Seedsman_Affiliate_Content {
+                flex-direction: column;
+            }
+        }
+
+        .Seedsman_affiliate_container {
+            .affiliate_section {
+                .section_text {
+                    .Section_description {
+                        width: 100%;
+                    }
+                }
+
+                .section_image {
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .Affiliate_Frequent_Content {
+            .Affilate_Frequent_header {
+                .Frequent_Image_Button {
+                    width: 100%;
+
+                    .Frequent_Image {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tools_resource_container {
+            width: 100%;
+
+            .Affiliate_tools {
+                .tools_resource_section {
+                    width: 100%;
+
+                    .tools_resource_col {
+                        .tools_image_resource_button {
+                            .tools_image {
+                                img {
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+
+                        .tools_para {
+                            p {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Affiliate_People_review {
+            .People_review {
+                .Affiliate_people_review_content {
+                    flex-direction: column;
+
+                    .Affiliate_people_Image {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

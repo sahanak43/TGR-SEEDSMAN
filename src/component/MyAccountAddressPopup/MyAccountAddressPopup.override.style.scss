@@ -1,0 +1,338 @@
+.MyAccountAddressPopup {
+    background-color: #00000077;
+
+    @include mobile {
+        inset-block-start: 80px;
+        background-color: none;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .FieldForm-Fields {
+        .FieldGroup-Wrapper {
+            .FieldSelect-Select {
+                border-bottom: 1px solid #8D8D8D;
+            }
+
+            &.FieldGroup-Wrapper {    
+                &_addresstype {
+                    grid-column-end: 1;
+    
+                    .FieldGroup {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-end;
+                        column-gap: 3rem;
+                        white-space: nowrap;
+
+                        &::before {
+                            content: 'Address Type';
+                            color: #6F6F6F;
+                            font-size: 14px;
+                        }
+
+                        .Field-Wrapper {
+                            label {
+                                font-size: 14px;
+                                color: #6F6F6F;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Field-Wrapper {
+            &_type {
+                &_checkbox {
+                    label {
+                        font-size: 14px;
+                        color: #959499;
+                    }
+                }
+            }
+        }
+    }
+
+    .Popup {
+        &-Heading {
+            display: none;
+
+            @include mobile {
+                display: block;
+                font-size: 16px;
+                font-weight: 600;
+                padding-block: 25px 14px;
+                margin-inline: 16px;
+                margin-block: 0;
+                border-bottom: 2px solid #e0e0e0;
+            }
+        }
+
+        &-CloseBtn {
+            inset-inline-end: -56px;
+            inset-block-start: -81px;
+
+            @include tablet-air {
+                inset-inline-end: -31px;
+            }
+        }
+
+        &-Content {
+            @include desktop {
+                padding: 50px;
+                min-width: 1012px;
+            }
+
+            @include tablet-air {   
+                min-width: auto;
+                margin: 0 3rem;
+                padding: 50px 25px;
+            }
+
+            @include mobile {
+                min-width: 100%;
+                padding: 0;
+            }
+
+            .Action-block {
+                display: flex;
+                column-gap: 2rem;
+
+                .MyAccount-Button {
+                    @include mobile {
+                        margin-inline-start: 0;
+
+                        &_Delete {
+                            font-weight: 600;
+                            padding: 0;                        
+                        }
+                    }
+                }
+
+                @include mobile {
+                    display: flex;
+                    position: fixed;
+                    inset-block-end: 0;
+                    width: 100%;
+                    background: white;
+                    padding-inline: 16px;
+                    box-sizing: border-box;
+                    column-gap: 5px;
+                    overflow: hidden;
+                    inset-inline-start: 0;
+                    z-index: 82;
+                    padding-block: 10px;
+                    border-top: 1px solid #e0e0e0;
+                }
+            }
+
+            .Form {
+                padding-block: 16px 15px;
+                background: white;
+                padding-inline: 16px;
+
+                @include mobile {
+                    padding-block-end: 114px;
+                    padding-block-start: 0;
+                }
+
+                .FieldForm-Fields {
+                    margin-block-end: 70px;
+
+                    &-Address {
+                        .MyAccountAddressTable {
+                            .KeyValueTable {
+                                tbody {
+                                    button {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .FieldGroup {
+                        grid-column-gap: 40px;
+
+                        @include mobile {
+                            grid-template-columns: repeat(1, 1fr);
+                        }
+
+                        .Field {
+                            margin-block-start: 40px;
+                        }
+
+                        @include mobile {
+                            &-Wrapper {
+                                &_nameGroup {
+                                    .FieldGroup {
+                                        .Field-Wrapper:first-of-type {
+                                            .Field {
+                                                margin-block-start: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }    
+                        }                  
+
+                        &-Wrapper_block_UseMyDefaultAdd {
+                            .Field {
+                                margin-block-start: 40px;
+
+                                &-Wrapper_type_checkbox {
+                                    @include desktop {
+                                        display: none;
+                                    }
+
+                                    .Field_type_checkbox {
+                                        margin-block-start: 24px;
+                                    }
+
+                                    .Field-CheckboxLabel {
+                                        color: #959595;
+
+                                        .input-control {
+                                            border: 2px solid #959595;
+                                            min-width: 18px;
+                                            min-height: 18px;
+                                            border-radius: 3px;
+                                            width: 18px;
+                                            height: 18px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &-Wrapper_block_DefaultAddressSection {
+                            .FieldGroup {
+                                display: flex;
+                                column-gap: 70px;
+                                border-bottom: 1px solid #e0e0e0;
+                                padding-block-end: 30px;
+                                align-items: center;
+                                font-weight: 500;
+
+                                @include mobile {
+                                    border-bottom: none;
+                                    padding-block-end: 0;
+                                    column-gap: 0; 
+                                    justify-content: space-between;
+                                }
+
+                                .Field-Wrapper_type_text {
+                                    @include mobile {
+                                        display: none;
+                                    }
+
+                                    input {
+                                        pointer-events: none;
+                                        border-block-end: 0;
+                                    }
+                                }
+
+                                .Field-Wrapper_type_checkbox {
+                                    display: block;
+                                }
+
+                                .Field {
+                                    margin-block-start: 0;
+
+                                    &-Label {
+                                        color: #000000;
+                                        font-size: 20px;
+                                        padding-block-end: 0;
+                                    }
+                                }
+
+                                .Field-CheckboxLabel {
+                                    .input-control {
+                                        border-radius: 50%;
+                                    }
+                                }
+                            }
+                        }
+
+                        &-Wrapper_block_AddressType {
+                            .FieldGroup {
+                                display: flex;
+
+                                .Field-RadioLabel {
+                                    color: #959595;
+                                }
+                            }
+                        }
+                    }
+
+                    .FieldGroup-Wrapper_street {
+                        .FieldGroup {
+                            display: flex;
+                            width: 100%;
+
+                            &-Wrapper_0_d {
+                                .FieldGroup {
+                                    display: flex;
+                                }
+                            }
+
+                            .Field-Wrapper {
+                                width: 100%;
+                                
+                                &:not(:first-child) {
+                                    display: none;
+                                }
+                            }
+
+                            .Field-Wrapper_type_text {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .GoogleMap-AddressSugestion {
+                    .Form {
+                        padding: 0px;
+                    }
+                }
+            }
+
+            .Address {
+                &-Action {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-heading {
+        font-weight: 500;
+        font-size: 20px;
+        border-bottom: 1px solid var(--primary-divider-color);
+        padding-block-end: 14px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-CheckboxSearch {
+        .Field {
+            &-CheckboxLabel {
+                text-decoration: underline;
+                color: #000000 !important;/* stylelint-disable-line declaration-no-important */
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 600;
+
+                .input-control {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+

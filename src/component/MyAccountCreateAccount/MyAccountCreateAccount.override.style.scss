@@ -1,0 +1,37 @@
+.MyAccountOverlay {
+    &-SignUpButton {
+        width: 100%;
+        margin-block-start: 0;
+        font-weight: 500;
+    }
+
+    &-PasswordBlock {
+        display: block;
+
+        .Field-Wrapper {
+            &.Field-Wrapper_type_password {
+                /* stylelint-disable-next-line declaration-no-important */
+                margin-block-end: 4rem !important;
+            }
+        }
+    }
+
+    &-checkboxBlock {
+        display: flex;
+        column-gap: 3rem;
+        row-gap: 1rem;
+        margin: 3rem 0;
+        flex-wrap: wrap;
+        max-width: 450px;
+
+        label {
+            font-size: 12px;
+            color: var(--color-gray);
+            align-items: flex-end;
+
+            @include mobile {
+                font-size: 11px;
+            }
+        }
+    }
+}

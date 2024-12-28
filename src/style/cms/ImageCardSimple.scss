@@ -1,0 +1,38 @@
+.ImageCardSimpleWrapper {
+    background: white;
+
+    .ImageCardSimpleHeading {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        margin-block-start: 16px;
+        margin-block-end: 0px;
+    }
+
+    .ImageCardSimpleText {
+        color: #807E7D;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.32px;/* stylelint-disable-line number-max-precision */
+        padding-block-start: 8px;
+
+        p {
+            font-size: 16px;
+        }
+
+        span {
+            color: #807E7D;
+        }
+    }
+
+    .imagecardsimpleimage img {
+        height: 400px;
+
+        @include mobile {
+            height: 348px;
+        }
+    }
+}

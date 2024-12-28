@@ -1,0 +1,745 @@
+.Main_Privacy_container {
+    width: 1200px;
+    margin: auto;
+
+    .Privacy_Container {
+        .Privacy_policy_header {
+            letter-spacing: 0px;
+            font-family: sans-serif;
+            margin-block: 15px;
+           
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        .Terms_condition_description {
+            font-family: sans-serif;
+            
+            p {
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 26px;
+            }
+
+            strong {
+                color: #739536;
+
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .Terms_below_description {
+            font-size: 14px;
+            font-family: sans-serif;
+        }
+    }
+
+    .Access_Ordering {
+        .Access_Ordering_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+                margin-block-end: 13px;
+            }
+        }
+
+        .Access_Ordering_description {
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+        }
+    }
+
+    .your_Account {
+        .Account_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+                margin-block-end: 13px;
+            }
+        }
+
+        .Account_description {
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+        }   
+    }
+
+    .Information_gather {
+        .Information_gather_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Information_gather_description {
+            .Information_gather_para {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+
+            .Information_gather_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    .Account_Security {
+        .Account_Security_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Account_Security_description {
+            font-size: 14px;
+            line-height: 24px;
+            font-family: sans-serif;
+        }
+    }
+
+    .File_cookies {
+        .File_cookies_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+                margin-block-end: 13px;
+            }
+        }
+
+        .File_cookies_description {
+            font-size: 14px;
+            line-height: 24px;
+            font-family: sans-serif;
+        }
+    }
+
+    .Webiste_link {
+        .Webiste_link_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+                margin-block-end: 13px;
+            }
+        }
+
+        .Website_link_description {
+            font-size: 14px;
+            line-height: 24px;
+            font-family: sans-serif;
+        }
+    }
+
+    .personal_information {
+        .personal_information_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+                margin-block-end: 13px;
+            }
+        }
+
+        .personal_information_description {
+            .personal_information_para {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+
+            .personal_information_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 20px;
+                } 
+            }
+        }
+    }
+
+    .Cookies_table {
+        .Cookies_table_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+                margin-block-end: 13px;
+            }
+        }
+
+        .Cookies_table_description {
+            font-size: 14px;
+            line-height: 24px;
+            font-family: sans-serif;
+        }
+
+        .Cookies_row_table {
+            table {
+                border-spacing: 0px;
+                width: 100%;
+                padding: 0 26px;
+
+                th {
+                    font-size: 16px;
+                    text-align: start;
+                    font-family: sans-serif;
+                }
+
+                td {
+                    font-size: 14px;
+                    font-family: sans-serif;
+                }
+
+                tr {
+                    height: 36px;
+                    font-family: sans-serif;
+                }
+                
+                td:nth-child(1) {
+                    width: 400px;
+                    padding-inline-start: 26px;
+                }
+
+                th:nth-child(1) {
+                    width: 400px;
+                    padding-inline-start: 26px;
+                }
+
+                tr:nth-child(odd) {
+                    background-color: #e8e8e8;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    .key_detail {
+        .key_detail_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+                width: 30%;
+            }
+        }
+
+        .key_detail_list {
+            font-size: 14px;
+            line-height: 30px;
+            font-family: sans-serif;
+            padding-inline-start: 20px;
+
+            li {
+                list-style: inherit;
+                margin-block-start: 10px;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            ::marker {
+                color: #739536;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .Policy_Intoduction {
+        .Policy_Intoduction_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Policy_Introduction_description {
+            font-size: 14px;
+            line-height: 10px;
+            font-family: sans-serif;
+        }
+    }
+
+    .Policy_exist {
+        .Policy_exist_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Policy_exist_description {
+            .Policy_exist_para {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+
+            .Policy_exist_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .Data_protection {
+        .Data_protection_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Data_protection_description {
+            .Data_protection_para {
+                font-size: 14px;
+                line-height: 10px;
+                font-family: sans-serif;
+            }
+
+            .Data_protection_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .Policy_scope {
+        .Policy_scope_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Policy_scope_description {
+            .Policy_scope_para {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+
+            .Policy_scope_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .Policy_scope_address_description {
+            .Policy_scope_para_address {
+                font-size: 14px;
+                line-height: 10px;
+                font-family: sans-serif;
+            }
+
+            .Policy_scope_address_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .Data_protection_risk {
+        .Data_protection_risk_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Data_protection_risk_description {
+            .Data_protection_risk_para {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+
+            .Data_protection_risk_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .Responsibility {
+        .Responsibility_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Responsibility_description {
+            .Responsibility_para {
+                font-size: 14px;
+                line-height: 10px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Responsibility_list {
+            .Reponsibility_board_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+
+            .Reponsibility_data_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                list-style-type: circle;
+                padding-inline-start: 40px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .Staff_guidelane {
+        .Staff_guidelane_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Staff_guidelane_Description {
+            .Staff_guidelane_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    .Data_disclose {
+        .Data_disclose_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Data_disclose_description {
+            .Data_disclose_para {
+                font-size: 14px;
+                line-height: 20px;
+                font-family: sans-serif;
+            }
+        }
+    }
+
+    .Provide_information {
+        margin-block-end: 40px;
+
+        .Provide_information_header {
+            h2 {
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: 0px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Provide_information_description {
+            .Provide_information_para {
+                font-size: 14px;
+                line-height: 20px;
+                font-family: sans-serif;
+            }
+
+            .Provide_information_list {
+                font-size: 14px;
+                line-height: 30px;
+                font-family: sans-serif;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    margin-block-start: 10px;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .Main_Privacy_container {
+        width: unset;
+        margin: auto 20px;
+
+        .Policy_Intoduction {           
+            .Policy_Introduction_description {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: sans-serif;
+            }
+        }
+
+        .Data_protection {
+            .Data_protection_description {
+                .Data_protection_para {
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: sans-serif;
+                }
+            }
+        }
+
+        .Policy_scope {      
+            .Policy_scope_address_description {
+                .Policy_scope_para_address {
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: sans-serif;
+                }
+            }
+        }
+
+        .Responsibility {  
+            .Responsibility_description {
+                .Responsibility_para {
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-family: sans-serif;
+                }
+            }
+        }
+
+        .Cookies_table {
+            .Cookies_row_table {
+                .Table-Wrapper {
+                    table {
+                        th {
+                            font-size: 12px;
+
+                            &:nth-child(1) {
+                                max-width: 40%;
+                                width: 100%;    
+                            }
+                        }
+
+                        td {
+                            font-size: 12px;
+                            padding: 26px 0;
+                            padding-inline-start: 14px;
+                            margin-inline-end: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .key_detail {
+            .key_detail_header {
+                h2 {
+                    width: 70%;
+                }
+            }
+        }
+    }
+}

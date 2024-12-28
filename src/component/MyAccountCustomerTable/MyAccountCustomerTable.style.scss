@@ -1,0 +1,82 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+.MyAccountCustomerTable {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr;
+    height: 100%;
+
+    @include mobile {
+        grid-gap: 28px;
+        height: unset;
+    }
+
+    .DashboardAddress {
+        .Address-heading {
+            font-size: 14px;
+            margin-block: 0;
+        }
+
+        .CustomerName {
+            p {
+                margin-block-end: 8px;
+            }
+
+            .FullName {
+                font-size: 14px;
+                font-weight: 600;
+                margin-block-end: 1rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .DOB {
+                margin-block-end: 20px;
+            }
+        }
+    }
+
+    &-HeaderSection {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-block-end: 30px;
+        border-bottom: 1px solid #8D8D8D;
+
+        h3 {
+            font-size: 20px;
+            margin-block: 0;
+        }
+
+        button {
+            font-size: 14px;
+            color: #565959;
+        }
+    }
+
+    &-Button {
+        @include desktop {
+            position: absolute;
+            inset-block-start: -55px;
+            inset-inline-end: 0;
+        }
+    }
+
+    &-Table {
+        font-size: 14px;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}

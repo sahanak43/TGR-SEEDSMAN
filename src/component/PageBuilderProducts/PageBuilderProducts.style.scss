@@ -1,0 +1,42 @@
+.PageBuilderProducts {
+    padding: 2rem 0;
+
+    @include mobile {
+        padding: 0px;
+    }
+
+    .ProductCard {
+        &-Content {
+            .ProductActions-AttributesWrapper {
+                .ProductCard-Attributes {
+                    .ProductConfigurableAttributes-SwatchList {
+                        max-width: 260px;
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-slide {
+        @include mobile {
+            width: 100%;
+            margin-inline-end: -150px;
+        }
+    }
+
+    .swiper-pagination-progressbar {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    .swiper-pagination {
+        display: none;
+
+        @include mobile {
+            display: none;
+        }
+    }
+}

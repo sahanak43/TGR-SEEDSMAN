@@ -1,0 +1,269 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+
+.MyAccountOrderItemsTableRow {
+    &-Qty {
+        display: table-cell;
+        vertical-align: top;
+
+        span {
+            margin-block-end: 5px;
+        }
+    }
+
+    &-QtyList {
+        display: inline-block;
+
+        li {
+            &::before {
+                content: none;
+            }
+
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+    }
+
+    &-Tracking {
+        margin-block-start: 2rem;
+        grid-column: span 2;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    &-Product {
+        display: grid;
+        grid-template-columns: 100px auto;
+        column-gap: 1rem;
+    }
+
+    &-OrderTitle {
+        display: flex;
+
+        @include  mobile {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 0.5rem;
+
+            .MyAccountOrderItemsTableRow-OrderDate {
+                margin-inline-start: 0;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-Action {
+        margin-block-start: 2rem;
+
+        @include  mobile {
+            grid-column: 1 / span 2;
+            margin-block-start: 1rem;
+        }
+    }
+
+    &-Action a {
+        color: #0a0903;
+        text-decoration: underline;
+        font-weight: 500;
+
+        @include  mobile {
+            font-size: 12px;
+        }
+    }
+
+    &-OrderDate {
+        margin-inline-start: auto;
+        font-size: 14px;
+    }
+
+    &-QuantityPrice {
+        display: flex;
+        column-gap: 7px;
+        margin: 18px 0;
+
+        .quantity {
+            font-size: 14px;
+        }
+
+        label {
+            color: #A3A3A3;
+            font-size: 14px;
+        }
+    }
+
+    &-TotalPrice {
+        margin-inline-start: auto;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &-RowWrapper {
+        font-size: 14px;
+        word-break: break-word;
+
+        td {
+            padding-block-start: 16px;
+            padding-block-end: 15px;
+            padding-inline: 10px;
+
+            @include desktop {
+                &:nth-child(n+3) {
+                    text-align: end;
+                }
+            }
+
+            @include mobile {
+                &::before {
+                    padding-inline-end: 10px;
+                    content: attr(data-th) ': ';
+                    display: inline-block;
+                    color: $black;
+                    font-weight: 700;
+                    vertical-align: inherit;
+                }
+            }
+        }
+
+        tr {
+            &:first-child {
+                td:first-child {
+                    padding-block-start: 15px;
+                }
+            }
+
+            &:last-child {
+                td:last-child {
+                    padding-block-end: 15px;
+                }
+            }
+        }
+
+        @include mobile {
+            border-block-start: var(--my-account-content-border);
+        }
+
+        &_lineBefore {
+            border-block-end: var(--my-account-content-border);
+        }
+
+        @media print {
+            break-inside: avoid;
+        }
+    }
+
+    &-Row {
+        @include mobile {
+            td {
+                padding: 5px 10px;
+
+                strong {
+                    vertical-align: top;
+                    margin-inline-end: 15px;
+                }
+            }
+
+            &_isOptions {
+                td {
+                    &::before {
+                        content: none;
+                    }
+
+                    &:first-child {
+                        &::after {
+                            content: ":";
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-Name {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-black);
+
+        strong {
+            font-size: 14px;
+        }
+    }
+
+    &-EnteredRow {
+        td {
+            padding-block-start: 0;
+            padding-block-end: 5px;
+            padding-inline: 10px;
+
+            @include desktop {
+                &:first-of-type {
+                    padding-inline-start: 20px;
+                }
+
+                &:nth-child(n+3) {
+                    text-align: end;
+                }
+            }
+
+            @include mobile {
+                &[data-th] {
+                    &::before {
+                        content: attr(data-th) ": ";
+                        display: inline-block;
+                        color: $black;
+                        font-weight: 700;
+                        vertical-align: inherit;
+                        padding-inline-end: 10px;
+                    }
+                }
+            }
+        }
+
+        &_isLastOptionItem {
+            @include desktop {
+                td {
+                    padding-block-end: 15px;
+                }
+            }
+        }
+    }
+
+    &-EnteredLabel {
+        td {
+            padding: 10px;
+
+            @include desktop {
+                padding: 5px 20px;
+            }
+        }
+    }
+
+    &-OptionLabel {
+        &:first-child {
+            margin-block-start: 0;
+        }
+
+        margin-block-start: 15px;
+        margin-block-end: 5px;
+    }
+
+    &-OptionValue {
+        margin-block-end: 5px;
+
+        &>* {
+            display: block;
+            position: relative;
+            word-break: break-all;
+        }
+    }
+
+    &-OptionValue,
+    &-OptionLabel,
+    &-DownloadableLink {
+        margin-inline-start: 10px;
+    }
+}

@@ -1,0 +1,564 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --category-page-miscellaneous-height: 0px;
+}
+
+.CategoryPage {
+    --category-page-miscellaneous-height: 0;
+
+    border-bottom: 1px solid #d4d4d4;
+    padding-block-end: 30px;
+
+    &-MobileHeadings {
+        display: flex;
+        align-items: center;
+        padding: 0 1.5rem;
+        gap: 1rem;
+        padding-block-start: 1rem;
+
+        p {
+            margin: 0;
+            padding: 0;
+
+            @include mobile {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &-additional_description {
+        border-top: 1px solid #d4d4d4;
+
+        @include mobile {
+            padding-inline: 16px;
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-block: 30px;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 22px;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-Rating-section {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        font-size: 14px;
+
+        .rating {
+            display: flex;
+            align-self: center;
+            column-gap: 5px;
+
+            svg {
+                fill: gold;
+            }
+        }
+
+        .users {
+            border-left: 1px solid #d4d4d4;
+            padding-inline-start: 5px;
+        }
+    }
+
+    &-SortLabel {
+        font-size: 14px;
+        padding-block-end: 0.6rem;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &_noResults {
+        --category-page-miscellaneous-height: 0;
+
+        .CategoryPage-LayoutWrapper {
+            /* stylelint-disable-next-line declaration-no-important */
+            display: none !important;
+        }
+    }
+
+    &-Sort {
+        @include mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 67px;
+            font-size: 14px;
+        }
+    }
+
+    &-Wrapper {
+        @include desktop {
+            display: grid;
+            padding-block-start: 24px;
+            grid-column-gap: 48px;
+        }
+
+        grid-template-columns: 279px auto;
+
+        @include mobile {
+            padding: 0;
+            margin-block-start: calc(var(--header-nav-height) + var(--category-page-miscellaneous-height));
+        }
+
+        &_hideProducts {
+            display: block;
+
+            .CategoryPage-CMS {
+                @include mobile {
+                    margin-block-start: 0;
+                    background-color: #F9F6F4;
+                }
+            }
+        }
+
+        .PageBuilderProducts {
+            .ProductListWidget-Page {
+                grid-template-columns: repeat(3, 1fr);
+
+                @include mobile {
+                    grid-template-columns: repeat(2, 1fr);
+                    padding: 0px;
+                }
+            }  
+        }
+    }
+
+    &-ProductListWrapper {
+        @include mobile {
+            padding-block-start: 16px;
+            padding-block-end: 50px;
+            background: #F9F6F4;
+        }
+
+        &_isPrerendered {
+            @include mobile {
+                padding-block-start: 120px;
+            }
+        }
+
+        .CategoryPage-ItemsCount {
+            display: none;
+        }
+    }
+
+    &-ItemsCount {
+        padding: 0;
+        margin-block-start: -2px;
+        color: #9b9b9b;
+
+        @include mobile {
+            order: 1;
+            padding-block: 4px 12px;
+            text-align: center;
+            grid-column: span 2;
+            padding-inline: 14px;
+        }
+
+        @include desktop {
+            margin: 0;
+        }
+    }
+
+    &-Filter {
+        text-align: end;
+        grid-column: 2;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+
+        &ButtonPlaceholder {
+            animation: appear 100ms 300ms forwards;
+
+            @include desktop {
+                display: none;
+            }
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &-Placeholder {
+        &List {
+            display: flex;
+            flex-direction: column;
+
+            @include desktop {
+                padding-block-start: 24px;
+                padding-block-end: 35px;
+            }
+        }
+
+        &ListItem {
+            animation: var(--placeholder-animation);
+            background-image: var(--placeholder-image);
+            background-size: var(--placeholder-size);
+            padding-inline-start: 3px;
+            padding-block-start: 3px;
+            margin-block-start: 2px;
+            margin-block-end: 12px;
+
+            &:nth-child(2) {
+                min-height: 67px;
+            }
+
+            &:first-child,
+            &:nth-child(3) {
+                min-height: 35px;
+            }
+        }
+
+        &Wrapper {
+            grid-row: 1/6;
+            display: flex;
+            flex-direction: column;
+
+            .Loader-Scale {
+                inset-block-start: 50%;
+            }
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &Heading {
+            margin: 0;
+        }
+    }
+
+    .Pagination-content {
+        @include mobile {
+            padding-inline: 16px;
+            padding-block-end: 0;
+            flex-direction: column;
+            align-items: self-start;
+
+            .Pagination {
+                display: none;
+            }
+        }
+    }
+
+    &-Subheading {
+        font-size: 14px;
+        white-space: pre;
+    }
+
+    &-MiscellaneousLayoutWrapper {
+        @include mobile {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &_isLandingPage {
+            .CategoryPage-LayoutWrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .CategorySort {
+                    margin-inline-start: 0;
+                }
+            }
+        }
+    }
+
+    &-Miscellaneous {
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translateY(0);
+        transition: transform 200ms cubic-bezier(0.47, 0, 0.745, 0.715);
+
+        @include desktop {
+            padding-block-start: 0;
+            padding-block-end: 10px;
+            padding-inline: 0;
+        }
+
+        @include mobile {
+            position: fixed;
+            inset-block-end: 0;
+            inset-inline-start: 0;
+            width: 100%;
+            z-index: 90;
+            background: #fff;
+            border-block-end: 1px solid var(--primary-divider-color);
+            grid-template-columns: repeat(2, 1fr);
+            height: auto;
+            flex-wrap: wrap;
+            padding: 0;
+            box-shadow: 0px 2px 8px rgba(66, 90, 120, 0.16);
+
+            &-Left {
+                min-width: 100%;
+
+                .CategoryPage-ItemsCount {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            .CategoryPage-LayoutWrapperFilter {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 67px;
+                width: 50%;
+                border-right: 1px solid var(--primary-divider-color);
+                border-bottom: none;
+
+                .CategoryPage-Filter {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 14px;
+                    justify-content: center;
+                    text-transform: uppercase;
+                }
+            }
+
+            .CategoryPage-MiscellaneousLayoutWrapper {
+                height: 50px;
+                width: 50%;
+                border: 1px solid var(--primary-divider-color);
+                border-bottom: none;
+                justify-content: center;
+
+                .CategoryPage-SortLabel {
+                    display: none;
+                }
+
+                .FieldSelect-SortSelect {
+                    border: none;
+                }
+            }
+
+            &_noResults {
+                height: auto;
+            }
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include tablet-portrait {
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .hideOnScroll & {
+            @include mobile {
+                transform: translateY(-100%);
+            }
+        }
+
+        > * {
+            @include mobile {
+                padding-inline-start: 14px;
+                padding-inline-end: 14px;
+            }
+        }
+
+        &-Left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            @include mobile {
+                margin-block-end: 1rem;
+            }
+        }
+    }
+
+    &-CMS {
+        @include mobile {
+            margin-block-start: calc(var(--header-total-height) + var(--category-page-miscellaneous-height));
+            padding-inline: 16px;
+            padding-block-start: 20px;
+            overflow-x: auto;
+            background-color: #F9F6F4;
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        @include desktop {
+            margin-block-end: 10px;
+        }
+    }
+
+    &-LayoutWrapper {
+        align-items: center;
+        display: flex;
+        height: 40px; // Same height as the select sort
+
+        @include mobile {
+            height: 100%;
+        }
+
+        p {
+            margin-block-end: 0;
+        }
+
+        &_isPrerendered {
+            @include mobile {
+                display: flex;
+                position: absolute;
+                inset-block-end: -50px;
+                inset-inline-start: 0;
+                inset-inline-end: 0;
+            }
+        }
+    }
+
+    &-LayoutButtons {
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            display: none;
+        }
+
+        button {
+            color: transparent;
+            margin-inline-end: 10px;
+        }
+    }
+
+    @include mobile {
+        &-FilterButtonPlaceholder {
+            margin: 0;
+        }
+
+        .CategorySortOverlay {
+            transition: transform 200ms ease-in-out;
+            transform: translateX(100%);
+            will-change: transform;
+            overflow-y: hidden;
+
+            &.CategorySortOverlay {
+                &_isVisible {
+                    transform: translateX(0%);
+                    inset: 0;
+                    z-index: 999;
+                    opacity: 1;
+                    height: auto;
+
+                    .CategorySortOverlay {
+                        &-Wrapper {
+                            display: grid;
+                            grid-template-rows: min-content auto min-content;
+                            height: 100%;
+                            overflow-y: auto;
+                        }
+
+                        &-SortHeader {
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 3rem 16px;
+                            align-items: center;
+                            z-index: 1;
+                            border-bottom: 1px solid var(--primary-divider-color);
+
+                            .action-icons {
+                                display: flex;
+                                align-items: flex-start;
+                                column-gap: 23px;
+
+                                span {
+                                    font-size: 15px;
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            button {
+                                font-size: 12px;
+                                font-weight: 500;
+                            }
+                        }
+
+                        &-SeeResults {
+                            position: fixed;
+                            inset-block-end: 0;
+                            background-color: var(--color-white);
+                            border-top: 1px solid var(--primary-divider-color);
+                            width: 100%;
+                            padding: 16px;
+                            height: fit-content
+                        }
+                    }
+
+                    .CategorySort {
+                        padding: 0 16px 81px 16px;
+                        overflow-y: auto;
+                        height: calc(100% - 81px);
+                    }
+                }
+            }
+        }
+
+        .CategoryDetails {
+            &-Wrapper {
+                display: flex;
+                flex-direction: column;
+                row-gap: 8px;
+                align-items: flex-start;
+
+                &.Products {
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+
+            &-Heading {
+                font-size: 16px;
+            }
+        }
+
+        &-CategoryImage {
+            width: 120px;
+            height: 80px;
+        }
+    }
+
+    .ProductListPage {
+        @include  mobile {
+            padding-inline: 16px;
+        }
+    }
+}

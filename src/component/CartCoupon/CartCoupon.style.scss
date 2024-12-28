@@ -1,0 +1,204 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+.CartCoupon {
+    display: grid;
+    width: 100%;
+
+    .loader {
+        margin-block-start: 10px;
+    }
+
+    @include mobile {
+        width: 100%;
+        padding: 0;
+    }
+
+    @include tablet-portrait {
+        width: 100%;
+    }
+
+    &-Message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-MessageText {
+        margin: 0;
+        word-break: break-word;
+        margin-inline-end: 24px;
+        display: inline-block;
+    }
+
+    .Field {
+        margin-block-start: 0;
+    }
+
+    &_remove {
+        .Form {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 20px;
+
+            .Button {
+                width: 100%;
+            }
+        }
+    }
+
+    .Form {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid var(--color-black);
+        border-radius: 8px;
+        padding: 8px;
+
+        @include mobile {
+            min-width: 80%;
+            padding: 1rem;
+            border-radius: 4px;
+            width: auto;
+        }
+
+        button.CartCoupon-Button.CartCoupon-Button_isHollow {
+            font-weight: 500;
+            font-size: 14px;
+            text-transform: uppercase;
+            height: unset;
+            color: var(--color-black);
+            border-color: var(--color-black);
+            border-radius: 8px;
+            padding-block: 5px;
+
+            @include mobile {
+                width: fit-content;
+            }
+        }
+    }
+
+    input {
+        vertical-align: top;
+        border: unset;
+        padding: unset;
+        height: unset;
+        background: transparent;
+
+        &::placeholder {
+            letter-spacing: 0px;
+            color: #7F7E7D;
+            opacity: 1;
+            font-size: 14px;
+            font-weight: bold;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    button {
+        vertical-align: top;
+        border-radius: 0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+
+        @include mobile {
+            margin-block: 0;
+        }
+    }
+
+    &-Input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+
+        @include mobile {
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        .CartCoupon {
+            &-CouponImg {
+                width: 25px;
+                height: 25px;
+                padding-inline-end: 5px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        input {
+            width: unset;
+            font-size: 16px;
+
+            &::placeholder {
+                font-weight: 500;
+            }
+        }
+
+        @include mobile {
+            width: 70%;
+            margin-block-start: 0;
+        }
+
+        @include tablet-portrait {
+            width: 100%;
+            margin-block-start: 0;
+        }
+
+        .Field-Wrapper_type_text {
+            width: 100%;
+        }
+
+        .Field-ErrorMessages {
+            padding-block-start: 20px;
+        }
+    }
+
+    &-Button {
+        color: #222222;
+        height: unset;
+
+        @include button;
+
+        @include mobile {
+            width: 100%;
+            margin-inline-start: 0;
+            margin-block: 14px 12px;
+        }
+
+        @include tablet-portrait {
+            margin-inline-start: 0;
+        }
+    }
+
+    &-Button[disabled] {
+        opacity: 0.5;
+        color: #000000;
+        height: unset;
+    }
+
+    &-Title {
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+        margin-block-end: 20px;
+    }
+}

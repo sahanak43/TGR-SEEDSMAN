@@ -1,0 +1,215 @@
+.SocialShare {
+    &-Block {
+        .navtive-icon {
+            display: flex;
+            flex-direction: row-reverse;
+
+            .shareIcon {
+                z-index: 10;
+                width: 36px;
+                height: 36px;
+
+                @include smallmobile {
+                    height: 30px;
+                    width: 30px;
+                }
+
+                .hide-span {    
+                    opacity: 0;
+                    position: absolute;
+                    font-size: 0;
+                }
+
+                button {
+                    width: 36px;
+                    height: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 8px;
+                    pointer-events: default;
+
+                    @include smallmobile {
+                        padding: 6px;
+                        width: 30px;
+                    }
+
+                    svg {
+                        fill: #ffffff;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .hover-content {
+                width: 0;
+                display: flex;
+                column-gap: 16px;
+                transition: all 500ms;
+                align-items: center;
+                inset-inline-end: -14px;
+                padding-block-start: 5px;
+
+                svg {
+                    width: 100%;
+                    fill: #ffffff;
+                }
+            }
+
+            &:hover {
+                .hover-content {
+                    width: 100%;
+                    transition: all 500ms;
+                    padding-inline-start: 10px;
+                    padding-inline-end: 20px;
+                    background-color: #707070;
+
+                    span {
+                        @include mobile {
+                            width: 10px
+                        }
+                    }
+                }
+            }
+
+            &:focus {
+                .hover-content {
+                    width: 100%;
+                    transition: all 500ms;
+                    padding-inline: 20px;
+                    background-color: #707070;
+                }
+            }
+        }
+    }
+
+    &-Button {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem 0;
+        // border-bottom: 1px solid rgba(112, 112, 112, 0.25);
+
+        .Local-Share-Heading {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    &-ButtonWrapper {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        .Local-Share-Icons {
+            cursor: pointer;
+        }
+
+        .SocialShare-Native {
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}
+
+.ShareIconMobile {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+
+    &-ShareHead {
+        padding-block-end: 16px;
+        font-size: 20px;
+    }
+
+    &-ShareIconHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #C7C5C3;
+    }
+    
+    &-ShareIconTitle {
+        padding-block-end: 16px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+    &-ShareCloseIcon {
+        padding-block-end: 10px;
+    }
+
+    &-IconShareSocial {
+        padding-block-start: 32px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+    &-IconShare {
+        margin-block-start: 16px;
+        font-size: 18px;
+    }
+}
+
+.ShareCopyLinkConatiner {
+    width: 100%;
+    cursor: pointer;
+}
+
+.ShareCopy {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-block: 16px;
+    border: 2px solid #9F9D9C;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ShareCopyCLicked {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-block: 16px;
+    border: 2px solid #4FAB2F;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ShareCopyLink {
+    margin-inline: 16px;
+}
+
+.ShareSocial {
+    display: flex;
+    align-items: center;
+    padding-block: 16px;
+    border: 2px solid #9F9D9C;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-inline: 16px;
+}
+
+.ShareSocialLink {
+    margin-inline-end: 16px;
+}
+
+.ShareSocial_direction_right {
+    margin-inline-start: 50px;
+}
+
+.ShareSocialText {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

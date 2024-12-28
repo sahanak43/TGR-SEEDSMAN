@@ -1,0 +1,22 @@
+/**
+ * Amasty Extra Fee compatibility for ScandiPWA
+ * @copyright Scandiweb, Inc. All rights reserved.
+ */
+
+.Fee {
+    &-Name {
+        margin-block-start: 16px;
+        font-size: 16px;
+        font-weight: 600;
+
+        &_Mandatory::after {
+            content: "*";
+            display: inline-block;
+            color: var(--primary-error-color, red);
+        }
+    }
+
+    &-Description {
+        margin-block-start: 8px;
+    }
+}

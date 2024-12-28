@@ -1,0 +1,34 @@
+{
+    "name": "@scandiweb/adobe-data-services",
+    "version": "2.0.0",
+    "description": "Adobe Data Services frontend compatibility for ScandiPWA",
+    "license": "UNLICENSED",
+    "scandipwa": {
+        "type": "extension"
+    },
+    "dependencies": {
+        "@adobe/magento-storefront-events-sdk": "^1.1.15",
+        "eslint-plugin-header": "^3.1.1"
+    },
+    "eslintConfig": {
+        "extends": "@scandipwa",
+        "plugins": [
+            "react",
+            "header"
+        ],
+        "rules": {
+            "max-lines": "off",
+            "header/header": [
+                2,
+                "block",
+                [
+                    "*",
+                    " * Adobe Data Services compatibility for ScandiPWA",
+                    " * @copyright Scandiweb, Inc. All rights reserved.",
+                    " "
+                ],
+                2
+            ]
+        }
+    }
+}

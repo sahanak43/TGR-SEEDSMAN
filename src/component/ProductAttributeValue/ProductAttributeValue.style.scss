@@ -1,0 +1,276 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --option-background-color: #{$white};
+    --option-check-mark-background: #{$black};
+    --option-size: 32px;
+    --option-text-color: #{$black}; // Move to root
+    --option-border-color: var(--color-dark-gray);
+
+    @include mobile {
+        --option-border-color: var(--color-dark-gray);
+    }
+}
+
+.ProductAttributeValue {
+    --button-background: initial;
+    --button-color: initial;
+    --button-padding: 0;
+    --option-is-selected: 0;
+
+    cursor: pointer;
+
+    &-Color,
+    &-String,
+    &-Image,
+    &-Text {
+        background-color: var(--option-background-color);
+        border-color: var(--option-border-color);
+        border-width: 1px;
+        color: var(--option-text-color);
+        display: inline-block;
+        min-height: var(--option-size);
+        width: var(--option-size);
+        margin-inline-end: 8px;
+    }
+
+    &-String {
+        padding: 8px 8px;
+        margin-block-end: 8px;
+
+        &_isSelected {
+            --option-text-color: var(--primary-base-color);
+        }
+    }
+
+    &-Image {
+        border-radius: 50%;
+        object-fit: cover;
+        padding: 0;
+        position: relative;
+    }
+
+    &-Image-Overlay {
+        --option-check-mark-background: var(--color-white);
+
+        inset-block-start: 0;
+        inset-inline-start: 0;
+        margin: 0;
+        position: absolute;
+    }
+
+    &-Color {
+        box-shadow: inset 0 0 0 1px #979797;
+        box-shadow: inset 0 0 0 1px var(--option-border-color);
+    }
+
+    &-Color,
+    &-Image-Overlay {
+        border-radius: 50%;
+        font-size: 0;
+        width: var(--option-size);
+        will-change: box-shadow, background-color;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            opacity: var(--option-is-selected);
+            transition: opacity 200ms;
+            will-change: opacity, border-inline-start, border-inline-end;
+        }
+
+        &::before {
+            height: calc(var(--option-size) + 6px);
+            width: calc(var(--option-size) + 6px);
+            border-radius: inherit;
+            box-shadow: inset 0 0 0 1px var(--primary-base-color);
+            inset-inline-start: -3px;
+            inset-block-start: -3px;
+        }
+
+        &::after {
+            height: calc(var(--option-size) / 5);
+            inset-inline-start: calc(var(--option-size) / 3.3);
+            inset-block-start: calc(var(--option-size) / 3.3);
+            width: calc(var(--option-size) / 2.5);
+            transform: rotate(-45deg);
+
+            [dir="rtl"] & {
+                transform: scale(-1, 1) rotate(45deg);
+            }
+
+            border-inline-start: 2px solid var(--option-check-mark-background);
+            border-block-end: 2px solid var(--option-check-mark-background);
+        }
+
+        &:hover {
+            @include desktop {
+                &::before,
+                &::after {
+                    --option-is-selected: 1;
+                }
+            }
+        }
+    }
+
+    &-String,
+    &-Text {
+        border-style: solid;
+        border-radius: var(--button-border-radius);
+        line-height: calc(var(--option-size) - 2px);
+        min-width: var(--option-size);
+        font-weight: 400;
+        width: auto;
+        text-align: center;
+
+        &_isSelected {
+            --option-border-color: var(--primary-base-color);
+
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    &-Text {
+        display: flex;
+        border: 0;
+        align-items: baseline;
+        margin: 0;
+
+        label,
+        .input-control {
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        label {
+            &:first-of-type {
+                padding-block-end: 0;
+                order: 1;
+                text-align: start;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                //display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                line-height: 24px;
+
+                .input-control {
+                    inset-inline-start: 0;
+                    width: 18px;
+                    height: 18px;
+                    min-width: 18px;
+                    min-height: 18px;
+                    vertical-align: top;
+                    border-color: var(--color-karaka);
+
+                    @include desktop {
+                        align-self: self-start;
+                        margin-block-start: 4px;
+                    }
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            label {
+                @include desktop {
+                    border-color: var(--primary-base-color);
+                }
+            }
+
+            .input-control {
+                &::after {
+                    @include desktop {
+                        --checkmark-color: var(--secondary-dark-color);
+                    }
+                }
+            }
+        }
+
+        @include desktop {
+            padding-block-end: 6px;
+            padding-inline: 0;
+        }
+    }
+
+    &:hover {
+        @include desktop {
+            --option-border-color: var(--primary-base-color);
+            --option-text-color: var(--primary-base-color);
+        }
+
+        text-decoration: none;
+    }
+
+    .Outofstock-price {
+        display: none;
+    }
+
+    &.ProductAttributeValue {
+        &_isNotAvailable {
+            opacity: 1;
+            cursor: default;
+
+            .ProductAttributeValue-String {
+                .outofstock-section {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    align-items: center;
+
+                    & > div {
+                        display: grid;
+                        justify-items: start;
+                    }
+
+                    .Outofstock-value {
+                        font-size: 16px;
+                    }
+
+                    .Outofstock-label {
+                        color: #CC2525;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+
+                    .Outofstock-price {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .ProductAttributeValue-Color {
+                &::before {
+                    @include not-available;
+
+                    background-color: var(--option-check-mark-background);
+                }
+            }
+        }
+    }
+
+    &-SubLabel {
+        display: none;
+        font-size: 14px;
+        color: #9B9B9B;
+        font-weight: normal;
+        white-space: break-spaces;
+        padding-inline-start: 4px;
+    }
+}

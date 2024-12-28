@@ -1,0 +1,62 @@
+.BablicDropdown {
+    .LanguageSwitcher {
+        display: flex;
+        align-items: center;
+
+        @include  mobile {
+            gap: 0rem;
+        }
+
+        img {
+            width: 24px;
+            height: auto;
+        }
+    }
+
+    .Field {
+        margin-block-start: 0;
+
+        select {
+            border-bottom: none;
+            font-size: 12px;
+            padding-inline-end: 2rem;
+            text-align: center;
+
+            @include  mobile {
+                /* stylelint-disable-next-line declaration-no-important */
+                text-align: center !important;
+            }
+        }
+
+        .FieldSelect {
+            &-Options {
+                inset-inline-start: -20px;
+                width: auto;
+            }
+
+            &-Option {
+                padding-inline-start: 10px;
+                padding-inline-end: 10px;
+            }
+
+            .ChevronIcon {
+                inset-inline-end: 0.5rem;
+
+                @include  mobile {
+                    inset-inline-end: 0rem;
+                }
+            }
+        }
+    }
+
+    .LanguageSwitcherList {
+        padding-inline-start: 0.5rem;
+        font-weight: 500;
+        font-size: 1.3rem;
+    }
+}
+
+iframe#bablicFlagsWidget {
+    /* stylelint-disable-next-line declaration-no-important */
+    display: none !important;
+}

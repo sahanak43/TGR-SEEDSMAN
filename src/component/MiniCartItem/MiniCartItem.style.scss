@@ -1,0 +1,580 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --cart-item-subheading-color: #888;
+}
+
+.MiniCartItem {
+    --header-color: var(--color-black);
+
+    border-block-end: 1px solid var(--primary-divider-color);
+
+    &-OutOfStock {
+        font-weight: 500;
+        margin-block-end: 5px;
+        color: var(--primary-error-color);
+    }
+
+    &-Link {
+        color: inherit;
+        font-weight: 400;
+        align-self: start;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .MiniCartItem-Picture {
+            &_isMobileLayout {
+                width: 100px;
+                height: 90px;
+
+                @include mobile {
+                    width: 100px;
+                    height: 130px;
+
+                    .Image-Image {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    &-Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+    }
+
+    &-QuantityWrapperFreeText {
+        font-size: 12px;
+        color: var(--primary-base-color);
+        font-weight: 600;
+        padding-inline-end: 8px;
+    }
+
+
+    &-QuantityWrapperFreeQuantity {
+        font-size: 12px;
+    }
+
+    &-Wrapper {
+        display: grid;
+        grid-gap: 12px;
+        padding: 12px;
+        background: var(--color-white);
+        align-items: baseline;
+        grid-template-columns: minmax(100px, 3fr) 2fr 1fr;
+
+        &_isMobileLayout {
+            grid-template-columns: 100px auto;
+            grid-gap: 14px;
+            padding: 1.4rem 0 1.4rem 1.4rem;
+            min-height: 130px;
+            overflow: hidden;
+        }
+
+        &_isSummary {
+            grid-template-columns: 96px auto;
+
+            & .MiniCartItem-ProductInfo {
+                justify-content: space-between;
+            }
+        }
+
+        &_isCart {
+            & .MiniCartItem-Title {
+                @include desktop {
+                    padding-inline-start: 20px;
+                }
+            }
+        }
+
+        &_isProductOutOfStock {
+            .MiniCartItem-ProductActions_isMobileLayout {
+                align-self: flex-end;
+            }
+        }
+    }
+
+    &-ProductInfo {
+        display: flex;
+
+        &_isMobileLayout {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    &-Options {
+        color: var(--secondary-dark-color);
+        font-size: 12px;
+        display: flex;
+        column-gap: 5px;
+
+        span:last-child {
+            color: var(--color-black);
+        }
+    }
+
+    &-Option {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 16px;
+        display: flex;
+        gap: 4px;
+
+        &_isBundle {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        span,
+        div {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &-ItemLinks {
+        &Wrapper {
+            display: flex;
+            flex-direction: column;
+            color: var(--secondary-dark-color);
+            font-size: 12px;
+        }
+    }
+
+    &-Title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 65%;
+        overflow: hidden;
+
+        &_isMobileLayout {
+            visibility: visible;
+            width: 100%;
+
+            .MiniCartItem-Heading {
+                white-space: inherit;
+                width: 330px;
+
+                @include tablet-air {
+                    width: 370px;
+                }
+
+                @include mobile {
+                    width: 210px;
+                    display: unset;
+                    white-space: nowrap;
+                    font-size: 14px;
+                }
+
+                @include smallmobile {
+                    font-size: 12px;
+                    width: 153px;
+                }
+            }
+        }
+
+        @include mobile {
+            margin-block-end: 5px;
+        }
+    }
+
+    &-Heading,
+    &-SubHeading {
+        font-size: 14px;
+        line-height: 1.2;
+        width: 100%;
+        margin-block-end: 6px;
+
+        @include mobile {
+            max-width: 95%;
+            margin-block-end: 2px;
+            margin-block-start: 0;
+        }
+    }
+
+    &-Heading {
+        color: var(--color-black);
+        overflow: hidden;
+        line-height: 20px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 16px;
+    }
+
+    &-SubHeading {
+        color: var(--cart-item-subheading-color);
+    }
+
+    &-Picture {
+        width: 96px;
+        height: 96px;
+        align-self: flex-start;
+
+        img {
+            object-position: top;
+        }
+
+        &_isMobileLayout {
+            width: 100px;
+            height: 90px;
+
+            @include mobile {
+                width: 100px;
+                height: 130px;
+
+                .Image-Image {
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &-Price {
+        text-align: end;
+        font-size: 18px;
+
+        &_isMobileLayout {
+            text-align: start;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            font-weight: 500;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        &_isCartOverlay data {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    &-ProductActions {
+        display: flex;
+        align-items: center;
+
+        &_isMobileLayout {
+            align-items: center;
+            column-gap: 12px;
+
+            @include mobile {
+                justify-content: unset;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-block-start: 1rem;
+            }
+        }
+    }
+
+    &-MiniCartItemRows {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 0;
+    }
+
+    .Quantity-Items {
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        column-gap: 2rem;
+        flex-wrap: wrap;
+
+        @include mobile {
+            row-gap: 1rem;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include desktop {
+            margin: 1rem 0;
+        }
+
+        .Seeds {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+        }
+
+        .Points {
+            padding: 5px 14px;
+            background: #e6d93b 0% 0% no-repeat padding-box;
+            letter-spacing: 1px;
+            color: #000000;
+            font-size: 12px;
+            font-weight: 500;
+
+            @include mobile {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .off-price {
+        color: var(--primary-base-color);
+        font-size: 13px;
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 15px;
+            line-height: 2rem;
+        }
+    }
+
+    .inclusiveTaxes {
+        color: #515e2c;
+        font-size: 12px;
+
+        @include mobile {
+            font-size: 9px;
+            width: 100%;
+            margin-block-start: 0.5rem;
+        }
+    }
+
+    &-Delete {
+        align-items: center;
+        display: flex;
+        z-index: 5;
+        font-size: 14px;
+        cursor: pointer;
+
+        &_isMobileLayout {
+            height: 12px;
+            padding-inline-start: 0;
+        }
+    }
+
+    &-DeleteButtonText {
+        color: inherit;
+        line-height: 20px;
+        margin-inline-start: 4px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--primary-base-color);
+        }
+    }
+
+    & &-Qty {
+        // hack to obtain required specificity
+        margin-block-start: 0;
+        display: inline-flex;
+        cursor: default;
+        padding: 5px 15px;
+
+        @include mobile {
+            padding: 5px;
+        }
+
+        @include mobile {
+            align-items: center;
+            font-size: 14px;
+        }
+
+        input {
+            @include mobile {
+                width: 32px;
+                min-width: 32px;
+                background-color: transparent;
+            }
+        }
+
+        button {
+            border: none;
+
+            &:not([disabled]) {
+                cursor: pointer;
+            }
+
+            svg {
+                fill: #767676;
+            }
+        }
+    }
+
+    .MiniCartProductAction {
+        display: inline-flex;
+
+        @include smallmobile {
+            display: inline-flex;
+        }
+
+        .RemoveButton {
+            padding-inline-end: 10px;
+
+            @include mobile {
+                padding-inline-end: 7px;
+            }
+
+            button {
+                color: var(--color-black);
+                padding: 11px 0;
+                font-size: 12px;
+                text-transform: capitalize;
+
+                @include smallmobile {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .ProductWishlistButton {
+            width: 100%;
+
+            @include desktop {
+                padding-inline-start: 12px;
+            }
+
+            @include smallmobile {
+                padding-inline-start: 0;
+            }
+
+            svg {
+                display: none;
+            }
+
+            &-Button {
+                font-weight: 400;
+                white-space: nowrap;
+                text-transform: capitalize;
+                font-size: 12px;
+
+                &::before {
+                    content: "Save For Later";
+                    color: #000;
+                    border-left: 1px solid var(--primary-divider-color);
+                    padding-inline-start: 1rem;
+
+                    @include mobile {
+                        padding-inline-start: 7px;
+                    }
+                }
+
+                &:hover {
+                    &::before {
+                        color: var(--primary-base-color);
+                    }
+                }
+
+                &_isInWishlist {
+                    &::before {
+                        content: "Remove From Wishlist";
+                        color: #000;
+                    }
+                }
+
+                @include smallmobile {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    &-SwipeToDeleteRightSide {
+        height: 100%;
+        width: 100%;
+        font-weight: 600;
+        color: var(--color-white);
+        background-color: var(--swipe-to-delete-bg-color);
+    }
+
+    .ProductPrice {
+        @include desktop {
+            min-height: auto;
+        }
+
+        &-SubPrice {
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .PromoPrice {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+
+            span {
+                color: var(--primary-base-color);
+                font-size: 16px;
+            }
+
+            del {
+                font-size: 13px;
+            }
+        }
+    }
+
+    .MiniCartItem-QuantityWrapper {
+        &_isCartOverlay {
+            & button {
+                width: 14px;
+                height: 14px;
+            }
+
+            .MiniCartItem-Qty {
+                width: 100%;
+                font-size: 16px;
+                border: 1px solid #c3c3c3;
+
+                input {
+                    font-weight: 500;
+                    width: 32px;
+                    min-width: 32px;
+
+                    @include mobile {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &-OutOfStockLink {
+        .QuantityBlock-isPlaceholder {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .MiniCartItem {
+            &-ProductActions {
+                display: none;
+            }
+
+            &-Heading {
+                color: #a6a6a5;
+                cursor: default;
+            }
+
+            &-CartItemRows {
+                .Quantity-Items span {
+                    color: #a6a6a5;
+                    cursor: default;
+                }
+            }
+        }
+
+        .Image {
+            filter: grayscale(1);
+        }
+    }
+}

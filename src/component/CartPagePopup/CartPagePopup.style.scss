@@ -1,0 +1,85 @@
+.CartPagePopup_isVisible {
+    .Popup {
+        &-Content {
+            padding: 24px;
+            overflow-y: unset;
+            border-radius: 8px;
+
+            @include mobile {
+                position: absolute;
+                inset-block-end: 0;
+                border-radius: 8px 8px 0 0;
+                padding-block-end: 60px;
+            }
+        }
+
+        &-CloseBtn {
+            inset-block-start: -68px;
+
+            @include desktop {
+                inset-inline-end: -37px;
+            }
+
+            .CloseIcon {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
+
+.remove-popup {
+    &-Close_button {
+        display: none;
+        justify-content: flex-end;
+        margin-block-start: -30px;
+        z-index: 999;
+
+        button {
+            cursor: pointer;
+            inset-block-start: -32px;
+            inset-inline-end: -25px;
+        }
+    }
+
+    &-Inner_content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4rem;
+        padding: 4rem 0 3rem 0;
+
+        .title {
+            text-align: center;
+            font-size: 25px;
+            max-width: 230px;
+            font-weight: 500;
+        }
+    }
+
+    &-Buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 13px;
+
+        button {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background-color: var(--primary-base-color);
+            cursor: pointer;
+            padding: 16px 4rem;
+            text-transform: uppercase;
+        }
+
+        button:nth-child(1) {
+            background: #ffffff 0% 0% no-repeat padding-box;
+            border: 1px solid #000000;
+            color: var(--color-black);
+        }
+
+        button:nth-child(2) {
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,149 @@
+:root {
+    --default-input-padding: 10px 0;
+    --input-background-color: var(--imported_input_background_color, #fff);
+    --input-border-color: var(--imported_input_border_color, #959499);
+    --input-border-color-focus: var(--primary-base-color);
+    --input-border-radius: var(--imported_input_border_radius, 2px);
+    --input-padding: var(--imported_input_padding, var(--default-input-padding));
+    --input-color: var(--imported_input_color, var(--color-karaka));
+    --input-type-number-width: 28px;
+}
+
+input,
+textarea,
+select {
+    border: none;
+    border-bottom: 1px solid var(--input-border-color);
+    background-color: var(--input-background-color);
+    border-radius: var(--input-border-radius);
+    color: var(--input-color);
+    padding: var(--input-padding);
+    appearance: none;
+    caret-color: var(--primary-base-color);
+
+    &:focus {
+        border-bottom: 1px solid var(--input-border-color-focus);
+    }
+
+    &:not(:first-of-type) {
+        margin-block-start: 12px;
+
+        @include mobile {
+            margin-block-start: 14px;
+        }
+    }
+
+    &:-webkit-autofill {
+        /* stylelint-disable-next-line declaration-no-important */
+        box-shadow: 0 0 0 30px var(--input-background-color) inset !important;
+        /* stylelint-disable-next-line declaration-no-important */
+        background-color: var(--input-background-color) !important;
+    }
+}
+
+input {
+    // height: 48px;
+    width: 100%;
+}
+
+textarea {
+    width: 300px;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+[type='text'] {
+    @include mobile {
+        width: 100%;
+    }
+}
+
+[type='number'] {
+    -moz-appearance: textfield;
+    color: var(--color-black);
+    border: 0;
+    font-size: 18px;
+    font-weight: 700;
+    height: var(--input-type-number-width);
+    padding: 0;
+    order: 2;
+    text-align: center;
+    width: var(--input-type-number-width);
+    pointer-events: none;
+
+    &:focus {
+        border: 1px solid var(--input-border-color);
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+
+    ~ button {
+        background: transparent;
+        border: 2px solid var(--primary-base-color);
+        border-radius: var(--button-border-radius);
+        color: $black;
+        inset-inline-start: 0;
+        line-height: 0;
+        margin: 0;
+        order: 1;
+        display: flex;
+        width: 48px;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        inset-block-start: 0;
+
+        @include mobile {
+            width: 36px;
+            height: 36px;
+        }
+
+        @include hoverable {
+            &:hover {
+                border-color: var(--primary-dark-color);
+
+                svg {
+                    fill: var(--primary-dark-color);
+                }
+            }
+        }
+
+        &:active {
+            border-color: var(--primary-dark-color);
+
+            svg {
+                fill: var(--primary-dark-color);
+            }
+        }
+
+        &:first-of-type {
+            inset-inline-start: 0;
+            order: 3;
+        }
+
+        &:last-of-type {
+            inset-block-end: 0;
+            inset-inline-end: 0;
+            order: 1;
+        }
+
+        &:disabled {
+            opacity: .25;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        span {
+            @include mobile {
+                inset-block-start: -2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.newtopBar-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #eee;
+    padding: 7px 12px;
+
+    a {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: normal;
+        border-right: 1px solid;
+        padding: 0 12px;
+    }
+
+    .newtopBar-content a:hover {
+        color: black;
+    }
+
+    .Wholesale-Link a {
+        background-color: #ebcf88;
+        padding: 2px 6px 2px 6px;
+        border-radius: 4px;
+        border-right: none;
+    }
+    
+    .CustomerService-Link a {
+        border-right: none;
+    }
+}

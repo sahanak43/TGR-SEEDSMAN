@@ -1,0 +1,186 @@
+.SearchField {
+    .Xsearch {
+        &-Container {
+            @include desktop {
+                display: flex;
+                width: 100%;
+            }
+
+            &-details {
+                @include desktop {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 24px 24px 24px;
+                    width: 45%;
+                }
+
+                &-block-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-block-start: 16px;
+                    padding-block-end: 8px;
+                    border-bottom: 1px solid;
+                }
+
+                &-block-heading {
+                    letter-spacing: 0;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    padding: 10px 0 0 0;
+
+                    @include desktop {
+                        font-size: 16px;
+                    }
+
+                    @include mobile {
+                        font-size: 14px;
+                        padding: 16px 0 0;
+                    }
+                }
+
+                &-name {
+                    letter-spacing: 0px;
+                    color: #9B9B9B;
+                    opacity: 1;
+                    font-weight: 300;
+
+                    @include desktop {
+                        font-size: 15px;
+                    }
+                }
+
+                &-tab {
+                    padding: 16px 0 0;
+
+                    &-block {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    &-recent-items {
+                        padding: 7px 16px;
+                        background: #e8f6d0;
+                        border-radius: 18px;
+                        margin-block-end: 10px;
+                        word-break: break-all;
+
+                        &:not(:last-of-type) {
+                            margin-inline-end: 10px;
+                        }
+                    }
+
+                    &-block-recent-items {
+                        font-weight: normal;
+                    }
+
+                    &.search-categories:last-child {
+                        border-bottom: unset;
+                    }
+                }
+
+                &-count {
+                    font-weight: normal;
+                }
+
+                &-block {
+                    &.related-terms-block {
+                        display: grid;
+                        column-gap: 10px;
+                        grid-template-rows: repeat(5, auto);
+                        grid-auto-flow: column;
+                        grid-auto-columns: auto auto;
+                    }
+                }
+            }
+
+            &-products {
+                @include desktop {
+                    width: 100%;
+                    margin-block-start: 10px;
+                    border-left: 1px solid #9d9d9d;
+                }
+
+                &-heading {
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    padding: 0 24px;
+
+                    @include mobile {
+                        font-size: 14px;
+                        padding: 18px 0 0;
+                    }
+                }
+
+                &-container {
+                    display: flex;
+                    flex-direction: column;
+
+                    @include desktop {
+                        padding: 16px 24px;
+                        overflow-y: unset;
+                        height: unset;
+                    }
+
+                    @include mobile {
+                        overflow-y: unset;
+                        padding: 16px 0;
+                    }
+                }
+
+                .ProductCard {
+                    margin-block-end: 0;
+
+                    &:last-child {
+                        margin-block-end: 0;
+                    }
+                }
+
+                .ProductCard-Figure {
+                    height: 200px;
+
+                    img {
+                        display: inline;
+                        object-fit: cover;
+                        height: 200px;
+                    }
+                }
+
+                &-viewAll {
+                    display: flex;
+                    margin-inline: auto;
+                    cursor: pointer;
+                    margin-block-start: 10px;
+
+                    p {
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        text-decoration: underline;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .ProductCard {
+                box-shadow: 2px 2px 9px #00000014;
+
+                &-Figure {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &-Picture {
+                    //width: inherit;
+                    width: 0;
+                    height: 0;
+                }
+
+                &-FigureReview {
+                    @include desktop {
+                        padding-inline: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,463 @@
+.wholesalecannbisseeds {
+    margin-block-start: 100px;
+
+    @include mobile {
+        margin-block-start: 50px;
+    }
+
+    .wholesale-wrapper {
+        max-width: var(--content-wrapper-width);
+        margin: 0 auto;
+        padding: 0 30px;
+
+        .whole_sale_cannabis_seeds_banner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            max-width: var(--content-wrapper-width);
+
+            .banner_text {
+                padding: 0 40px;
+
+                .banner_heading {
+                    font-size: 30px;
+                    margin-block-start: 0;
+                    line-height: 42px;
+
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 22px;
+                        padding-inline-end: 110px;
+                        margin-block: 27px;
+                    }
+                }
+
+                .normal_font {
+                    margin-block-end: 34px;
+
+                    @include mobile {
+                        font-size: 12px;
+                        line-height: 22px;
+                        margin-block-end: 24px;
+                    }
+                }
+
+                .border_font {
+                    padding: 30px 0;
+                    border-top: 1px solid #959595;
+                    border-bottom: 1px solid #959595;
+                    margin-block-end: 0;
+                    font-weight: 500;
+
+                    .bold_text {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+
+                    @include mobile {
+                        font-size: 12px;
+                        font-weight: 700;
+                        padding: 28px 0;
+                    }
+                }
+
+                @include mobile {
+                    padding: 0;
+                }
+            }
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+
+                .banner_image {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .product_ranges {
+        width: 100vw;
+        margin-inline-start: calc(50% - 50vw);
+        background: #f2faf7;
+        margin: 80px 0;
+
+        .product_ranges_wrapper {
+            max-width: var(--content-wrapper-width);
+            margin: auto;
+            padding: 80px 30px;
+
+            .product_ranges_text {
+                font-size: 30px;
+                text-align: center;
+                font-weight: 600;
+                margin-block-end: 50px;
+
+                @include mobile {
+                    font-size: 16px;
+                    padding: 0 55px;
+                }
+            }
+
+            .product_ranges_images {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                .cannabis_seeds {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 20px;
+
+                    @include mobile {
+                        .cannabis_seeds_image > svg {
+                            height: 40px;
+                            width: 40px;
+                        }
+
+                        div > p {
+                            padding: 0 20px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                @include mobile {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            @include mobile {
+                padding: 24px 0;
+            }
+        }
+
+        @include mobile {
+            margin: 24px 0;
+        }
+    }
+
+    .ecommerce-site-wrapper {
+        max-width: var(--content-wrapper-width);
+        margin-inline-start: auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mobile {
+            padding: 0 20px;
+        }
+
+        .ecommerce_site {
+            text-align: center;
+            margin: 0 auto;
+            order: 1;
+            width: 100%;
+            margin-block-end: 55px;
+
+            @include mobile {
+                order: 2;
+                margin-block-end: 20px
+            }
+
+            .ecommerce_site_text {
+                font-size: 30px;
+                max-width: 600px;
+                text-align: center;
+                font-weight: 600;
+                margin-block-end: 50px;
+                line-height: 44px;
+                margin: auto;
+
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 22px;
+                    text-align: start;
+                }
+            }
+        }
+
+        .banner_image.whole_sale_cannabis_seeds_div {
+            order: 2;
+
+            @include mobile {
+                order: 1;
+            }
+
+            img {
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+
+        .banner_text.whole_sale_cannabis_seeds_div {
+            order: 3;
+            padding-inline-start: 100px;
+            max-width: 50%;
+
+            @include mobile {
+                padding-inline-start: 0;
+                max-width: 100%;
+            }
+
+            .banner_text_paragraph {
+                font-size: 19px;
+                font-weight: 500;
+                margin-block-end: 30px;
+
+                @include mobile {
+                    &.para-padding {
+                        padding: 0;
+                    }
+
+                    font-size: 12px;
+                    padding-inline-end: 150px;
+                }
+            }
+
+            .banner_list {
+                list-style-position: outside;
+                padding-inline-start: 20px;
+
+                li {
+                    list-style: inherit;
+                    font-size: 16px;
+                    line-height: 22px;
+                    margin-block-end: 30px;
+
+                    &::before {
+                        display: none;
+                    }
+
+                    @include mobile {
+                        font-size: 12px;
+                        margin-block-end: 24px;
+                    }
+                }
+
+                ::marker {
+                    color: #739536;
+                    font-size: 22px;
+                }
+
+                @include mobile {
+                    padding-inline-start: 24px;
+                }
+            }
+
+            .banner_text_paragraph1 {
+                font-size: 16px;
+                line-height: 22px;
+                margin-block-end: 30px;
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+
+            .buttons {
+                display: inline-flex;
+                column-gap: 40px;
+
+                .button_visit {
+                    background-color: #739537;
+                    padding: 16px 42px;
+                    color: #fff;
+                    white-space: nowrap;
+                    font-weight: 600;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+
+                .button_apply {
+                    padding: 16px 36px;
+                    border: solid 1px;
+                    white-space: nowrap;
+                    font-weight: 600;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+
+                @include mobile {
+                    column-gap: 15px;
+
+                    .button_visit {
+                        padding: 14px 30px;
+                    }
+
+                    .button_apply {
+                        padding: 14px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .product_ranges1 {
+        width: 100vw;
+        margin-inline-start: calc(50% - 50vw);
+        background: #f4f4f4;
+        margin: 80px 0;
+        padding: 80px 0;
+
+        @include mobile {
+            margin: 20px 0;
+            padding: 20px 0;
+        }
+
+        .product_ranges1_container {
+            max-width: var(--content-wrapper-width);
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 40px;
+
+            @include mobile {
+                padding: 0 20px;
+            }
+
+            .ecommerce_site {
+                text-align: center;
+                margin: 0 auto;
+                order: 1;
+                width: 100%;
+                margin-block-end: 55px;
+
+                @include mobile {
+                    order: 2;
+                    margin-block-end: 20px;
+                }
+
+                .ecommerce_site_text {
+                    font-size: 30px;
+                    max-width: 600px;
+                    text-align: center;
+                    font-weight: 600;
+                    margin-block-end: 50px;
+                    line-height: 44px;
+                    margin: auto;
+
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 22px;
+                        text-align: start;
+                    }
+                }
+            }
+
+            .ecommerce_site_banner_text {
+                order: 2;
+                max-width: 50%;
+                padding-inline-end: 70px;
+
+                @include mobile {
+                    order: 3;
+                    max-width: 100%;
+                    padding-inline-end: 0;
+                }
+
+                .banner_text_paragraph_licenced {
+                    font-size: 19px;
+                    line-height: 26px;
+                    font-weight: 500;
+                    margin-block: 60px 30px;
+
+                    @include mobile {
+                        font-size: 12px;
+                        line-height: 16px;
+                        margin-block: 0;
+                    }
+                }
+
+                .banner_list {
+                    list-style-position: outside;
+                    padding-inline-start: 20px;
+
+                    li {
+                        list-style: inherit;
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin-block-end: 30px;
+
+                        &::before {
+                            display: none;
+                        }
+
+                        @include mobile {
+                            font-size: 12px;
+                            margin-block-end: 24px;
+                        }
+                    }
+
+                    ::marker {
+                        color: #739536;
+                        font-size: 22px;
+                    }
+                }
+
+                .banner_text_paragraph_2 {
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-block: 20px;
+
+                    @include mobile {
+                        font-size: 12px;
+                        line-height: 22px;
+                    }
+                }
+
+                .buttons {
+                    display: inline-flex;
+                    column-gap: 40px;
+
+                    .button_visit {
+                        background-color: #739537;
+                        padding: 16px 42px;
+                        color: #fff;
+                        white-space: nowrap;
+                        font-weight: 600;
+                    }
+
+                    .button_apply {
+                        padding: 16px 36px;
+                        border: solid 1px;
+                        white-space: nowrap;
+                        font-weight: 600;
+                    }
+
+                    @include mobile {
+                        column-gap: 30px;
+
+                        .button_visit {
+                            padding: 14px 30px;
+                        }
+
+                        .button_apply {
+                            padding: 14px 10px;
+                        }
+                    }
+                }
+            }
+
+            .banner_image.whole_sale_cannabis_seeds_div {
+                order: 3;
+
+                @include mobile {
+                    order: 1;
+                }
+               
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

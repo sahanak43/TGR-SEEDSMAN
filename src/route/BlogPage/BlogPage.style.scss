@@ -1,0 +1,295 @@
+.Blog {
+    @include desktop {
+        margin-inline-start: 10px;
+    }
+}
+
+.BlogPage {
+    &-BlogCategory {
+        @include desktop {
+            grid-column-gap: 24px;
+            grid-row-gap: 0;
+            -webkit-padding-before: 12px;
+            padding-block: 12px;
+            -webkit-padding-after: 12px;
+        }
+
+        @include mobile {
+            display: flex;
+            overflow-x: hidden;
+        }
+    }
+
+    &-Wrapper {
+        @include desktop {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr;
+            grid-column-gap: 3rem;
+            padding-block: 2rem;
+        }
+    }
+
+    &-List-ul {
+        @include mobile {
+            display: flex;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            border-bottom: 1px solid #DDDDDD;
+            grid-column-gap: 25px;
+            -webkit-column-gap: 25px;
+            column-gap: 25px;
+        }
+    }
+
+    &-BlogCategoryReadTime {
+        margin-inline-start: auto;
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            font-size: 10px;
+            margin-inline-end: 40px;
+        }
+    }
+
+    &-categoryList {
+        font-size: 20px;
+        color: #959595;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #959595;
+    }
+
+    &-BlogCategoryPosts {
+        margin-block-start: 16px;
+
+        .SearchField-SearchInnerWrapper {
+            .Form {
+                display: flex;
+                column-gap: 10px;
+
+                .SearchField-Input {
+                    @include mobile {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &-SearchButton {
+        background: var(--hollow-button-color);
+        height: 50px;
+
+        &.Button_isHollow:not([disabled]):hover {
+            background: var(--hollow-button-color);
+            height: 50px;
+        }
+
+        @include mobile {
+            width: auto;
+        }
+    }
+
+    &-BlogCategoryPostList {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 4rem;
+        }
+
+        @include mobile {
+            display: grid;
+            grid-gap: 23px;
+        }
+    }
+
+    &-Pagination {
+        display: flex;
+    }
+
+    &-Separator {
+        @include mobile {
+            border-bottom: 1px solid #707070;
+            opacity: 0.25;
+            margin-block-start: -2px;
+        }
+    }
+
+    &-BlogCategoryPostLink {
+        .Image_isPlaceholder {
+            height: 212px;
+            width: 383px;
+
+            @include mobile {
+                width: 100%;
+                height: 190px;
+            }
+        }
+
+        .Image_imageStatus_image_not_found {
+            height: 212px;
+
+            @include mobile {
+                width: 100%;
+                height: 190px;
+            }
+        }
+    }
+
+    &-BlogCategoryPage {
+        @include mobile {
+            display: flex;
+        }
+    }
+
+    &-BlogPostNoCategoryPost {
+        @include desktop {
+            font-size: 14px;
+        }
+    }
+
+    &-BlogCategoryPostPagination {
+        margin-block-start: 40px;
+
+        @include mobile {
+            nav {
+                .Pagination-content {
+                    display: unset;
+                }
+            }
+    
+            .Pagination-ListItem {
+                min-width: 20px;
+            }
+        }
+    }
+
+    &-BlogCategoryPost {
+        display: grid;
+
+        a {
+            height: fit-content;
+        }
+
+        .Image-Image {
+            width: 100%;
+            height: 212px;
+            // min-height: 212px;
+            position: relative;
+            object-fit: cover;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        @include mobile {
+            box-shadow: 4px 5px 15px #0000000f;
+        }
+    }
+
+    &-BlogCategoryPostName {
+        font-size: 20px;
+        font-weight: 600;
+        margin-block-start: 17px;
+        color: #000000;
+        max-height: 72px;
+        overflow: hidden;
+
+        @include mobile {
+            font-size: 16px;
+            padding: 10px;
+        }
+    }
+
+    &-BlogCategoryAuthorDetails {
+        display: flex;
+
+        @include mobile {
+            padding-inline-start: 10px;
+        }
+    }
+
+    &-BlogCategoryAuthor {
+        display: flex;
+    }
+
+    &-BlogCategoryAuthorName {
+        padding: 6px;
+
+        @include mobile {
+            font-size: 10px;
+        }
+    }
+
+    &-BlogPostCategoryDetails {
+        position: absolute;
+        margin-block-start: -60px;
+        margin-inline-start: 10px;
+        display: flex;
+    }
+
+    &-BlogCategoryDate {
+        padding: 10px;
+        color: #FFFFFF;
+
+        @include mobile {
+            font-size: 8px;
+            padding: 6px;
+            margin-block-start: 10px;
+        }
+
+        background: transparent linear-gradient(269deg, #FFFFFF26 0%, #5858585D 100%) 0% 0% no-repeat padding-box;
+        backdrop-filter: blur(24px);
+    }
+
+    &-BlogPostCategory {
+        padding: 10px;
+        color: #FFFFFF;
+        background: #E3BD59 0% 0% no-repeat padding-box;
+
+        @include mobile {
+            font-size: 8px;
+            padding: 6px;
+            margin-block-start: 10px;
+        }
+    }
+
+    &-BlogCategoryPostContent {
+        padding-block-start: 18px;
+        color: #000000;
+        font-size: 14px;
+
+        @include desktop {
+            max-height: 108px;
+            overflow: hidden;
+        }
+
+        @include mobile {
+            font-size: 12px;
+            line-height: 23px;
+            padding: 18px 12px 30px 10px;
+        }
+    }
+
+    &-pagination {
+        @include mobile {
+            margin-inline-start: -10px;
+        }
+
+        li * {
+            font-size: 12px;
+        }
+
+        .PaginationLink {
+            font-size: 12px;
+        }
+    }
+}
+

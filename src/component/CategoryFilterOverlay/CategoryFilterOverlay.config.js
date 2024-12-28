@@ -1,0 +1,10 @@
+import {
+    CATEGORY_FILTER_OVERLAY_ID as SOURCE_CATEGORY_FILTER_OVERLAY_ID,
+    KEY_PRICE as SOURCE_KEY_PRICE
+} from 'SourceComponent/CategoryFilterOverlay/CategoryFilterOverlay.config';
+
+// TODO: implement CATEGORY_FILTER_OVERLAY_ID
+export const CATEGORY_FILTER_OVERLAY_ID = SOURCE_CATEGORY_FILTER_OVERLAY_ID;
+
+// TODO: implement KEY_PRICE
+export const KEY_PRICE = SOURCE_KEY_PRICE;

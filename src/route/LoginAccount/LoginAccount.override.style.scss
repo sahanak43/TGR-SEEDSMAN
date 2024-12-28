@@ -1,0 +1,58 @@
+.LoginAccount {
+    .ContentWrapper {
+        @include mobile {
+            padding-block-start: 2rem;
+        }
+    }
+
+    @include mobile {
+        &-SignInWrapper {
+            h3 {
+                margin-block-start: 0;
+            }
+        }
+    }
+
+    &-CreateAccountButton {
+        font-weight: 500;
+    }
+
+    &-InnerWrapper {
+        @include desktop() {
+            display: grid;
+            justify-content: space-around;
+            margin: 0 auto;
+            padding-block-start: 0;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 100px;
+        }
+        
+        .Form {
+            .Password-Block {
+                position: relative;
+        
+                button {
+                    position: absolute;
+                    inset-inline-end: 0;
+                    inset-block-end: 10px;
+                    font-size: 14px;
+                    color: var(--color-gray);
+                }
+            }
+        }
+    }
+
+    &-SignInWrapper {
+        .Loader {
+            display: none;
+        }
+    }
+
+    &-CreateAccount {
+        margin-block-start: 1rem;
+        
+        h4 {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --checkout-max-width: 1100px;
+}
+
+.Checkout {
+    padding-block-end: var(--header-nav-height);
+
+    @include desktop {
+        margin-block-start: 0;
+    }
+
+    @include mobile {
+        padding-block-end: calc(var(--navigation-tabs-height) + 60px);
+        padding-block-start: 0px;
+
+        &-Step {
+            form {
+                padding-block-end: 4rem;
+
+                @include mobile {
+                    padding-block-end: 0;
+                }
+            }
+        }
+    }
+
+    &::before {
+        display: none;
+    }
+
+    &-StickyButtonWrapper {
+        @include mobile {
+            position: unset;
+            border: none;
+            padding: 1rem 0;
+
+            // .hideOnScroll & {
+            //     transform: translateY(var(--footer-nav-height));
+            // }
+        }
+
+        .Button {
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        .Checkout-OrderTotal {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &-SummaryOverlay {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+        background-color: #F9F6F4;
+
+        .Checkout-SummaryHeading {
+            display: flex;
+            align-items: center;
+
+            h3 {
+                padding-inline-end: 15px;
+                border-right: 1px solid #C7C5C3;
+                margin: 0;
+            }
+
+            p {
+                padding-inline-start: 15px;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+    }
+
+    &-checkoutOrderSummaryOverlay {
+        background: #F9F6F4;
+        position: fixed;
+        height: 100vh;
+        width: 95%;
+        overflow-y: auto;
+        overscroll-behavior: none;
+        z-index: 1002;
+        inset-inline-end: 0;
+        inset-block-start: 0;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px, rgba(0, 0, 0, 0.14) 0px 16px 24px 2px,
+            rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+
+        &.hide {
+            visibility: hidden;
+            inset-inline-end: -100%;
+        }
+
+        &.visible {
+            visibility: visible;
+            inset-inline-end: 0;
+
+            .Checkout-CloseButton {
+                inset-inline-end: 10px;
+                position: absolute;
+                inset-block-start: 15px;
+
+                svg {
+                    fill: var(--color-black);
+                }
+            }
+        }
+    }
+
+    &-Wrapper {
+        display: block;
+
+        .Checkout-WrapperSteps {
+            margin: auto;
+            grid-template-columns: minmax(500px, 1fr) minmax(250px, 420px);
+
+            @include desktop {
+                padding: 0;
+                display: grid;
+                grid-gap: 3rem;
+            }
+
+            .CheckoutOrderSummary {
+                &-CartItemList {
+                    .CartItem {
+                        &-ProductInfo {
+                            grid-template-columns: 1fr;
+                        }
+
+                        &-Title {
+                            width: 100%;
+                        }
+
+                        &-DeliveryDate {
+                            .DeliveryCharges {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .ProductPrice {
+                        display: none;
+                    }
+                }
+
+                &-SafetyConcern {
+                    padding: 2rem 2rem 4rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &-ProgressSection {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-Heading {
+        text-transform: none;
+        margin-block: 40px 12px;
+        font-size: 20px;
+
+        @include mobile {
+            font-size: 15px;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    }
+
+    &-Header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 10px 20px;
+
+        @include mobile {
+            padding-block: 10px;
+        }
+    }
+
+    &-StepBarTotal {
+        background-color: var(--secondary-base-color);
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+    }
+
+    &-StepBarActive {
+        position: relative;
+        inset-block-start: -4px;
+        background-color: var(--primary-base-color);
+        width: 50%;
+        height: 4px;
+        border-radius: 2px;
+        z-index: 2;
+
+        &_isSecond {
+            inset-inline-start: 50%;
+        }
+    }
+
+    &-Title {
+        font-size: 28px;
+        font-weight: bold;
+
+        @include mobile {
+            font-size: 20px;    
+        }
+    }
+
+    &-SelectedStep {
+        font-size: 36px;
+    }
+
+    &-StepsBorder {
+        font-size: 26px;
+    }
+
+    &-TotalSteps {
+        font-size: 20px;
+    }
+
+    &-Coupon {
+        @include desktop {
+            margin-block-start: 30px;
+        }
+    }
+
+    &-OrderTotal {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        font-weight: bold;
+        padding-block-end: 14px;
+
+        @include desktop {
+            display: none;
+        }
+    }
+
+    &-ShippingButton {
+        margin-inline-end: 10px;
+        margin-block-end: 10px;
+    }
+
+    &-DeliverySelect {
+        margin-block-start: 15px;
+
+        @include mobile {
+            margin-block-start: 10px;
+        }
+    }
+
+    &-Promo {
+        @include desktop {
+            padding-block-start: 24px;
+        }
+    }
+
+    .Checkout-ExpandableContentContent {
+        margin-block-start: 0;
+        padding: 0 16px;
+    }
+
+    .CheckoutOrderSummary-ButtonWrapper {
+        @include mobile {
+            display: block;
+            margin-block-start: 2rem;
+        }
+    }
+
+    .CmsBlock-Wrapper {
+        margin: auto;
+        max-width: var(--content-wrapper-width);
+    }
+}

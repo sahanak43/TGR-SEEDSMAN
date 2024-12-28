@@ -1,0 +1,94 @@
+.MyAccountZendesk {
+    @include mobile {
+        margin-block-start: 30px;
+    }
+
+    &-Actions {
+        padding: 2rem 0;
+        margin-block-end: 30px;
+
+        .Button {
+            width: inherit;
+        }
+    }
+
+    table {
+        width: 100%;
+        border: 1px solid #f5f5f5;
+        box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.06);
+
+        td,
+        th {
+            text-align: center;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+            color: black;
+            line-height: 30px;
+        }
+    }
+
+    &-TicketRow {
+        padding: 1rem;
+        margin-block-end: 1rem;
+        background-color: #f5f5f5;
+        grid-column-gap: 1rem;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    &-view-button {
+        cursor: pointer;
+        color: #739536;
+    }
+
+    &-mobile {
+        display: flex;
+        box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f5f5f5;
+        padding: 20px;
+        justify-content: space-between;
+        margin-block-end: 30px;
+
+        .values,
+        .title {
+            display: flex;
+            flex-direction: column;
+
+            span:nth-child(odd) {
+                background-color: #ffffff;
+                color: black;
+                line-height: 30px;
+            }
+
+            span {
+                background-color: #f5f5f5;
+                line-height: 30px;
+            }
+        }
+
+        .title {
+            width: 30%;
+
+            span {
+                background-color: #f5f5f5;
+                padding-inline-start: 10px;
+
+                &::after {
+                    content: ":";
+                    position: absolute;
+                    inset-inline-end: 0;
+                }
+            }
+        }
+
+        .values {
+            width: 70%;
+
+            span {
+                padding-inline-start: 30px;
+            }
+        }
+    }
+}

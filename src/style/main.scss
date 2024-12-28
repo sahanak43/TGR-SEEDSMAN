@@ -1,0 +1,92 @@
+@import "./abstract/abstract";
+@import "./base/breakpoints";
+@import "./base/keyframes";
+@import "./base/root";
+@import "./base/reset";
+@import "./base/button";
+@import "./base/list";
+@import "./base/link";
+@import "./base/table";
+@import "./base/input";
+@import "./base/fieldset";
+@import "./base/blockquote";
+@import "./cms/block";
+@import "./base/font";
+@import "./cms/index";
+
+@include mobile {
+    :root {
+        --footer-nav-height: 50px;
+
+        main {
+            --header-total-height: 0;
+        }
+    }
+}
+
+.pagebuilder-mobile-only {
+    /* stylelint-disable-next-line declaration-no-important */
+    display: none !important;
+}
+
+@media all and (max-width: 768px) {
+    .pagebuilder-mobile-only {
+        /* stylelint-disable-next-line declaration-no-important */
+        display: block !important;
+    }
+
+    .pagebuilder-mobile-hidden {
+        /* stylelint-disable-next-line declaration-no-important */
+        display: none !important;
+    }
+}
+
+.RecommendationUnit-Products {
+    padding-block-end: 9rem;
+}
+
+.customImg {
+    width: auto;
+}
+
+.gap-10 .pagebuilder-column-group {
+    gap: 24px;
+}
+
+.gap-20 .pagebuilder-column-group {
+    gap: 20px;
+}
+
+@include mobile {
+    .grid-col-2 .pagebuilder-column-group {
+        /* stylelint-disable-next-line declaration-no-important */
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+
+        .pagebuilder-column {
+            /* stylelint-disable-next-line declaration-no-important */
+            width: 100% !important;
+            /* stylelint-disable-next-line declaration-no-important */
+            margin: 0 !important;
+        }
+    }    
+}
+
+.Custom-scroll-cms .pagebuilder-column-group {
+    @include mobile {
+        /* stylelint-disable-next-line declaration-no-important */
+        gap: 10px;
+    }
+}
+
+.Custom-margin-topmenu {
+    margin-inline: 60px;
+
+    @include mobile {
+        margin-inline: 0px;
+    }
+
+    @include tablet {
+        margin-inline: 20px;
+    }
+}

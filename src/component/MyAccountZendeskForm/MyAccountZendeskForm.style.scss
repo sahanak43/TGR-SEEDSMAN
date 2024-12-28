@@ -1,0 +1,103 @@
+.MyTickets-form {
+    .MyAccount-HeadingSection {
+        margin-block-end: 30px;
+    }
+    
+    .Form {
+        .FieldForm {
+            &-Body {
+                input {
+                    min-height: 54px;
+                }
+            }
+
+            &-Fields {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-column-gap: 80px;
+
+                @include mobile {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+
+                .Field {
+                    textarea {
+                        width: 100%;
+                    }
+
+                    &-Wrapper {
+                        .isPreFilled_type_file,
+                        &_type_file {
+                            display: flex;
+                            align-items: flex-end;
+
+                            .Field-ErrorMessages {
+                                inset-block-end: -19px;
+                            }
+
+                            .Field_type_file {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .isPreFilled_type_file {
+                    display: flex;
+                    align-items: flex-end;
+
+                    .Field_type_file {
+                        width: 100%;
+                    }
+                }
+
+                .Field-Wrapper_type_textarea {
+                    .Field {
+                        &:focus-within {
+                            .Field-LabelContainer {
+                                inset-block-end: 5rem;
+
+                                .Field-Label {
+                                    transform: scale(0.8);
+
+                                    @include mobile {
+                                        transform: scale(0.9);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .Field_type_textarea {
+                        .Field-LabelContainer {
+                            inset-block-end: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .acton-section {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            column-gap: 10px;
+        }
+
+        .Button {
+            margin-block-start: 40px;
+            padding-inline: 60px;
+
+            @include mobile {
+                padding-inline: unset;
+            }
+        }
+
+        .button-back {
+            background-color: #fff;
+            color: #739536;
+        }
+    }
+}

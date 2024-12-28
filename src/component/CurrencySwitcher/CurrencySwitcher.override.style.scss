@@ -1,0 +1,32 @@
+.CurrencySwitcher {
+    border-block-end: unset;
+    min-width: 80px;
+    width: 100%;
+
+    .FieldSelect {
+        width: unset;
+
+        .ChevronIcon {
+            inset-inline-end: 0;
+
+            @include mobile {
+                inset-inline-end: 50px;
+                inset-block-start: 27px;
+            }
+        }
+
+        &-Select {
+            font-weight: 500;
+            padding-inline-end: 14px;
+
+            @include mobile {
+                inset-block-start: 14px;
+                padding-inline-start: 15px;
+            }
+        }
+
+        &-Options {
+            width: max-content;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+.Checkout {
+    .CheckoutShipping {
+        &-Button {
+            text-align: center;
+            width: 100%;
+            max-width: 325px;
+            border-radius: 8px;
+    
+            &:not([disabled]):hover {
+                border-radius: 8px;
+            }
+    
+            @include mobile {
+                max-width: 100%;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.CheckoutShipping {
+    &-Button {
+        text-align: center;
+
+        @include mobile {
+            font-weight: 500;
+        }
+    }
+
+    &-ContinueButton {
+        width: 100%;
+        max-width: 325px;
+        border-radius: 8px;
+        
+        &.Button:not([disabled]) {
+            &:hover {
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &-ErrorMsg {
+        font-size: 14px;
+        background: #fff5f4;
+        padding: 10px 14px;
+        color: #e73b25;
+        font-weight: 500;
+        width: fit-content;
+        margin-block: 2rem;
+
+        .ChangeCountryLink {
+            font-weight: 600;
+            text-decoration: underline;
+            margin-inline-start: 6px;
+            cursor: pointer;
+        }
+    }
+
+    &-customerDetails {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+        border-block: 1px solid #C7C5C3;
+
+        @include mobile {
+            flex-direction: column;
+            padding: 16px 0;
+        }
+
+        .NameBlock {
+            p:first-child {
+                font-weight: 600;
+                margin-block-end: 16px;
+                font-size: 18px;
+            }
+        }
+
+        .LoyaltyPoints {
+            @include mobile {
+                display: flex;
+                column-gap: 5px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            p {
+                color: var(--color-black);
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+            p:last-child {
+                color: #73A054;
+            }
+        }
+    }
+}

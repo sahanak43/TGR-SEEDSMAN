@@ -1,0 +1,625 @@
+/* stylelint-disable property-no-unknown */
+/* stylelint-disable no-missing-end-of-source-newline */
+
+
+.MyAccountOrder {
+    &-CreationDate {
+        font-size: 14px;
+        margin-block-start: 18px;
+        color: #959595;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-Status {
+        font-size: 16px;
+        font-weight: 500;
+        margin-block-start: 1rem;
+
+        .value {
+            padding-inline-start: 5px;
+            color: #959595;
+        }
+
+        .row_tracking-order_tracking {
+            .status_tracking {
+                padding: 4rem 0 0 0;
+                
+                .justify-content-between {
+                    display: flex;
+
+                    .order {
+                        width: 50%;
+
+                        @include mobile {
+                            &::before {
+                                height: 64px;
+                                width: 3px;
+                            }
+                        }
+                    }
+
+                    .shipped {
+                        @include mobile {
+                            inset-block-start: 21px;
+                            height: 93px;
+                        }
+
+                        @include mobile {
+                            &::before {
+                                height: 73px;
+                                width: 3px;
+                            }
+                        }
+                    }
+
+                    .delivery {
+                        &::before {
+                            display: none;
+                        }
+                    }
+
+                    .shipped,
+                    .delivery {
+                        width: 25%;
+
+                        @include mobile {
+                            inset-block-start: 0;
+                            width: unset;
+                        }
+                    }
+
+
+
+                    .order-tracking,
+                    .order-completed {
+                        position: relative;
+                        display: block;
+                        border-color: var(--primary-base-color);
+                        border-width: 0px;
+
+                        @include mobile {
+                            &:not(:last-child)::before {
+                                content: '';
+                            }
+                        }
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            background-color: var(--primary-base-color);
+                            inset-block-start: 13px;
+                            position: absolute;
+
+                            @include mobile {
+                                inset-inline-start: 7px;
+                            }
+
+                            @include desktop {
+                                width: 100%;
+                                height: 3px;
+                            }
+                        }
+
+                        .is-pending,
+                        .is-complete {
+                            display: block;
+                            position: relative;
+                            border-radius: 50%;
+                            padding: 1px;
+                            height: 17px;
+                            width: 17px;
+                            margin-block: 5px;
+                            z-index: 2;
+                            border-color: var(--primary-base-color);
+                            border-width: 0px;
+                            text-align: start;
+
+                            @include mobile {
+                                margin-block-end: 4px;
+                            }
+                        }
+
+                        .is-pending {
+                            background-color: #f7f7f7;
+                        }
+
+                        .is-complete {
+                            background-color: var(--primary-base-color);
+                        }
+
+                        .center {
+                            @include mobile {
+                                margin: 0;
+                                inset-block-start: 4rem;
+                            }
+                        }
+
+                        .right-c {
+                            margin-inline-start: auto;
+
+                            @include mobile {
+                                margin-inline-start: 0;
+                                inset-block-start: -2rem;
+                            }
+                        }
+
+                        .completed {
+                            border-color: var(--primary-base-color);
+                            border-width: 0px;
+                            background-color: var(--primary-base-color);
+                        }
+
+                        .delivered_order {
+                            font-size: 14px;
+                            color: #000000;
+                            position: absolute;
+                            inset-block-end: 3rem;
+                            inset-inline-start: 10rem;
+                        }
+
+                        .delivered_date {
+                            font-size: 14px;
+                            color: #959595;
+                            line-height: 30px;
+
+                            &.shipped_date {
+                                inset-inline-start: -3rem;
+
+                                @include mobile {
+                                    inset-inline-start: 3rem;
+                                }
+                            }
+
+                            @include mobile {
+                                inset-inline-start: 2rem;
+                                inset-block-end: 3rem;
+                            }
+                        }
+
+                        .ordered {
+                            inset-block-end: 5rem;
+                            margin-block-end: 0;
+
+                            @include mobile {
+                                inset-inline-start: 3rem;
+                                inset-block-end: 2rem;
+                                margin-block-end: 5px;
+                            }
+                        }
+
+                        .order_date {
+                            @include mobile {
+                                inset-inline-start: 3rem;
+                            }
+                        }
+
+                        .Shipped {
+                            inset-inline-start: -3rem;
+                            inset-block-end: 5rem;
+                            margin-block-end: 0;
+
+                            @include mobile {
+                                inset-inline-start: 3rem;
+                                inset-block-start: -21px;
+                                margin-block-end: 5px;
+                            }
+                        }
+
+                        .Delivered {
+                            inset-block-end: 5rem;
+                            display: flex;
+                            width: 100%;
+                            justify-content: flex-end;
+                            margin-block-end: 0;
+
+                            @include mobile {
+                                display: block;
+                                inset-inline-start: 3rem;
+                                inset-block-start: -48px;
+                                margin-block-end: 5px;
+                            }
+                        }
+
+                        .shipped_date {
+                            @include mobile {
+                                inset-inline-start: 3rem;
+                                inset-block-start: -3rem;
+                            }
+                        }
+
+                        .delivery_date {
+                            display: flex;
+                            width: 100%;
+                            justify-content: flex-end;
+
+                            @include mobile {
+                                inset-block-start: -6rem;
+                                inset-inline-start: 3rem;
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .order-tracking {
+                        border-color: #f7f7f7;
+
+                        &::before {
+                            background-color: #f7f7f7;
+                        }
+                    }
+
+                    @include mobile {
+                        display: block;
+                    }
+                }
+
+                @include mobile {
+                    margin-block-end: -42px;
+                    padding: 15px;
+                    margin-block-start: 0;
+                }
+            }
+
+            @include mobile {
+                display: block;
+            }
+        }
+    }
+
+    &-OrderStatus {
+        display: block;
+        border-radius: 3px;
+        border: var(--my-account-order-subheading-border);
+        color: var(--my-account-order-subheading-color);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        margin: 3px 0 0;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        inset-block-start: -1px;
+        width: min-content;
+    }
+
+    &-StatusBorder {
+        border-top: 4px solid #739536;
+    }
+
+    &-StatusSymbol {
+        display: block;
+        width: 22px;
+        height: 22px;
+        background: #fff;
+        border-radius: 50%;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #739536;
+        }
+    }
+
+    &-StatusTrack {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #739536;
+        height: 5px;
+        margin: 6rem 0;
+    }
+
+    &-StatusTrackItem {
+        flex-basis: 33%;
+        min-width: 33%;
+        gap: 1rem;
+
+        .MyAccountOrder-StatusSymbol {
+            &.Active {
+                border: 1px solid #739536;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    border: 1px solid #739536;
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    position: absolute;
+                    /* stylelint-disable-next-line csstools/use-logical */
+                    top: 3px;
+                    left: 3px;
+                    background: #739536;
+                }
+            }
+        }
+
+        &:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &-StatusTrackTitle {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &-StatusTrackDate {
+        font-size: 14px;
+        font-weight: 500;
+        color: #959595;
+    }
+
+    &-OrderId {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-Buttons {
+        display: flex;
+        margin-block-end: 25px;
+        justify-content: space-between;
+    }
+
+    &-Reorder {
+        margin-inline-end: 20px;
+
+        &.Button {
+            &:active {
+                color: var(--link-hover);
+            }
+
+            @include hoverable {
+                &:hover {
+                    color: var(--link-hover);
+                }
+            }
+        }
+    }
+
+    &-OrderInformation {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin-block-start: 4rem;
+
+        .MyAccountOrderTotals-OrderDetails {
+            margin-block-start: 40px;
+            display: grid;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-row-gap: 4rem;
+        }
+    }
+
+    &-Border {
+        border-top: 1px solid #AFAFAF;
+        opacity: 100%;
+        width: 100%;
+        margin-block-start: 28px;
+    }
+
+    &-Reorder,
+    &-SubscribeToStatus {
+        font-weight: normal;
+        width: max-content;
+
+        @include hoverable {
+            &:hover {
+                text-decoration: none;
+                color: var(--link-hover);
+            }
+        }
+
+        &:active {
+            text-decoration: none;
+            color: var(--link-hover);
+        }
+
+        &:focus {
+            color: var(--primary-base-color);
+            text-decoration: none;
+        }
+    }
+
+    &-PrintOrder {
+        font-weight: normal;
+
+        @include desktop {
+            display: block;
+            margin-inline-start: auto;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+
+    &-Address,
+    &-Products {
+        margin-block-end: 14px;
+
+        @include desktop {
+            margin-block-start: 24px;
+        }
+
+        @include mobile {
+            margin-block-end: 28px;
+            /* stylelint-disable-next-line declaration-no-important */
+            overflow-x: unset !important;
+        }
+    }
+
+    &-Products {
+        width: 100%;
+        margin-block-start: 12px;
+        table-layout: initial;
+
+        @include mobile {
+            margin-block-start: 14px;
+        }
+
+        td,
+        th {
+            vertical-align: middle;
+        }
+    }
+
+    &-Thumbnail {
+        width: 60px;
+        height: 60px;
+        padding: 0;
+    }
+
+    &-Row {
+        height: 80px;
+        padding: 10px 0;
+
+        &:nth-child(even) {
+            img {
+                mix-blend-mode: multiply;
+            }
+        }
+    }
+
+    &-Content {
+        min-height: 200px;
+
+        @include desktop {
+            display: grid;
+            grid-gap: 24px;
+        }
+    }
+
+    h4 {
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 17px;
+        }
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dl {
+        display: grid;
+        margin-block-start: 12px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 6px;
+
+        @include mobile {
+            margin-block-start: 14px;
+            grid-gap: 7px;
+            margin-block-end: 28px;
+        }
+    }
+
+    td,
+    th {
+        min-width: 0;
+    }
+
+    &-Address {
+        .KeyValueTable-Wrapper {
+            overflow-x: unset;
+        }
+    }
+
+    &-Comments {
+        margin-block-end: 40px;
+        margin-block-start: 2rem;
+
+        @include mobile {
+            margin-block-end: 25px;
+        }
+
+        &Title {
+            border-block-end: var(--my-account-content-border);
+            margin-block-end: 25px;
+            padding-block-end: 10px;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .MyAccountOrder-Comment {
+            display: inherit;
+            background: #f2f2f2;
+            padding: 1rem;
+
+            .CommentMessage {
+                font-weight: 600;
+                margin-block-end: 0.5rem;
+            }
+        }
+    }
+
+
+
+    &-Comment {
+        display: flex;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-block-end: 10px;
+            margin-inline-end: 30px;
+            min-width: 90px;
+            width: 90px;
+
+            @include mobile {
+                margin-block-end: 5px;
+                width: auto;
+            }
+        }
+
+        dd {
+            word-break: break-word;
+
+            &:not(&:last-of-type) {
+                @include mobile {
+                    margin-block-end: 15px;
+                }
+            }
+        }
+    }
+
+    &-PrintAction {
+        display: flex;
+        align-items: center;
+    }
+
+    &-Loader {
+        @include mobile {
+            inset-block-start: 35vh;
+        }
+    }
+
+    .MyAccountOrderTotals-Wrapper {
+        background-color: unset;
+        margin-block-start: 40px;
+    }
+}

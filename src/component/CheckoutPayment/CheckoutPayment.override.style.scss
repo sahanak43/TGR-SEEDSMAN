@@ -1,0 +1,191 @@
+
+.CheckoutPayment {
+    margin-block-end: 15px;
+    border-radius: 8px;
+    border: 2px solid #9F9D9C;
+    padding-block: 0px;
+
+    &:first-child {
+        border-block-start: 2px solid #9F9D9C;
+    }
+
+    &_isSelected {
+        background-color: #F9F6F4;
+        border-color: var(--color-black);
+    }
+
+    @include mobile {
+        padding-block: 0px;
+    }
+
+    &-cardBlock {   
+        padding-block: 19px;
+    }
+
+    &-paymentInfo {
+        border-block-end: 1px solid #C7C5C3;
+
+        p {
+            padding: 12px;
+            margin-block-end: 0px;
+            font-size: 12px;
+            text-align: justify;
+        }
+    }
+
+    &-paymentInfoVideo {
+        border-bottom: 1px solid #C7C5C3;
+
+        .CmsBlock-Wrapper {
+            padding: 12px !important; /* stylelint-disable-line declaration-no-important */
+
+            .paymentInfoVideoNote {
+                display: flex;
+                align-items: center;
+                margin-block-end: 10px;
+                column-gap: 5px;
+
+                p {
+                    margin-block-end: 0px;
+                    font-weight: 600;
+                    color: var(--color-black);
+                }
+            }
+
+            .paymentInfoVideoText {
+                line-height: 2;
+            }
+
+            .downloadLink {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: var(--color-black);
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &-Button {
+        --check-mark-opacity: 0;
+
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 14px;
+        cursor: pointer;
+        font-weight: 500;
+        padding-inline: 12px;
+
+        .Field {
+            margin-block-start: 0px;
+
+            &-RadioLabel {
+                .input-control {
+                    border: 2px solid #959499;
+                }
+            }
+        }
+
+        &_isSelected {
+            padding-block-end: 12px;
+            border-bottom: 1px solid #C7C5C3;
+        }
+    }
+
+    &-PlaceOrderBlock {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+
+        h4 {
+            font-weight: 600;
+        }
+
+        .Field-Wrapper_type_checkbox {
+            .CheckoutPayment-AgreeCheckBox {
+                p {
+                    margin-block-end: 0px;
+                }
+
+                .Field-CheckboxLabel {
+                    font-size: 14px;
+        
+                    &:not([class*='_isDisabled']):hover {
+                        color: var(--color-black);
+                    }
+        
+                    .input-control {
+                        border: 2px solid #959499;
+                    }
+        
+                    p {
+                        margin-block-end: 0px;
+        
+                        a {
+                            color: var(--color-black);
+                            text-decoration: underline;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-checkBoxLink {
+        display: flex;
+        align-items: center;
+
+        a {
+            color: var(--color-black);
+            text-decoration: underline;
+        }
+    }
+
+    &-orderTotal {
+        display: flex;
+        background-color: #D6EBCE;
+        padding: 14px 16px;
+        justify-content: space-between;
+
+        p {
+            margin-block-end: 0px;
+            font-weight: 600;
+        }
+    }
+
+    &-StickyButtonWrapper {
+        .CheckoutPayment-Button {
+            width: 100%;
+            border-radius: 8px;
+            align-items: center;
+
+            &:hover {
+                border-radius: 8px;
+            }
+        }
+
+        .Button[disabled] {
+            background-color: #9F9D9C;
+            border-color: #9F9D9C;
+        }
+    }
+
+    &-paymentCardFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin-block-end: 0px;
+            font-size: 10px;
+        }
+    }
+}

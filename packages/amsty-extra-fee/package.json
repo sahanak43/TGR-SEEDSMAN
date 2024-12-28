@@ -1,0 +1,33 @@
+{
+    "name": "@scandiweb/amasty-extra-fee",
+    "version": "1.0.0",
+    "description": "Amasty Extra Fee frontend compatibility for ScandiPWA",
+    "license": "UNLICENSED",
+    "scandipwa": {
+        "type": "extension"
+    },
+    "dependencies": {
+        "eslint-plugin-header": "^3.1.1"
+    },
+    "eslintConfig": {
+        "extends": "@scandipwa",
+        "plugins": [
+            "react",
+            "header"
+        ],
+        "rules": {
+            "max-lines": "off",
+            "header/header": [
+                2,
+                "block",
+                [
+                    "*",
+                    " * Amasty Extra Fee compatibility for ScandiPWA",
+                    " * @copyright Scandiweb, Inc. All rights reserved.",
+                    " "
+                ],
+                2
+            ]
+        }
+    }
+}

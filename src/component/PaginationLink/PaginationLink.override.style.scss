@@ -1,0 +1,31 @@
+.PaginationLink {
+    border: unset;
+    display: block;
+    margin-inline-end: 15px;
+    padding: 7px 13px;
+    text-align: center;
+
+    @include mobile {
+        font-size: 12px;
+        padding: 2px 8px;
+        margin-inline-end: 0;
+    }
+
+    &_isArrow {
+        padding: 7px 11px;
+        border: none;
+
+        @include mobile {
+            padding: 6px 0px; 
+        }
+    }
+
+    &_isArrowInActive {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}

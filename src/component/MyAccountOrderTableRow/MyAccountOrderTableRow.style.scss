@@ -1,0 +1,245 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+
+:root {
+    --my-account-order-table-row-hover-background: var(--secondary-base-color);
+}
+
+.MyAccountOrderTableRow {
+    display: block;
+    background-color: #F5F5F5;
+    margin-block-start: 29px;
+
+    &-OrderDetails {
+        padding-inline-start: 31px;
+        padding-block-end: 31px;
+        padding-inline-end: 31px;
+
+        @include mobile {
+            padding-inline-start: 14px;
+            padding-block-end: 15px;
+            padding-inline-end: 14px;
+        }
+    }
+
+    &-DownloadLink {
+        display: block;
+    }
+
+    &-Action {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            color: var(--color-black);
+            text-decoration: underline;
+            font-weight: 500;
+            cursor: pointer;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-OrderTotalExTax {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        font-size: 14px;
+        color: var(--color-gray);
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 11px;
+        }
+
+        .OrderTotalTax {
+            font-size: 16px;
+            color: var(--color-black);
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-OrderTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 8px;
+        }
+
+        a {
+            width: 40%;
+
+            @include mobile {
+                width: 80%;
+            }
+        }
+    }
+
+    &-OrderDate {
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &-TopBar {
+        padding-block: 31px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        column-gap: 10px;
+        cursor: pointer;
+
+        @include mobile {
+            padding-block-start: 17px;
+            column-gap: 5px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+
+    &-HeadingBorder {
+        border-top: 1px solid #AFAFAF;
+        opacity: 100%;
+        width: 100%;
+    }
+
+    &-StatusSymbol {
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: #739536;
+        border-radius: 50%;
+
+        @include mobile {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    &-ProductDetails {
+        display: grid;
+        gap : 30px;
+
+        @include mobile {
+            row-gap: 1rem;
+        }
+    }
+
+    &-Product {
+        display: grid;
+        grid-template-columns: 100px auto;
+        padding-block-end: 2rem;
+        border-bottom: 1px solid #AFAFAF;
+        column-gap: 1rem;
+        color: var(--black);
+        font-weight: initial;
+
+        &:hover {
+            color: initial;
+        }
+
+        .Image-Image {
+            height: 100px;
+            width: 100px;
+        }
+
+        .Image_ratio_square {
+            padding-block-end: 100px;
+        }
+
+        .Content {
+            display: grid;
+            align-items: center;
+
+            h4 {
+                font-size: 16px;
+
+                @include mobile {
+                    font-size: 13px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    &-QuantityPrice {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+            font-size: 13px;
+            color: #A3A3A3;
+
+            @include mobile {
+                font-size: 11px;
+            }
+        }
+
+        .quantity {
+            margin-inline-start: 5px;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-TotalPrice {
+        font-size: 16px;
+        font-weight: 500;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    .TopBar {
+        &-OrderStatus {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            span {
+                font-size: 16px;
+
+                @include mobile {
+                    column-gap: 5px;
+                    font-size: 10px;
+                }
+            }
+        }
+        
+        &-OrderNumber {
+            font-size: var(--size-15px);
+            font-family: var(--font-poppins-semibold);
+            font-weight: 400;
+            display: flex;
+
+            span {
+                margin-inline-start: 5px;
+            }
+
+            @include mobile {
+                font-size: 10px;
+            }
+        }
+
+        &-OrderCount {
+            color: var(--primary-base-color);
+            font-weight: 500;
+
+            @include mobile {
+                font-size: 10px;
+            }
+        }
+    }
+}

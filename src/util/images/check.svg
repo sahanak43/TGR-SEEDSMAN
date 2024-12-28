@@ -1,0 +1,29 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="36"
+    height="36"
+    viewBox="0 0 36 36"
+>
+    <g
+        id="Group_806"
+        data-name="Group 806"
+        transform="translate(8220 -852)"
+    >
+        <rect
+            id="Rectangle_902"
+            data-name="Rectangle 902"
+            width="24"
+            height="24"
+            transform="translate(-8220 852)"
+            fill="#fff"
+            opacity="0"
+        />
+        <path
+            id="FontAwsome_check-circle_"
+            data-name="FontAwsome (check-circle)"
+            d="M33.96,20.98A12.98,12.98,0,1,1,20.98,8,12.98,12.98,0,0,1,33.96,20.98ZM19.479,27.853l9.63-9.63a.837.837,0,0,0,0-1.184l-1.184-1.184a.837.837,0,0,0-1.184,0l-7.854,7.854L15.22,20.041a.838.838,0,0,0-1.184,0l-1.184,1.184a.837.837,0,0,0,0,1.184l5.443,5.443a.837.837,0,0,0,1.184,0Z"
+            transform="translate(-8222.98 849.02)"
+            fill="#fff"
+        />
+    </g>
+</svg>

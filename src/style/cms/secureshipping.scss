@@ -1,0 +1,29 @@
+.secure_checking {
+    max-width: var(--content-wrapper-width);
+    width: 100%;
+    margin: 80px auto;
+    
+    @include mobile {
+        padding: 20px;
+    }
+
+    .CmsPageHeading {
+        font-weight: 700;
+        line-height: 1.1;
+        font-size: 2.59615385rem;
+        margin-block: 0 2.88461538rem;
+    }
+
+    h3 {
+        font-weight: 700;
+        line-height: 1.1;
+        font-size: 1.82692308rem;
+        margin-block: 2.16346154rem 1.44230769rem;
+    }
+    
+    p {
+        margin-block: 0 1.44230769rem;
+        font-size: 1.5rem;
+        line-height: 22px;
+    }
+}

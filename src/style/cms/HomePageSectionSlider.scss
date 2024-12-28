@@ -1,0 +1,102 @@
+.Homepage-section-one {
+    margin-block-start: 2%;
+
+    @include mobile {
+        gap: 1.6rem;
+        margin-block-start: 3.6rem;
+    }
+
+    .heading {
+        padding: 2.3rem 2rem;
+        background-color: #f2faf7;
+        text-align: start;
+        display: inherit;
+        height: 168px;
+
+        @include mobile() {
+            padding: 5%;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-block-start: 0;
+            margin-block-end: 16px;
+            display: flex;
+            column-gap: 10px;
+
+            img {
+                width: 30px;
+                height: 24px;
+            }
+        }
+
+        .para {
+            font-size: 12px;
+
+            @include mobile() {
+                padding-block-start: 3%;
+                line-height: 1.7rem;
+            }
+        }
+    }
+}
+
+.Typeof-product-container {
+    background-color: #f8f8f8;
+    margin-block-start: 30px;
+
+    .section_slider {
+        padding-block: 20px;
+        
+        .seeds_logos {
+            display: grid;
+            place-content: center;
+            padding: 0.5rem;
+            min-width: 16%;
+
+            @include desktop {
+                &:hover {
+                    background-color: #739536;
+                    color: #ffffff;
+    
+                    span {
+                        color: #fff;
+                    }
+    
+                    svg {
+                        fill: #ffffff;
+                        stroke: #ffffff;
+                    }
+                }
+            }
+
+            @include mobile() {
+                width: 100%;
+            }
+
+            svg {
+                width: 64px;
+                height: 64px;
+                margin: auto;
+            }
+
+            span {
+                color: #000000;
+                text-transform: capitalize;
+                opacity: 1;
+                font-size: 16px;
+                padding-block-start: 10px;
+                text-align: center;
+
+                &:hover {
+                    color: #ffffff;
+                }
+
+                @include mobile() {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

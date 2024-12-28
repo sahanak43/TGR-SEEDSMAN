@@ -1,0 +1,22 @@
+.AddToCart {
+    width: unset;
+    border-radius: 8px;
+
+    &:not([disabled]):hover {
+        border-radius: 8px;
+    }
+    
+    @include mobile {
+        min-width: 0px;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &:has(svg) {
+        gap: 1rem;
+    }
+}
+

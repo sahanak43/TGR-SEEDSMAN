@@ -1,0 +1,85 @@
+.BuynNow {
+    width: 100%;
+    padding: 0;
+    vertical-align: middle;
+
+    @include desktop {
+        line-height: 20px;
+    }
+
+    &:hover, :focus {
+        --button-hover-padding: 0;
+    }
+
+    @include mobile {
+        min-width: 168px;
+        line-height: 20px;
+    }
+
+    &_layout_list {
+        width: 222px;
+    }
+
+    span {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        transition-property: transform, opacity;
+        will-change: transform, opacity;
+        transition-timing-function: ease-in;
+        transition-duration: .25s;
+        color: #000;
+
+        &:last-child {
+            inset-inline-start: 0;
+            transform: translateY(0);
+        }
+    }
+
+    &_isPlaceholder {
+        height: 48px;
+        display: inline-block;
+        padding: var(--button-padding);
+        background-image: var(--placeholder-image);
+        background-size: var(--placeholder-size);
+        animation: var(--placeholder-animation);
+        will-change: background-position;
+
+        @include mobile {
+            height: 56px;
+        }
+    }
+
+    &_isLoading {
+        span {
+            &:first-child {
+                opacity: 0;
+            }
+
+            &:last-child {
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            span {
+                &:last-child {
+                    opacity: .9;
+                    transform: translateY(-120%);
+                }
+            }
+        }
+    }
+
+    .CartIcon {
+        margin-inline-end: 16px;
+        width: 20px;
+        height: 100%;
+        padding-block-end: 0;
+        fill: var(--color-white);
+
+        &:hover {
+            fill: var(--color-white);
+        }
+    }
+}

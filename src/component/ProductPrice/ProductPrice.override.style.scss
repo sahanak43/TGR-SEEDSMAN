@@ -1,0 +1,34 @@
+.ProductPrice {
+    white-space: nowrap;
+    
+    del {
+        font-size: 14px;
+        font-weight: normal;
+        opacity: .48;
+        display: inline-block;
+        margin-inline-end: 0;
+
+        @include mobile {
+            margin-block-start: 0;
+            font-size: 12px;
+        }
+
+        @include smallmobile {
+            font-size: 12px
+        }
+    }
+
+    &-PriceBadge {
+        font-size: 12px;
+    }
+
+    &-Discount {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--primary-base-color);
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+}

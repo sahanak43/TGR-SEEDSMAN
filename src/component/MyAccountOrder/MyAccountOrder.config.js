@@ -1,0 +1,17 @@
+import {
+    ORDER_ACTION_LABELS as SOURCE_ORDER_ACTION_LABELS,
+    ORDER_INVOICES as SOURCE_ORDER_INVOICES,
+    ORDER_ITEMS as SOURCE_ORDER_ITEMS, ORDER_REFUNDS as SOURCE_ORDER_REFUNDS,
+    ORDER_SHIPMENTS as SOURCE_ORDER_SHIPMENTS
+} from 'SourceComponent/MyAccountOrder/MyAccountOrder.config.js';
+
+export const ORDER_INVOICES = SOURCE_ORDER_INVOICES;
+export const ORDER_ACTION_LABELS = SOURCE_ORDER_ACTION_LABELS;
+export const ORDER_ITEMS = SOURCE_ORDER_ITEMS;
+export const ORDER_REFUNDS = SOURCE_ORDER_REFUNDS;
+export const ORDER_SHIPMENTS = SOURCE_ORDER_SHIPMENTS;
+
+export const COMPLETED = 'complete';
+export const PROCESSING = 'processing';
+export const CANCELLED = 'canceled';
+export const NEW = 'new';

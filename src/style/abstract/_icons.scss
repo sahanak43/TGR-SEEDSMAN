@@ -1,0 +1,100 @@
+:root {
+    --star-size: 18px;
+    --plus-minus-icon-size: 24px;
+    --wishlist-heart-size: 23px;
+}
+
+@mixin icon-black-hover-effect {
+    fill: var(--color-black);
+
+    &:hover {
+        fill: var(--primary-base-color);
+    }
+}
+
+@mixin icon-primary {
+    fill: var(--color-gray);
+
+    @include hoverable { 
+        &:hover {
+            fill: var(--color-dark-gray);
+        }
+    }
+
+    &:active {
+        fill: var(--color-dark-gray);
+    }
+}
+
+@mixin not-available {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 32px;
+    transform-origin: 50% 50%;
+    inset-inline-start: 15px;
+    inset-block-start: 1px;
+    transform: rotate(45deg);
+    box-shadow: none;
+    border-radius: 0;
+    opacity: 1;
+}
+
+@mixin ios-share {
+    $color-dodger-blue: #3b9cfe;
+
+    border: 2px solid $color-dodger-blue;
+    inset-block-end: -3px;
+    height: 18px;
+    margin: 0 4px;
+    width: 18px;
+
+    &::before {
+        content: '';
+        border-inline-start: 2px solid $color-dodger-blue;
+        border-block-start: 2px solid $color-dodger-blue;
+        display: block;
+        height: 6px;
+        inset-inline-start: 3px;
+        position: relative;
+        inset-block-start: -9px;
+        transform: rotate(45deg);
+        width: 6px;
+
+        [dir="rtl"] & {
+            transform: rotate(315deg);
+        }
+    }
+
+    &::after {
+        border-inline-start: 2px solid $color-dodger-blue;
+        content: '';
+        display: block;
+        height: 16px;
+        inset-inline-start: 6px;
+        position: relative;
+        inset-block-start: -16px;
+        width: 19px;
+    }
+}
+
+@mixin ios-plus {
+    $color-storm-grey: #7b7b86;
+
+    background: linear-gradient($white, $white),
+        linear-gradient($white, $white),
+        $color-storm-grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 52% 1px, 1px 48%;
+    border-radius: 5px;
+    height: 20px;
+    margin: 0 4px;
+    width: 20px;
+}
+
+@mixin rtl-icon {
+    [dir="rtl"] & {
+        transform: scaleX(-1);
+    }
+}

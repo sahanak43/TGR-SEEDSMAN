@@ -1,0 +1,33 @@
+.CarouselScrollArrow {
+    $arrow-size: 25px;
+
+    display: none;
+    z-index: 1;
+    transition: opacity 200ms;
+    cursor: pointer;
+    transform: rotate(-180deg);
+    width: $arrow-size;
+    height: $arrow-size;
+
+    .ChevronIcon {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        transform: rotate(-180deg) scale(1.2);
+    }
+
+    &_isNextArrow {
+        transform: none;
+        display: none;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &_isInvisible {
+        visibility: hidden;
+    }
+}

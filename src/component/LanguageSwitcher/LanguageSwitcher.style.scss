@@ -1,0 +1,71 @@
+.LanguageSwitcher {
+    --selector-width: 56px;
+
+    border-block-end: 1px solid var(--primary-divider-color);
+
+    @include mobile {
+        margin: 0 16px;
+        padding-block-end: 1px;
+    }
+
+    .Field {
+        margin-block-start: 0;
+
+        &Select {
+            @include desktop {
+                width: var(--selector-width);
+                padding-inline-start: 18px;
+            }
+
+            .ChevronIcon {
+                inset-inline-end: 0;
+            }
+
+            &-Select {
+                border: none;
+                font-size: 14px;
+                font-weight: 400;
+                margin: 0;
+                opacity: 1;
+                padding-inline-start: 0;
+                line-height: 23px;
+                min-height: 0;
+            }
+
+            &::after {
+                height: 13px;
+                inset-inline-end: 0;
+                width: 13px;
+            }
+        }
+    }
+
+    @include desktop {
+        border-block-end: none;
+
+        .FieldSelect {
+            &-Select {
+                border: none;
+                font-size: 12px;
+                padding: 0;
+                line-height: 20px;
+            }
+
+            &-Options {
+                overflow-y: auto;
+                width: min-content;
+                min-width: var(--selector-width);
+
+                &_isExpanded {
+                    border-block-start: 1px solid var(--primary-divider-color);
+                }
+            }
+
+            &-Option {
+                line-height: 28px;
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+        }
+    }
+}

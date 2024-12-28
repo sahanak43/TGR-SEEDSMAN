@@ -1,0 +1,88 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+
+.MyAccount-TabContent {
+    .MyAccountOrder-OrderInformation {
+        .MyAccountOrderTotals {
+            &-Wrapper {
+                background-color: unset;
+                margin-block-start: 0.5rem;
+                font-size: 14px;
+
+                tr {
+                    &:not(.MyAccountOrderTotals-GrandTotal) {
+                        th {
+                            font-weight: normal;
+                            word-break: break-word;
+                        }
+                    }
+
+                    th {
+                        @include desktop {
+                            text-align: start;
+                        }
+                    }
+
+                    td {
+                        text-align: end;
+                        word-wrap: break-word;
+                    }
+
+                    @include mobile {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    @media print {
+                        th {
+                            text-align: end;
+                        }
+                    }
+                }
+
+                @include  mobile {
+                    transform: translateX(-1rem);
+                }
+            }
+
+            &-Title {
+                font-weight: 500;
+                font-size: 16px;
+                padding: 0 1rem;
+
+                @include  mobile {
+                    padding: 0;
+                    margin-block: 1rem 15px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+
+            &-Tax {
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-block-end: 20px;
+                column-gap: 6rem;
+                flex-wrap: wrap;
+
+                .detail {
+                    flex-basis: 100%;
+                    font-size: 12px;
+                }
+            }
+
+            &-OrderDetails {
+                margin-block-start: 0;
+                display: initial;
+
+                @include  mobile {
+                    padding: 1rem 1rem 1.5rem 1rem;
+                    border: 1px solid #d4d4d4;
+                }
+            }
+
+            text-align: start;
+        }
+    }
+}

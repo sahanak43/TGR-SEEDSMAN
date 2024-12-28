@@ -1,0 +1,78 @@
+.NewsletterSubscription {
+    .Field-Wrapper.isPreFilled .Field.Field .Field-LabelContainer .Field-Label {
+        margin-block-end: 20px;
+    }
+
+    .FieldForm-Body {
+        display: grid;
+
+        @include desktop {
+            grid-template-columns: 4fr 2fr;
+            grid-gap: 35px;
+        }
+
+   
+        @include mobile {
+            margin-block-start: 34px;
+        }
+
+        .FieldForm-Fields {
+            margin-block-start: auto;
+
+            .Field-Wrapper_type_email {
+                margin-inline-start: auto;
+            }
+        }
+    }
+
+    .Field-Label {
+        padding-block-end: 16px;
+        
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    .FieldForm-Fieldset .Field {
+        width: 100%;
+        margin-block-start: 0;
+
+        input {
+            background-color: #F2FAF7;
+
+            @include desktop {
+                padding: 14px 12px;
+            }
+
+            @include mobile {
+                font-size: 12px;
+                padding: 8px 3px;
+            }
+        }
+
+        input:-webkit-autofill, select:-webkit-autofill {
+            /* stylelint-disable-next-line declaration-no-important */
+            -webkit-box-shadow: 0 0 0 30px var(--color-black) inset !important;
+            -webkit-text-fill-color: var(--color-white);
+        }
+    }
+
+    .Button {
+        margin-block-start: 16px;
+        width: 57%;
+        color: #FFFFFF;
+        background-color: #739536;
+
+        @include mobile {
+            font-weight: 500;
+            font-size: 12px;
+            width: 38%;
+            height: 100%;
+        }
+    }
+
+    .Button_isHollow:not([disabled]):hover {
+        color: #FFFFFF;
+        background-color: #739536;
+    }
+}

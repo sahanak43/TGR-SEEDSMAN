@@ -1,0 +1,319 @@
+.MyAccountOverlay {
+    &-Action {
+        padding: 24px 30px 16px 30px;
+
+        @include mobile {
+            padding: 0 32px 30px 32px;
+            margin-block-start: 1rem;
+            max-height: calc(100% - 60px);
+            overflow-y: auto;
+            overscroll-behavior: none;
+        }
+
+        @include minimobile {
+            padding: 7px;
+        }
+
+        &_state {
+            &_forgotPassword {
+                input {
+                    border: none;
+                    border-bottom: 1px solid #959499;
+                    width: 100%;
+                }
+
+                label {
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+
+                button {
+                    font-weight: 500;
+                }
+
+                .MyAccountOverlay-Title {
+                    max-width: 400px;
+
+                    p {
+                        font-weight: 500;
+
+                        @include mobile {
+                            margin: 1rem 0;
+                        }
+                    }
+                }
+
+                section {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &_signIn {
+                .Form .Button_likeLink {
+                    color: var(--color-gray);
+                    text-decoration: underline;
+
+                    @include mobile {
+                        font-size: 11px;
+                    }
+
+                    &:focus,
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .Form {
+                    .Field-LabelContainer {
+                        label {
+                            padding-block-end: 0;
+
+                            @include mobile {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .Password-Block {
+                    position: relative;
+                    inset-block-start: 1rem;
+
+                    button {
+                        position: absolute;
+                        inset-inline-end: 0;
+                        inset-block-end: 10px;
+                        font-size: 14px;
+                        color: var(--color-gray);
+
+                        &:focus,
+                        &:hover {
+                            cursor: pointer;
+                            color: #7b7b7b;
+                        }
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            &_loggedIn {
+                .MyAccountOverlay-Heading {
+                    @include desktop {
+                        display: none;
+                    }
+                }
+
+                @include desktop {
+                    width: 180px;
+                    padding: 0;
+                }
+            }
+
+            &_createAccount {
+                .Form {
+                    .Field-LabelContainer {
+                        label {
+                            @include mobile {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    @include mobile {
+                        overflow-y: auto;
+                    }
+
+                    .Loader {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        form,
+        &-Additional_state_signIn {
+            @include mobile {
+                padding-block-start: 0;
+                padding-inline: 0;
+            }
+        }
+
+        .Form {
+            .Field-Wrapper {
+                &_type_date {
+                    input {
+                        margin-block-start: 10px;
+                    }      
+                }
+
+                &_type,
+                &.isPreFilled_type {
+                    &_text {
+                        .Field-LabelContainer {
+                            inset-block: 0 2rem;
+                        }
+
+                        margin-block-end: 28px;
+                    }
+                    
+                    &_email,
+                    &_password,
+                    &_date {
+                        margin-block-end: 2rem;
+
+                        input {
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-Additional {
+        &_state {
+            &_signIn {
+                button {
+                    text-transform: uppercase;
+                }
+            }
+
+            &_forgotPassword {
+                section {
+                    button {
+                        font-weight: 500;
+                        margin: 1rem 0;
+                        color: #000;
+                        text-transform: uppercase;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+
+                    &:last-of-type {
+                        justify-content: center;
+                        border: 1px solid black;
+                    }
+                }
+            }
+
+            &_forgotPasswordSuccess {
+                max-width: 400px;
+            }
+        }
+
+        @include mobile {
+            padding-block-start: 8px;
+        }
+    }
+
+    &-ButtonsLogin {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        inset-inline: 0;
+        inset-inline-end: 0;
+        cursor: pointer;
+        border-bottom: 1px solid #d5d5d3;
+
+        @include mobile {
+            inset-block-start: 0;
+            z-index: 8;
+            background-color: var(--color-white);
+        }
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 3rem 0;
+
+            @include mobile {
+                font-size: 12px;
+                font-weight: 500;
+                padding: 2rem 0;
+            }
+        }
+
+        .Button-Login,
+        .Button-Create {
+            font-weight: 600;
+            font-size: 16px;
+            width: 50%;
+
+            &.Active {
+                border-bottom: 3px solid var(--primary-base-color);
+
+                @include mobile {
+                    border-bottom: 2px solid var(--primary-base-color);
+                }
+
+                p {
+                    color: var(--primary-base-color);
+                }
+            }
+
+            &.NotActive {
+                p {
+                    color: #b2b2b2;
+                }
+            }
+        }
+
+        .Button-Forgot {
+            width: 100%;
+            cursor: default;
+
+            p {
+                color: var(--primary-base-color);
+                border-bottom: 3px solid var(--primary-base-color);
+
+                @include mobile {
+                    border-bottom: 2px solid var(--primary-base-color);
+                }
+            }
+        }
+    }
+
+    &-Buttons {
+        margin-block-start: 6px;
+
+        @include mobile {
+            margin-block-start: 7px;
+
+            button {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &-Button {
+        &_likeLink {
+            font-size: 12px;
+            margin-block-start: 14px;
+
+            @include mobile {
+                font-size: 13px;
+                margin-block-start: 17px;
+            }
+        }
+    }
+
+    &-ForgotPassword {
+        margin-block-start: 2rem;
+    }
+
+    &-Legend {
+        .Field-ErrorMessages {
+            padding-block-start: 2px;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.ShippingAddress,
+.BillingAddress {
+    .MyAccountAddressTable {
+        font-size: 14px;
+        height: 100%;
+
+        .AddressContainer-Active {
+            background: #f2faf7;
+            border: 1px solid #fff;
+            height: 100%;
+        }
+
+        .AddressContainer {
+            border: solid 1px #d4d4d4;
+            height: 100%;
+
+            label {
+                display: grid;
+                height: 100%;
+                align-items: stretch;
+            }
+        }
+
+        .AddressContainer,
+        .AddressContainer-Active {
+            padding: 20px;
+
+            .AddressContent {
+                display: flex;
+                gap: 30px;
+
+                .Addresstype {
+                    padding: 4px 12px;
+                    line-height: 20px;
+                    color: #fff;
+                    background: #000;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+
+                    :nth-child(2) {
+                        font-weight: bold;
+                    }
+                }
+
+                .FullName {
+                    font-weight: 600;
+                    margin: 1rem 0;
+                    display: flex;
+                    column-gap: 10px;
+                }
+
+                p {
+                    margin: 5px 0;
+                    font-size: 14px;
+                }
+            }
+
+            .Address-Action {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-block-start: 1.2rem;
+
+                .Action-Buttons {
+                    button {
+                        padding-inline-start: 0;
+                        text-transform: inherit;
+                        font-weight: normal;
+
+                        &:hover {
+                            color: var(--primary-base-color);
+                        }
+                    }
+                }
+
+                .DefaultAddress {
+                    &-Wrapper {
+                        display: grid;
+                        row-gap: 10px;
+                    }
+
+                    &-label {
+                        background-color: #e6d93b;
+                        padding: 2px 4px;
+    
+                        @include smallmobile {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .KeyValueTable-Wrapper {
+                .KeyValueTable {
+                    tr {
+                        border: none;
+                        font-size: 14px;
+                        font-weight: 600;
+
+                        td {
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+
+            .Button_isHollow {
+                color: #565959;
+                font-size: 14px;
+                height: 30px;
+            }
+        }
+    }
+}

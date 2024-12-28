@@ -1,0 +1,188 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --product-review-item-border: #d8d8d8;
+}
+
+.ProductReviewItem {
+    color: #000000;
+
+    @include desktop {
+        display: grid;
+        grid-template-areas: "title ."
+            "content ratings";
+        grid-template-rows: repeat(1, min-content);
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 24px;
+    }
+
+    margin: 0;
+    word-break: break-word;
+    padding-inline: 24px;
+    padding-block: 24px;
+    border: 1px solid var(--product-review-item-border);
+    text-align: start;
+
+    &:last-child {
+        margin-block-end: 0;
+    }
+
+    &::before {
+        content: none;
+    }
+
+    &-ReviewTitle {
+        width: 100%;
+        // margin-block-end: 24px;
+        font-weight: 500;
+        grid-area: title;
+        font-size: 14px;
+
+        @include mobile {
+            margin-block-end: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &-ReviewRating {
+        min-width: 166px;
+        display: flex;
+        gap: 7px;
+    }
+
+    &-Content {
+        grid-area: content;
+    }
+
+    &-RatingSummary {
+        grid-area: ratings;
+        line-height: 1;
+
+        @include desktop {
+            min-width: 180px;
+        }
+
+        @include mobile {
+            margin-block-end: 14px;
+            width: 100%;
+        }
+    }
+
+    &-RatingSummaryItem {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-block-end: 16px;
+
+        @include mobile {
+            margin-block-end: 7px;
+        }
+
+        &:last-of-type {
+            margin-block-end: 0;
+        }
+
+        .ProductReviewRating {
+            --star-size: 20px;
+
+            margin-block: 0 2px;
+            margin-inline: 12px 0;
+
+            @include mobile {
+                margin-block: 0 3px;
+                margin-inline: 14px 0;
+            }
+        }
+    }
+
+    &-ReviewContent {
+        flex: 1 0 0;
+        margin-inline-end: 48px;
+
+        @include mobile {
+            flex: 0 0 auto;
+            margin-inline-start: 0;
+            width: 100%;
+            order: 3;
+        }
+
+        @include tablet {
+            flex: auto;
+            order: 15;
+            margin-block-start: 18px;
+        }
+
+        .TextPlaceholder {
+            display: block;
+        }
+    }
+
+    &-ReviewTotal {
+        display: flex;
+        margin-block-end: 24px;
+    }
+
+    &-ReviewAuthor {
+        margin-block: 17px 0;
+        font-size: 12px;
+        display: flex;
+
+        @include mobile {
+            line-height: 20px;
+        }
+    }
+
+    &-ReviewAuthors {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &-ReviewDate {
+        margin-inline-start: auto;
+        color: #585858;
+    }
+
+    &-ReviewDetails {
+        margin-block-end: 0;
+        color: #585858;
+
+        @include mobile {
+            margin-block-end: 14px;
+            line-height: 20px;
+        }
+
+        .TextPlaceholder {
+            margin-block-start: 6px;
+            line-height: 1.1;
+
+            @include mobile {
+                margin-block-start: 7px;
+            }
+
+            &::after {
+                display: block;
+            }
+        }
+    }
+
+    .ProductReviewRating-Counter {
+        display: none;
+    }
+
+    &-RatingItem {
+        margin-block: auto;
+
+        @include mobile {
+            line-height: 20px;
+        }
+    }
+}

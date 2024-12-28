@@ -1,0 +1,39 @@
+.ExpandableContentCategoryDescription {
+    &-description {
+        text-align: justify;
+        line-height: 18px;
+
+        @include mobile {
+            p {
+                font-size: 12px;
+                line-height: 22px;
+                padding-inline: 16px;
+            }
+            
+            h3 {
+                padding-inline: 16px;
+            }
+        }
+
+        &.active {
+            -webkit-line-clamp: initial;
+        }
+    }
+
+    &-knowMoreBtn {
+        color: #000;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-block-start: 0px;
+
+        @include desktop {
+            margin-block-end: 10px;
+        }
+        
+        @include mobile {
+            padding: 0px 0px 0px 16px;
+        }
+    }
+}

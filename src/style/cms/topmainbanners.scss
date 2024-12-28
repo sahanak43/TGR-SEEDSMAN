@@ -1,0 +1,180 @@
+.threemainbannerclass {
+    .pagebuilder-column-group {
+        @include tablet {
+            margin-inline: 20px;
+            display: grid !important;/* stylelint-disable declaration-no-important */
+            grid-template-columns: 67% 30%;
+        }
+
+        .initial-column {
+            @include tablet {
+                width: 100% !important;
+            }
+
+            @include mobile {
+                min-height: 360px !important;
+                margin: 0 !important;
+                margin-block-end: 16px !important;
+            }
+
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            display: flex;
+            justify-content: center;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+
+            .buttonthreebanners {
+                @include mobile {
+                    margin-inline-start: 16px;
+                    margin-block-end: 16px;
+                }
+
+                margin-inline-start: 32px;
+                margin-block-end: 32px;
+            }
+        }
+
+        .columntop {
+            @include tablet {
+                width: 100% !important;
+            }
+
+            @include mobile {
+                min-height: 215px !important;
+                margin: 0 !important;
+            }
+
+            grid-column: 2 / 2;
+            grid-row: 1 / 2;
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            width: 420px !important;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        .columnbottom {
+            @include tablet {
+                width: 100% !important;
+                inset-inline-start: 0 !important;
+            }
+
+            grid-column: 2 / 2;
+            grid-row: 3 / 2;
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            width: 310px !important;
+            position: absolute;
+            inset-inline-start: 940px;
+
+            @include mobile {
+                position: relative;
+                inset-inline-start: 1px;
+                min-height: 215px !important;
+                margin: 0 !important;
+                margin-block-end: 16px !important;
+            }
+
+            .shopsubbutton {
+                margin-inline-start: 33px;
+                margin-block-end: 31px;
+
+                @include mobile {
+                    margin-inline-start: 17px;
+                    margin-block-end: 26px;
+                }
+            }
+        }
+    }
+
+    .pagebuilder-button-primary {
+        span {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+
+        border-radius: 8px !important;
+        margin: 0 !important;
+
+        &:hover {
+            background-color: var(--primary-dark-color);
+        }
+    }
+
+    .initialcolumnheading {
+        .shopbutton {
+            margin-block-end: 32px;
+            margin-inline-start: 32px;
+
+            @include mobile {
+                margin-inline-start: 16px;
+                margin-block-end: 16px;
+            }
+        }
+        
+        @include mobile {
+            margin-inline-start: 17px;
+            margin-block-end: 20px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 32px;
+        }
+
+        color: var(--shade-black, #000);
+        font-size: 32px;
+        margin: 0;
+        margin-block-end: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 42px; 
+        position: relative;
+        margin-inline-start: 33px;
+    }
+
+    .columntopheading {
+        @include mobile {
+            margin: 0;
+            margin-inline-start: 17px;
+            margin-block-end: 58px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+
+        color: var(--shade-black, #000);
+        margin-inline-start: 33px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; 
+        position: relative;
+        margin: 0;
+        margin-block-end: 31px;
+    }
+
+    .columnbottomheading {
+        @include mobile {
+            margin: 0;
+            margin-inline-start: 17px;
+            margin-block-end: 58px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+
+        color: var(--shade-black, #000);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; 
+        margin: 0;
+        margin-block-end: 31px;
+        margin-inline-start: 33px;
+    }
+}

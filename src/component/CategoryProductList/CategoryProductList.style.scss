@@ -1,0 +1,135 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+.CategoryProductList {
+    @include desktop {
+        inset-block-start: unset;
+        grid-column: 2;
+        padding-block-end: 24px;
+    }
+
+    &-Page {
+        &_layout {
+            &_grid {
+                display: grid;
+                grid-auto-rows: max-content;
+                grid-column-gap: 24px;
+                grid-row-gap: 24px;
+
+                @include narrow-desktop {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                @include wide-desktop {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                @include tablet {
+                    grid-template-columns: repeat(2, 1fr);
+                    justify-items: center;
+                }
+
+                @include mobile {
+                    grid-column-gap: 13px;
+                    // remove margin from top to other pages
+                    grid-template-columns: 1fr 1fr;
+                    justify-items: center;
+                    border: 0;
+                    grid-row-gap: 16px;
+
+                    &:last-of-type {
+                        padding-block-end: 50px;
+                    }
+                }
+
+                @include desktop {
+                    grid-column: 2;
+                    margin-block-start: 0;
+                }
+
+                // remove margin from top to other pages
+
+                ~ .CategoryProductList-Page {
+                    @include desktop {
+                        margin-block-start: 0;
+                    }
+                }
+            }
+
+            &_list {
+                display: block;
+                max-width: 600px;
+
+                .ProductCard-Link {
+                    flex-direction: row;
+                    max-width: 100%;
+                    width: fit-content;
+
+                    .Image {
+                        width: 200px;
+                    }
+
+                    .ProductCompareButton {
+                        .Image {
+                            width: var(--compare-button-size);
+                        }
+                    }
+
+                    .ProductWishlistButton {
+                        .Image,
+                        &-Heart {
+                            height: var(--wishlist-heart-size);
+                            width: var(--wishlist-heart-size);
+                        }
+                    }
+                }
+            }
+        }
+
+        // remove margin from top to other pages
+
+        ~ .CategoryProductList-Page {
+            @include desktop {
+                margin-block-start: 0;
+            }
+        }
+    }
+
+    &-ProductsMissing {
+        padding: 12px;
+        text-align: center;
+
+        @include mobile {
+            padding: 14px;
+        }
+    }
+
+    &-More {
+        min-height: 36px;
+
+        @include mobile {
+            min-height: 42px;
+        }
+    }
+
+    &-LoadButton {
+        background-color: var(--category-product-list-load-button-background);
+        cursor: pointer;
+        font-size: 17px;
+        margin-block-end: 12px;
+        padding: 1em 0;
+        text-align: center;
+
+        @include mobile {
+            margin-block-end: 14px;
+        }
+    }
+}

@@ -1,0 +1,175 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+.ProductPage {
+    .ProductGallery {
+        margin: 0;
+    }
+
+    &-right-content {
+        overflow-x: hidden;
+
+        .ProductReviews {
+            .ProductReviews-ExpandableContentButton {
+                display: block;
+            }
+        }
+    }
+
+    @include tablet {
+        padding-block-start: 0;
+        margin-block-start: 0;
+    }
+
+    &-Wrapper {
+        display: grid;
+        grid-template-columns: 60% auto;
+        grid-column-gap: 24px;
+        grid-template-rows: min-content min-content;
+        padding-block-start: 24px;
+
+        @include mobile {
+            margin-inline: 16px;
+        }
+
+        .ExpandableContent {
+            border-bottom: 1px solid rgba(112, 112, 112, 0.25);
+
+            &.Product-Reviews {
+                border-top: 1px solid rgba(112, 112, 112, 0.25);
+            }
+
+            &-Heading {
+                font-weight: 600;
+                font-size: 16px;
+            }
+
+            &-Content {
+                margin-block-start: unset;
+                font-size: 14px;
+
+                @include desktop {
+                    max-height: 0;
+                    opacity: 0;
+                }
+
+                &_isContentExpanded {
+                    margin-block-start: 0;
+                    padding-block-end: 0;
+
+                    @include desktop {
+                        max-height: 100%;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .ExpandableContent-Button {
+            padding-block: 18px;
+            cursor: pointer;
+        }
+
+        @include desktop {
+            grid-column-gap: 24px;
+            grid-template-areas: ". actions";
+            padding-block-end: 72px;
+
+            .ProductActions {
+                grid-area: actions;
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: 100%;
+            padding: 0;
+        }
+
+        > .RelatedProducts {
+            display: none;
+
+            @include desktop {
+                display: block;
+            }
+        }
+    }
+
+    &-DesktopTabs {
+        @include  desktop {
+            margin-block-start: 70px;
+        }
+    }
+
+    .Footer {
+        @include mobile {
+            margin-block-start: 40px;
+        }
+    }
+
+    .ElementsWidget-prefix .R-MediaSlider {
+        .R-MediaSlider {
+            &__inner {
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+
+            &__item {
+                margin: 0;
+            }
+        }
+    }
+
+    .ProductLinks {
+        &-Title {
+            padding: 0;
+            margin: 0;
+            position: absolute;
+
+            @include mobile {
+                padding-inline: 16px;
+            }
+        }
+
+        .swiper {
+            padding: 5rem 0;
+
+            @include mobile {
+                padding: 4rem 16px 0 16px;
+                margin-block-end: 14px;
+
+                .swiper-pagination-progressbar {
+                    width: 92%;
+                }
+            }
+
+            &-button-prev,
+            &-button-next {
+                inset-block-start: 9px;
+                width: 12px;
+                height: 12px;
+            }
+
+            &-button-prev {
+                inset-inline-start: unset;
+                inset-inline-end: 2rem;
+            }
+        }
+    }
+}
+
+body:has(.ProductPage) {
+    footer {
+        @include mobile {
+            padding-block-end: 50px;
+        }
+    }
+}
+

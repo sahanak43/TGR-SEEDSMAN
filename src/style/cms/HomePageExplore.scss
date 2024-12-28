@@ -1,0 +1,475 @@
+.seedsman-section-five {
+    @include mobile {
+        padding-inline: 16px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: #000000;
+        text-transform: capitalize;
+        opacity: 1;
+        font-weight: bold;
+
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        text-align: center;
+        padding-block-start: 15px;
+        color: #000000;
+        opacity: 1;
+        font-size: 16px;
+        margin-block-end: 0;
+        line-height: 22px;
+
+        @include mobile {
+            font-size: 12px;
+            padding-block-start: 10px;
+            width: 275px;
+            margin: auto;
+        }
+    }
+
+    .exlpore-award-common {
+        max-width: var(--content-wrapper-width);
+        margin-inline: auto;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        margin-block-start: 10rem;
+
+        @include mobile {
+            margin-block-start: 35px;
+        }
+
+        .Content {
+            padding-block-start: 39px;
+            display: flex;
+            height: auto;
+
+            .image {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .right_Inner {
+            opacity: 1;
+            width: 50%;
+            background: #f2faf7 0% 0% no-repeat padding-box;
+
+            h2 {
+                letter-spacing: 1px;
+                color: #000000;
+                text-transform: capitalize;
+                opacity: 1;
+                font-size: 20px;
+                padding-block-start: 74px;
+                text-align: center;
+
+                @include mobile {
+                    font-size: 16px;
+                    padding-block-start: 35px;
+                }
+            }
+
+            .right_content {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-around;
+                padding-block-start: 2%;
+                padding-block-start: 4rem;
+                margin: auto;
+                padding-inline: 3.5rem;
+
+                @include mobile {
+                    padding-block-start: 0;
+                }
+
+                .slider_Products {
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    gap: 36px;
+                    position: relative;
+                    max-width: 100%;
+                    flex-direction: column;
+
+                    &::-webkit-scrollbar {
+                        height: 4px;
+                        width: 236px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: #63a532;
+                        height: 1px;
+                        border-radius: 10px;
+                        display: none;
+                    }
+
+                    .slider_images {
+                        width: 176px;
+                        height: 226px;
+                        display: grid;
+                        place-content: center;
+                        padding: 2.9rem 3.6rem;
+                        margin: auto;
+
+                        &:hover {
+                            background: #ffffff 0% 0% no-repeat padding-box;
+                            box-shadow: 4px 5px 16px #0000000f;
+                            opacity: 1;
+                        }
+
+                        img {
+                            width: 153px;
+                            height: 115px;
+                            margin-inline: auto;
+                        }
+
+                        span {
+                            text-align: center;
+                            letter-spacing: 1px;
+                            color: #000000;
+                            text-transform: capitalize;
+                            opacity: 1;
+                            margin-inline: auto;
+                            padding-block-start: 5px;
+                        }
+                    }
+                }
+            }
+
+            .learn_more {
+                text-align: center;
+                padding: 16px 0;
+                margin-block-start: 20px;
+                display: inherit;
+                margin-inline: auto;
+                margin-block: 3rem 5.2rem;
+                letter-spacing: 1px;
+                color: #000000;
+                text-transform: uppercase;
+                opacity: 1;
+                border: 1px solid #000000;
+                background-color: #f2faf7;
+                width: 166px;
+
+                @include mobile {
+                    padding: 13px 20px;
+                }
+            }
+        }
+    }
+
+    .awardwinning_section {
+        .Content {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .popular_products {
+        margin-block-start: 8rem;
+
+        @include mobile {
+            margin-block-start: 3.5rem;
+        }
+
+        h2 {
+            text-align: start;
+            padding-inline-start: 2.6rem;
+
+            @include mobile {
+                padding-inline-start: 0;
+            }
+        }
+
+        .popular_inner {
+            display: flex;
+            align-items: center;
+            gap: 2%;
+            width: 98%;
+            margin: 20px auto;
+
+            .swiper {
+                padding: 0 1.9rem;
+
+                @include mobile {
+                    padding: 0;
+                }
+            }
+
+            .popular_content_inner {
+                display: flex;
+                gap: 30px;
+                padding-block-end: 20px;
+
+                .cards {
+                    position: relative;
+                    display: inherit;
+
+                    .card_image {
+                        padding-block-end: 136%;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            inset: 0;
+                        }
+                    }
+
+                    span {
+                        position: absolute;
+                        color: #ffffff;
+                        text-transform: capitalize;
+                        opacity: 1;
+                        letter-spacing: 1px;
+                        font-size: 18px;
+                        inset-block-end: 4%;
+                        inset-inline-start: 25%;
+                    }
+                }
+            }
+        }
+    }
+
+    .Resouce-section {
+        margin-block-start: 8rem;
+
+        @include mobile {
+            margin-block-start: 3.5rem;
+        }
+
+        .Resouce-inner {
+            display: flex;
+            align-items: center;
+            gap: 5.7rem;
+            padding-block-start: 8.2rem;
+            width: 98%;
+            margin: auto;
+
+            @include mobile {
+                padding-block-start: 4.5rem;
+            }
+
+            .slider_Images {
+                display: flex;
+                // margin-block-start: 2%;
+                align-items: center;
+                gap: 2%;
+                padding-block-end: 5px;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .swiper-slide {
+                    padding-inline: 10px;
+                    height: 226px;
+
+                    @include mobile {
+                        padding-inline: 20px;
+                    }
+
+                    &:hover {
+                        box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.059);
+                    }
+
+                    .slider-image {
+                        display: inherit;
+                        color: #000000;
+
+                        &:hover {
+                            color: #000000;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 150px;
+                        }
+
+                        span {
+                            display: grid;
+                            margin: auto;
+                            width: 100%;
+                            text-align: center;
+                            font-size: 16px;
+                            padding-inline: 5px;
+                            font-weight: 600;
+
+                            @include mobile {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .exlpore-award-common {
+            width: 100%;
+
+            .Content {
+                flex-direction: column;
+                padding-block-start: 19px;
+
+                .image {
+                    padding-block-end: 61%;
+
+                    img {
+                        width: 100%;
+                        position: absolute;
+                    }
+                }
+            }
+
+            .right_Inner {
+                width: 100%;
+                padding-block-end: 14px;
+
+                .right_content {
+                    padding-inline: 20px;
+
+                    .slider_Products {
+                        gap: 0px;
+
+                        .slider_images {
+                            width: 100%;
+                            max-width: 306px;
+
+                            @include mobile {
+                                max-width: 215px;
+                                width: 100%;
+                            }
+
+                            img {
+                                width: inherit;
+                                object-fit: contain;
+                            }
+
+                            span {
+                                text-align: center;
+                                letter-spacing: 1px;
+                                color: #000000;
+                                text-transform: capitalize;
+                                opacity: 1;
+                                margin-inline: auto;
+                                padding-block-start: 8px;
+                            }
+                        }
+                    }
+                }
+
+                .learn_more {
+                    margin: 20px auto;
+                }
+            }
+        }
+
+        .Resouce-section {
+            .Resouce-inner {
+                display: flex;
+                align-items: center;
+                gap: 2%;
+
+                .left-button {
+                    display: none;
+                }
+
+                .right-button {
+                    display: none;
+                }
+
+                .slider_Images {
+                    display: flex;
+                    margin-block-start: 2%;
+                    align-items: center;
+                    gap: 2%;
+                    padding-block-end: 5%;
+
+                    &::-webkit-scrollbar {
+                        height: 4px;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: #63a532;
+                        height: 1px;
+                        border-radius: 10px;
+                    }
+
+                    .slider-image {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .popular_products {
+                .popular_inner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 4%;
+
+                    .swiper-slide {
+                        width: 279px;
+                        margin-inline-end: 0;
+                    }
+
+                    .left-button,
+                    .right-button {
+                        display: none;
+                    }
+
+                    .popular_content_inner {
+                        display: flex;
+                        gap: 30px;
+                        padding-block-end: 10px;
+
+                        &::-webkit-scrollbar {
+                            height: 4px;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: #63a532;
+                            height: 1px;
+                            border-radius: 10px;
+                        }
+
+                        .cards {
+                            // width: 169px;
+                            border: 1px solid black;
+                            position: relative;
+
+                            span {
+                                position: absolute;
+                                color: #ffffff;
+                                text-transform: capitalize;
+                                opacity: 1;
+                                letter-spacing: 1px;
+                                font-size: 12px;
+                                inset-inline-start: 50%;
+                                text-align: center;
+                                transform: translate(-50%, -50%);
+                                width: 100%;
+                                inset-block-end: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

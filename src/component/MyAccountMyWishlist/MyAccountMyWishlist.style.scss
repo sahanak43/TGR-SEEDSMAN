@@ -1,0 +1,310 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --wishlist-item-border-color: var(--expandable-content-divider-color);
+}
+
+.MyAccountMyWishlist {
+    --myaccount-wishlist-action-bar-offset: 55px;
+
+    &-Heading-section {
+        border-bottom: 2px solid #ebebeb;
+        margin-block-end: 20px;
+        padding-block-end: 20px;
+
+        .Heading-inner {
+            display: flex;
+            justify-content: space-between;
+
+            .Heading {
+                display: flex;
+                align-items: center;
+                column-gap: 40px;
+
+                @include mobile {
+                    column-gap: 9px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-block: 0;
+
+                    @include mobile {
+                        font-size: 16px;
+                    }
+                }
+
+                .SubHeading {
+                    color: #959595;
+                    font-size: 14px;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-Sharing-section {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+
+        @include mobile {
+            margin-block-start: 20px;
+            column-gap: 20px;
+        }
+
+        h3 {
+            margin-block: 0;
+            font-size: 14px;
+        }
+
+        .sharing-icons {
+            display: flex;
+
+            .Button {
+                border: none;
+
+                @include mobile {
+                    padding-inline-start: 0;
+                    padding-inline-end: 15px;
+                }
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            .SocialShare-Block {
+                display: flex;
+                align-items: center;
+
+                .SocialShare-Button {
+                    padding: 0;
+                    padding-block-start: 4px;
+                }
+
+                .Local-Share-Heading {
+                    display: none;
+                }
+
+                .SocialShare-ButtonWrapper {
+                    @include mobile {
+                        column-gap: 2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &-Products {
+        display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(240px, 1fr));
+        grid-auto-rows: max-content;
+        grid-gap: 24px;
+
+        @include tablet {
+            // grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(240px, 1fr));
+            inset-block-start: var(--myaccount-wishlist-action-bar-offset);
+            padding-block-end: var(--myaccount-wishlist-action-bar-offset);
+        }
+
+        @include narrow-desktop {
+            grid-template-columns: repeat(3, 1fr);
+            // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            inset-block-start: var(--myaccount-wishlist-action-bar-offset);
+            padding-block-end: var(--myaccount-wishlist-action-bar-offset);
+        }
+
+        @include wide-desktop {
+            // grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(240px, 1fr));
+            inset-block-start: 0;
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(2, minmax(164px, 1fr));
+            grid-column-gap: 16px;
+            border: 0;
+            max-width: 100%;
+            margin: 0 auto;
+            margin-block-end: var(--myaccount-wihslist-products-margin-bottom);
+
+            .ProductCard {
+                padding-block-end: 0;
+            }
+        }
+
+        @include desktop {
+            grid-column: 2;
+        }
+
+        @media screen and (max-width: 375px) {
+            .ProductCard {
+                width: 100%;
+            }
+        }
+    }
+
+    &-NoProducts {
+        text-align: center;
+        margin-block-start: 80px;
+
+        h2 {
+            font-size: 20px;
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .Button {
+            width: unset;
+        }
+
+        @include tablet {
+            position: relative;
+            inset-block-start: 60px;
+        }
+    }
+
+    &-ActionBar {
+        display: flex;
+        padding: 0;
+        padding-block-end: 12px;
+        justify-content: flex-end;
+
+        @include desktop {
+            position: absolute;
+            inset-block-start: 0;
+            inset-inline-end: 0;
+        }
+
+        @include wide-desktop {
+            inset-block-start: calc(0px - var(--myaccount-wishlist-action-bar-offset));
+        }
+
+        @include mobile {
+            background-color: var(--my-account-content-background);
+            inset-block-end: var(--footer-total-height);
+            display: block;
+            inset-inline-start: 0;
+            padding: 14px;
+            position: fixed;
+            width: 100%;
+            border-block-start: 1px solid var(--primary-divider-color);
+            z-index: 10;
+
+            .hideOnScroll & {
+                transform: translateY(var(--footer-nav-height));
+            }
+        }
+
+        @include tablet {
+            .AddToCart-Icon {
+                display: none;
+            }
+        }
+    }
+
+    &-ActionBarActionWrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-block-end: 10px;
+    }
+
+    &-NoProductsButton {
+        margin-block-start: 12px;
+
+        @include mobile {
+            margin-block-start: 14px;
+        }
+    }
+
+    &-Button {
+        @include desktop {
+            margin-inline-end: 30px;
+            margin-inline-start: 30px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+
+        .CartIcon {
+            fill: var(--color-white);
+            margin-inline-end: 12px;
+            width: 20px;
+            height: 20px;
+
+            &:hover {
+                fill: var(--color-white);
+            }
+        }
+    }
+
+    &-ClearRemoveItemsButton {
+        text-transform: uppercase;
+        color: initial;
+
+        &.Button {
+            width: auto;
+        }
+    }
+
+    &-ClearWishlistButton {
+        text-transform: uppercase;
+
+        @include desktop {
+            order: 1;
+        }
+
+        &.Button {
+            width: auto;
+            font-size: 14px;
+            color: #739536;
+            font-weight: 500;
+            text-decoration: underline;
+            padding-inline: 0;
+
+            @include mobile {
+                font-size: 12px;
+            }
+
+            &:hover {
+                // color: #000000;
+                text-decoration: underline;
+                padding-inline: 0;
+            }
+        }
+    }
+
+    &-ShareWishlistButton {
+        .ShareIcon {
+            margin-inline-end: 12px;
+        }
+
+        &:not([disabled]):hover .ShareIcon_isPrimary {
+            fill: var(--primary-dark-color);
+        }
+    }
+}

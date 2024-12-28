@@ -1,0 +1,77 @@
+.MyAccountOverlay {
+    &-SignInButton {
+        margin-block-start: 20px;
+        margin-block-end: 20px;
+        line-height: 20px;
+
+        button {
+            width: 100%;
+            background-color: var(--primary-base-color);
+            border: none;
+            font-weight: 500;
+
+            &:not([disabled]):hover {
+                background-color: #5a7429;
+            }
+
+            @include mobile {
+                font-size: 12px;
+            } 
+        }
+    }
+
+    #forgot-password-label {
+        margin-block-end: 0;
+    }
+
+    .CreateAccount {
+        margin-inline-start: 5px;
+    }
+
+    &-orText {
+        display: flex;
+        width: 100%;
+        gap: 5px;
+        margin-block-end: 2rem;
+        color: var(--color-gray);
+        font-weight: 500;
+        font-size: 16px;
+        align-items: center;
+
+        @include mobile {
+            font-size: 10px;
+        }
+
+        &::after,
+        &::before {
+            border-bottom: 0 solid #e8e8e8;
+            background-color: #e8e8e8;
+            content: "";
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 100%;
+        }
+    }
+
+    &-ForgotPasswordBtn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        color: var(--color-gray);
+        font-size: 14px;
+
+        label {
+            @include mobile {
+                font-size: 11px;
+            }
+        }
+    }
+
+    &-Captcha {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+}

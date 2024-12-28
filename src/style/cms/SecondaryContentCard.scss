@@ -1,0 +1,89 @@
+.SecondaryContentWrapper {
+    .SecondaryContentCardImage {
+        border-radius: 8px 8px 0px 0px;
+        background: transparent;
+
+        img {
+            height: 160px; 
+        }
+    }
+
+    .SecondaryContentDescription {
+        border-radius: 0px 0px 8px 8px;
+        background: #EEEEEE;
+    }
+
+    .SecondaryContentCardText {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        margin-block: 0px;
+        padding: 24px 24px 6px 24px;
+        background: #EEEEEE;
+
+        @include mobile {
+            font-size: 18px;
+            padding: 18px 12px 8px 12px;
+        }
+    }
+
+    .SecondaryContentWrapper {
+        padding-block-end: 0px;
+        border-radius: 8px;
+    }
+
+    a {
+        color: #000;
+    }
+
+    .SecondaryContentCardSmallText {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.32px;/* stylelint-disable-line number-max-precision */
+        padding-inline-start: 24px;
+        padding-inline-end: 24px;
+        background: #EEEEEE;
+
+        @include mobile {
+            padding-inline-start: 12px;
+            padding-inline-end: 12px;
+        }
+        
+        p {
+            font-size: 16px;
+            color: #807E7D;
+            margin-block-end: none;
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .SecondaryContentLink {
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        letter-spacing: 0.28px;/* stylelint-disable-line number-max-precision */
+        text-decoration-line: underline;
+        padding-block-end: 0px;
+        padding-block-start: 26px;
+        padding-inline-start: 24px;
+        padding-inline-end: 24px;
+
+        @include mobile {
+            padding-inline-start: 12px;
+            padding-inline-end: 12px;
+        }
+
+        p {
+            margin-block-end: 22px;
+        }
+    }
+}

@@ -1,0 +1,594 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+:root {
+    --whislist-swipe-to-delete-color: #fff;
+    --whislist-qty-button-size: 20px;
+}
+
+.WishlistItem {
+    @include mobile {
+        padding-block: 14px;
+        margin-inline: var(--my-account-wrapper-margin-mobile);
+        border-block-start: 1px solid var(--wishlist-item-border-color);
+    }
+
+    &-ActionWrapper {
+        margin-block-start: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-InformationWrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &Options-List,
+    &Option {
+        font-weight: 400;
+        font-size: 12px;
+        color: var(--secondary-dark-color);
+    }
+
+    &Option {
+        padding-inline-end: 5px;
+    }
+
+    &Options-List {
+        min-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+
+    &:first-of-type {
+        @include mobile {
+            border-block-start: none;
+            padding-block-start: 0;
+        }
+    }
+
+    &:last-of-type {
+        @include mobile {
+            margin-block-end: 0;
+        }
+    }
+
+    &-ProductCard {
+        display: flex;
+        flex-direction: column;
+
+        .ProductCard-social-share {
+            opacity: 1;
+
+            @include desktop {
+                inset-inline-end: 20px;
+            }
+
+            @include smallmobile {
+                inset-block-start: 51px;
+            }
+
+            .shareIcon {
+                display: none;
+
+                button {
+                    @include smallmobile {
+                        padding: 3px;
+                    }
+                }
+
+                @include smallmobile {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .SocialShare-Native {
+                    @include smallmobile {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+        @include desktop {
+            margin-block-end: 0;
+
+            &:last-child {
+                margin-block-end: 0;
+            }
+        }
+
+        .ProductCard-Name {
+            white-space: inherit;
+        }
+
+        .ProductCard-Links {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+
+            p {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                white-space: unset;
+                margin-block-end: 0;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 48px;
+                padding-inline-end: 16px;
+                width: 80%;
+                padding-inline-start: 16px;
+                line-height: 24px;
+
+                @include mobile {
+                    font-size: 12px;
+                    height: 40px;
+                    text-overflow: clip;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    padding-inline-end: 12px;
+                    padding-inline-start: 12px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .ProductCard-productPriceAddToCart {
+            justify-content: space-between;
+
+            .ProductCard-OutOfStock {
+                height: unset;
+                padding: 6px 0px 0px 0px;
+
+                @include mobile {
+                    padding-inline: 12px;
+                    padding-block: 10px;
+                    border-top: 1px solid #f3f3f3;
+                    min-height: 72px;
+                }
+            }
+        }
+
+        .ProductPrice_hasDiscount {
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+            }
+
+            del {
+                @include mobile {
+                    order: -1;
+                    margin-inline: 0;
+                }
+            }
+        }
+
+        .ProductPrice {
+            white-space: normal;
+            
+            &-Price {
+                @include mobile {
+                    width: min-content;
+                    text-align: end;
+                }
+            }
+
+            &-PriceBadge {
+                @include mobile {
+                    margin-inline-end: 0;
+                }
+            }
+        }
+    }
+
+    &-FigureWrapper {
+        @include mobile {
+            display: flex;
+            padding-inline: 0;
+        }
+
+        p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            white-space: unset;
+            -webkit-margin-after: 0;
+            margin-block-end: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            height: 38px;
+            -webkit-padding-end: 16px;
+            width: 80%;
+            -webkit-padding-start: 16px;
+
+            @include mobile {
+                font-size: 13px;
+            }
+        }
+    }
+
+    &-AddToCart {
+        width: auto;
+        height: 32px;
+        color: var(--color-white);
+        background-color: #73a054;
+        border: none;
+        font-weight: 600;
+        border-radius: 8px;
+        white-space: nowrap;
+        font-size: 14px;
+        padding-inline: 8px;
+        padding-block: 4px;
+        min-width: 141px;
+
+        @include mobile {
+            width: -webkit-fill-available;
+            padding-inline: 8px;
+            margin-inline: 12px;
+            margin-block-start: 8px ;
+            margin-block-end: 9px;
+        }
+
+        span {
+            color: var(--color-white);
+            padding-inline: 8px;
+
+
+            @include mobile {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+        &.Button:not([disabled]):hover {
+            color: var(--color-white);
+            background-color: #73a054;
+            border: none;
+            border-radius: 8px;
+        }
+    }
+
+    .ProductPrice-SubPrice {
+        display: none;
+    }
+
+    &-ContentWrapper {
+        @include mobile {
+            width: 100%;
+            min-height: 130px;
+        }
+    }
+
+    &-Remove {
+        position: absolute;
+        inset-block-start: 20px;
+        inset-inline-end: 15px;
+        background: #707070;
+        border-radius: 50%;
+        width: 36px;
+        padding: 5px;
+        height: 36px;
+
+        @include desktop {
+            inset-inline-end: 20px;
+        }
+
+        .CloseIcon {
+            height: 100%;
+            width: 100%;
+            fill: #ffffff;
+        }
+
+        @include mobile {
+            inset-block-start: 18px;
+            inset-inline-end: 15px;
+            margin-block-start: 0;
+
+            &_withReview {
+                inset-block-start: 18px;
+            }
+        }
+
+        @include smallmobile {
+            width: 20px;
+            height: 20px;
+            inset-inline-end: 8px;
+            padding: 2px;
+        }
+    }
+  
+    &-OutOfStock {
+        align-items: center;
+        display: flex;
+        height: 48px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &-Quantity {
+        &Text {
+            margin-inline-end: 10px;
+        }
+
+        &Input {
+            margin-block-start: 0;
+
+            button {
+                width: 36px;
+                height: 36px;
+
+                &:not([disabled]) {
+                    cursor: pointer;
+                }
+            }
+
+            input {
+                min-width: 36px;
+                font-size: 14px;
+            }
+        }
+
+        &Wrapper {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-Price {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        font-size: 16px;
+
+        @include mobile {
+            font-size: 14px;
+        }
+
+        .ProductCard-PriceWrapper {
+            padding-block-end: 0px;
+
+            @include mobile {
+                padding-block-end: 6px;
+            }
+
+            .ProductPrice-PriceValue {
+                margin-block-start: 6px;
+            }
+        }
+
+        @include desktop {
+            margin-block-end: 16px;
+            min-height: unset;
+        }
+    }
+
+    &-Content {
+        display: flex;
+        // padding-block-start: 0;
+        // padding-block-end: 9px;
+        // padding-inline: 9px;
+
+        @include mobile {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding-inline: 0;
+        }
+    }
+
+    &-ImageWrapper {
+        margin-inline-end: 15px;
+        width: 100px;
+    }
+
+    &-CommentField {
+        margin-block-start: 8px;
+
+        @include mobile {
+            margin-block-end: 8px;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    &-RowWrapper {
+        display: flex;
+        justify-content: space-between;
+        
+
+        @include desktop {
+            align-items: flex-start;
+            flex-direction: row;
+            margin-block-start: 7px;
+        }
+    }
+
+    &-AttributeWrapper {
+        margin-block-start: 5px;
+        margin-block-end: 12px;
+        margin-inline: 0;
+    }
+
+    &-SelectWrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    &-Select {
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        &_isEditingActive {
+            width: calc(50px - 14px);
+            padding-inline-end: 14px;
+            display: flex;
+        }
+    }
+
+    &-Picture {
+        @include mobile {
+            height: 100%;
+        }
+    }
+
+    &-SwipeToDeleteRightSide {
+        height: 100%;
+        width: 100%;
+        font-weight: 600;
+        color: var(--whislist-swipe-to-delete-color);
+        background-color: var(--swipe-to-delete-bg-color);
+    }
+
+    &-RatingPlaceholder {
+        height: 18px;
+
+        @include mobile {
+            height: auto;
+        }
+    }
+
+    &-Brand {
+        color: var(--secondary-dark-color);
+        font-weight: 400;
+        font-size: 12px;
+        min-height: 20px;
+    }
+
+
+    &-Seedslogo {
+        position: absolute;
+        inset-block-start: -77px;
+        inset-inline-end: 0;
+        z-index: 4;
+        background-color: #ffffff;
+        border-radius: 11px 0 0;
+        width: 75px;
+        overflow: hidden;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+
+        @include mobile {
+            width: 36px;
+            height: 36px;
+            padding: 28px;
+            inset-block-start: -82px;
+            inset-inline-end: 0px;
+        }
+
+        .logo {
+            width: 100%;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+
+        img {
+            width: 47px;
+            height: 47px;
+        }
+    }
+
+    &-NameAndOptions {
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    .ruk_rating_snippet {
+        padding: 0px 16px 0px 16px;
+    }
+
+    &-WishlistItem:has(.ruk_rating_snippet) {
+        .ruk_rating_snippet {
+            height: 45px;
+            padding: 15px 10px 7px 16px;
+
+            @include mobile {
+                padding: 10px 5px 10px 16px;
+                z-index: 9;
+                font-size: 10px;
+            }
+        }
+    }
+
+    &-table-striped {
+        min-height: 92px;
+
+        @include mobile {
+            min-height: 57px;
+        }
+    }
+
+    &-table-striped:has(.striped-row) {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+        border-top: 1px solid #f3f3f3;
+        padding: 16px 16px 16px 16px;
+        min-height: 56px;
+        align-items: center;
+        width: auto;
+
+        @include mobile {
+            display: flex;
+            overflow-x: scroll;
+            padding: 12px 8px 8px 8px;
+            min-height: 56px;
+        }
+
+        .striped-row {
+            display: flex;
+            column-gap: 4px;
+            line-height: 20px;
+            margin-block-end: 0;
+            padding: 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        li:nth-child(odd) {
+            background: #eaf5e7;
+        }
+
+        li:nth-child(even) {
+            background: #c8c7ba;
+        }
+
+        li:last-child {
+            margin-block-end: 0px;
+        }
+
+        .striped-col2 {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }   
+}

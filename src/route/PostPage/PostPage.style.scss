@@ -1,0 +1,208 @@
+
+.BlogPostPage {
+    &-Images {
+        img {
+            position: relative;
+            object-fit: cover;
+            height: 450px;
+
+            @include mobile {
+                height: 191px;
+            }
+        }
+
+        margin-block-start: 31px;
+
+        .Image_isPlaceholder {
+            height: 500px;
+            width: 1200px;
+
+            @include mobile {
+                width: 343px;
+                height: 190px;
+            }
+        }
+
+        .Image_imageStatus_image_not_found {
+            height: 212px;
+
+            @include mobile {
+                width: 343px;
+                height: 190px;
+            }
+        }
+    }
+
+    &-Title {
+        h2 {
+            font-size: 30px;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-blogPostAuthorDetails {
+        display: flex;
+        column-gap: 18px;
+
+        @include mobile {
+            column-gap: 13px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 13px;
+        }
+    }
+
+    &-authorName {
+        margin-block: auto;
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &-authorNameDetails {
+        column-gap: 6px;
+        display: flex;
+        margin-block: auto;
+        align-items: center;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &-postCreatedDate {
+        margin-block: auto;
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &-readTime {
+        margin-block: auto;
+        font-size: 14px;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &-BlogCategoryReadTime {
+        display: flex;
+
+        svg {
+            margin-block-start: 4px;
+        }
+    }
+
+    &-BlogPostCategory {
+        display: flex;
+        gap: 10px;
+        width: fit-content;
+
+        @include mobile {
+            font-size: 10px;
+            flex-wrap: wrap;
+            margin-block-start: 15px;
+        }
+    }
+
+    &-catItemName {
+        color: #fff;
+        padding: 10px;
+        font-size: 14px;
+        background-color: #E3BD59;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    
+
+    &-content {
+        .yoast-table-of-contents {
+            ul {
+                li {
+                    a {
+                        margin-inline-start: 9px;
+                        color: black;
+                        font-weight: 400;
+
+                        @include mobile {
+                            font-weight: 600;
+                            font-size: 12px;
+                        }
+                    }
+
+                    ul {
+                        li {
+                            margin-inline-start: 20px;
+                            margin-block-start: 10px;
+                        }
+                    }
+                }
+
+                li::before {
+                    color: #739536;
+                    margin-block-start: -2px;
+                }
+            }
+        }
+
+        margin-block-start: 30px;
+        color: #000000;
+        line-height: 24px;
+
+        @include desktop {
+            font-size: 14px;
+        }
+
+        @include mobile {
+            font-size: 12px;
+        }
+
+        p {
+            @include mobile {
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+
+        ul {
+            li::before {
+                color: #739536;
+                margin-block-start: -2px;
+                inset-inline-start: 0px;
+                position: relative;
+            }
+        }
+     
+
+        .blogContent {
+            line-height: 24px;
+            font-size: 14px;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+
+        .wp-block-image {
+            img {
+                width: unset;
+
+                @include mobile {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

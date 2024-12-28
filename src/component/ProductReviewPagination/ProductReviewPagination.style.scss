@@ -1,0 +1,105 @@
+
+
+.Pagination {
+    display: flex;
+    justify-content: center;
+    min-height: 56px;
+    margin-inline: auto;
+    margin-block-start: 23px;
+    align-items: center;
+    z-index: 2;
+    width: min-content;
+
+    &-content {
+        display: flex;
+    }
+
+    &-totalPages {
+        margin-block: auto 17px;
+        color: #606060;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    &-contentLink {
+        margin-inline-start: auto;
+    }
+
+    @include desktop {
+        order: 1;
+    }
+
+    @include mobile {
+        padding-block-end: 0;
+    }
+
+    .ChevronIcon {
+        cursor: pointer;
+        display: block;
+        height: 20px;
+        width: 16px;
+
+        &:hover,
+        &:focus {
+            fill: var(--primary-base-color);
+            color: #739536;
+        }
+    }
+
+    &-ListItem {
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        min-width: 35px;
+        display: block;
+        font-weight: 700;
+
+        &::before {
+            content: '';
+        }
+
+        &:first-child {
+            @include mobile {
+                padding-inline-start: 0;
+            }
+        }
+
+        &:last-child {
+            margin-block-end: 0;
+        }
+    }
+
+    ._isCurrent {
+        --color-pagination-link-text: #739536;
+    
+        border-color: var(--color-pagination-link-active-text);
+    }
+}
+
+
+
+.dots- {
+    pointer-events: none;
+}
+
+.PaginationLink {
+    border-radius: 2px;
+    color: var(--color-pagination-link-text);
+    font-size: var(--pagination-font-size);
+    font-style: var(--pagination-font-style);
+    display: block;
+    line-height: var(--pagination-line-height);
+    padding: 7px 4px;
+    text-align: center;
+    cursor: pointer;
+
+    &_isArrow {
+        padding: 7px 11px;
+    }
+
+    &:hover {
+        --color-pagination-link-text: var(--color-pagination-link-active-text);
+
+        color: #739536;
+        text-decoration: none;
+    }
+}

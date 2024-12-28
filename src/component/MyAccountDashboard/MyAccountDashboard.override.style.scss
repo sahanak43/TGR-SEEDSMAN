@@ -1,0 +1,366 @@
+.MyAccountDashboard {
+    display: block;
+
+    &-CustomerData {
+        .MyAccountCustomerTable {
+            height: 100%;
+
+            thead {
+                display: none;
+            }
+        }
+    }
+
+    &-BlockTitle {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-block-end: 30px;
+        border-bottom: 1px solid #d4d4d4;
+        margin-block-end: 30px;
+
+        @include mobile {
+            padding-block-end: 20px;
+            padding-block-start: 20px;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-block: 0;
+            font-weight: 600;
+
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+
+        button {
+            font-size: 14px;
+            color: #565959;
+            cursor: pointer;
+        }
+    }
+
+    .CustomerAccount-container {
+        border: 1px solid #d4d4d4;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        height: calc(100% - 42px);
+
+        @include mobile {
+            height: unset;
+        }
+    }
+
+    .NoAddress {
+        margin-block-start: 30px;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .NoDefaultAddressConfigured {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: calc(100% - 60px);
+    }
+
+    &-CustomerAccountGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        padding-block-end: 30px;
+        border-bottom: 1px solid #d4d4d4;
+
+        .Heading_Section {
+            display: flex;
+            justify-content: space-between;
+            padding-inline-end: 2px;
+            align-items: center;
+            margin-block-end: 1rem;
+
+            h3 {
+                margin: 0;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            .EditButton {
+                font-weight: normal;
+                text-decoration: underline;
+            }
+
+            button {
+                font-size: 14px;
+                color: #565959;
+                cursor: pointer;
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 30px;
+        }
+
+        .NewsletterSubscription {
+            .subscribe {
+                font-size: 14px;
+                margin-block-end: 20px;
+
+                .bold-text {
+                    color: #739536;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &-Addresses {
+        padding-block-end: 4rem;
+        border-bottom: 1px solid #d4d4d4;
+        margin-block-start: 1rem;
+    }
+
+    &-DefaultAddress {
+        &:nth-child(2) {
+            @include mobile {
+                margin-block-start: 0;
+            }
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .MyAccountAddressTable {
+            border: 1px solid #d4d4d4;
+            padding: 20px;
+            height: calc(100% - 60px);
+
+            .Addresstype {
+                width: 60px;
+                height: 20px;
+                display: flex;
+                justify-content: center;
+                line-height: 20px;
+                color: #fff;
+                background: #000;
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-block-end: 10px;
+            }
+
+            p {
+                margin-block-end: 0;
+
+                &.Telephone-no {
+                    margin-block-start: 0.8rem;
+                }
+            }
+
+            .FullName {
+                font-size: 14px;
+                font-weight: 600;
+                margin-block-end: 1rem;
+                display: flex;
+                column-gap: 5px;
+            }
+
+            .Address-Action {
+                display: none;
+            }
+
+            .DOB {
+                margin-block-end: 20px;
+            }
+        }
+    }
+
+    .OrdersTable {
+        .Heading_Section {
+            display: flex;
+            justify-content: space-between;
+
+            .OrderHeading {
+                font-size: 17px;
+                font-weight: 600;
+
+                @include mobile {
+                    margin: 0;
+                    background-color: #fafafa;
+                    font-size: 12px;
+                    padding: 0;
+                    padding-block-start: 10px;
+                    padding-block-end: 12px;
+                }
+            }
+
+            .VeiwAll_button {
+                display: flex;
+                align-items: center;
+                text-decoration: underline;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+
+        .OrderTable1 {
+            padding: 24px;
+            background: #f5f5f5;
+        }
+
+        .Orders {
+            width: 100%;
+
+            .border-bottom {
+                border-bottom: 1px solid #000;
+                font-size: 14px;
+                margin-block-end: 12px;
+            }
+
+            tr {
+                font-size: 14px;
+            }
+
+            td {
+                margin: 12px;
+                vertical-align: middle;
+                font-size: 14px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                .VeiwButton {
+                    font-size: 14px;
+                    color: #000;
+                    border-bottom: 1px solid #000;
+                    cursor: pointer;
+                    margin-inline-end: 12px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .OrderTableMobile {
+        margin-block-start: 30px;
+
+        .Heading_Section {
+            display: flex;
+            justify-content: space-between;
+
+            .OrderHeading {
+                font-size: 16px;
+                font-weight: 600;
+                padding: 0 0;
+                margin-block: 0;
+            }
+
+            .VeiwAll_button {
+                display: flex;
+                align-items: center;
+                text-decoration: underline;
+            }
+        }
+
+        .Orders {
+            &-Wrapper {
+                margin-block-start: 30px;
+
+                .Inner {
+                    padding: 12px;
+                    border-bottom: 1px solid #fafafa;
+                    box-shadow: #00000005;
+                    background: #fafafa;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 12px;
+
+                    .oredr-row {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .title-txt {
+                            color: #9b9b9b;
+                        }
+                    }
+
+                    .OrderDetail,
+                    .OrderStatus,
+                    .OrderNumber {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-block-end: 12px;
+                        align-items: center;
+
+                        span {
+                            color: #707070;
+                            font-size: 12px;
+                        }
+
+                        .bold {
+                            font-weight: bold;
+                            color: #000;
+                            margin-inline-start: 12px;
+                            text-align: end;
+                        }
+                    }
+
+                    .OrderNumber {
+                        .seperator {
+                            flex: 1 0 auto;
+                            margin-inline-start: 10px;
+                            height: 1px;
+                            background-color: #707070;
+                        }
+
+                        .text-title {
+                            font-size: 10px;
+                        }
+                    }
+
+                    .OrderStatus {
+                        .status {
+                            .wait {
+                                font-weight: bold;
+                                color: #bb8376;
+                                margin-inline-start: 12px;
+                            }
+                        }
+                    }
+
+                    .OrderAction {
+                        display: flex;
+                        justify-content: flex-start;
+                        gap: 10px;
+                        align-items: center;
+                        border-top: 1px solid #afafaf;
+                        padding-block-start: 12px;
+                        margin-block-start: 12px;
+
+                        button {
+                            font-size: 14px;
+                            color: #000;
+                            border-bottom: 1px solid #000;
+                            cursor: pointer;
+                            margin-inline-end: 12px;
+                        }
+
+                        .Vline {
+                            height: 12 px;
+                            width: 1px;
+                            background-color: #707070;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

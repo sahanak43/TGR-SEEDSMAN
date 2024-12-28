@@ -1,0 +1,18 @@
+.StoreSwitcher {
+    border-block-end: unset;
+    margin-inline-start: unset;
+    display: inline-flex;
+    gap: 2px;
+
+    &-Title {
+        line-height: 20px;
+    }
+
+    &-storeLabel {
+        margin: auto;
+    }
+
+    img {
+        margin-block-start: 2px;
+    }
+}

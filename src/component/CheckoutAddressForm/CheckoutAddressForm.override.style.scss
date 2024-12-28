@@ -1,0 +1,76 @@
+.CheckoutAddressForm {
+    &-Actions {
+        display: flex;
+        gap: 3rem;
+        margin: 4rem 0;
+
+        .Button {
+            display: inline-block;
+            border: none;
+            border-radius: 8px;
+            padding: 0 5rem;
+            color: var(--color-white);
+            font-size: 14px;
+            font-weight: 600;
+
+            &:not([disabled]):hover {
+                border-radius: 8px;
+            }
+
+            &.Cancel {
+                border: 1px solid var(--color-black);
+                color: var(--color-black);
+                background-color: transparent;
+            }
+        }
+    }
+
+    .FieldForm-Fields {
+        .FieldGroup-Wrapper {
+            &.FieldGroup-Wrapper {
+                &_street {
+                    grid-column-end: 3;
+                    grid-column-start: 1;
+    
+                    .FieldGroup {
+                        grid-template-columns: 1fr;
+                    }
+                }
+    
+                &_addresstype {
+                    .FieldGroup {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-end;
+                        column-gap: 3rem;
+                        white-space: nowrap;
+
+                        &::before {
+                            content: 'Address Type';
+                            color: #6F6F6F;
+                            font-size: 14px;
+                        }
+
+                        .Field-Wrapper {
+                            label {
+                                font-size: 14px;
+                                color: #6F6F6F;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Field-Wrapper {
+            &_type {
+                &_checkbox {
+                    label {
+                        font-size: 14px;
+                        color: #959499;
+                    }
+                }
+            }
+        }
+    }
+}

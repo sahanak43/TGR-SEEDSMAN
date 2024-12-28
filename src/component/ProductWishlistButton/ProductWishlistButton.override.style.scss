@@ -1,0 +1,30 @@
+.ProductWishlistButton {
+    display: inline-block;
+    height: var(--wishlist-heart-size);
+    width: var(--wishlist-heart-size);
+
+    &-Button.Button {
+        background-color: unset;
+        border: none;
+        height: var(--wishlist-heart-size);
+        padding: 0;
+
+        &:hover,
+        &:focus {
+            background-color: unset;
+            height: var(--wishlist-heart-size);
+            padding: 0;
+        }
+    }
+
+    &-Button {
+        &_isInWishlist {
+            svg {
+                path {
+                    fill: var(--primary-base-color);
+                    stroke: none;
+                }
+            }
+        }
+    }
+}

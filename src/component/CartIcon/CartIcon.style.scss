@@ -1,0 +1,13 @@
+.CartIcon {
+    fill: #000000;
+    cursor: pointer;
+
+    @include desktop {
+        margin-block-start: -10px;
+    }
+
+    @include mobile {
+        width: 30px;
+        height: 30px;
+    }
+}

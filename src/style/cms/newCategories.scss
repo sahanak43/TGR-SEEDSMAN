@@ -1,0 +1,94 @@
+.popular-category-row {
+    @include mobile {
+        margin-block-start: 16px;
+    }
+    
+    display: flex;
+    margin-block-start: 0 !important; /* stylelint-disable declaration-no-important */
+    margin-block-end: 24px !important;
+    cursor: pointer;
+    align-items: center;
+    background-color: #F3F3F3;
+    flex-direction: row !important;
+    border-radius: 8px;
+    justify-content: space-evenly !important;
+
+    .popular-image {
+        aspect-ratio: 1;
+        padding-inline-start: 10px;
+        padding-block-start: 4px;
+        padding-block-end: 4px;
+    }
+
+    .category-heading {
+        padding-block-start: 14px;
+        padding-inline-end: 6px;
+        padding-block-end: 14px;
+        padding-inline-start: 6px;
+        width: 100%;
+
+        p {
+            @include mobile {
+                padding-inline-start: 4px;
+            }
+            
+            a {
+                &:hover {
+                    color: black;
+                }
+
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                color: black;
+            }
+
+            margin: 0 !important;
+            text-align: center;
+        }
+    }
+
+    .CategoryButtonswrapper {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        @include mobile {
+            padding-inline: 20px;
+        }
+    }
+    
+    .CategoryButtonsheading {
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+
+        @include mobile {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px; 
+        }
+    }
+
+    .CategoryButtonslink {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        text-decoration-line: underline;
+
+        @include mobile {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 22px;
+            text-decoration-line: underline;
+        }
+    }
+}
+
+
+
+

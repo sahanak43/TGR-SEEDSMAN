@@ -1,0 +1,85 @@
+.CreateAccount {
+    .ContentWrapper {
+        padding-block-start: 28px;
+        padding-block-end: 50px;
+        padding-inline: 20px;
+
+        @include desktop() {
+            padding-block-start: 25px;
+        }
+
+        @supports (-webkit-touch-callout: none) {
+            padding-block-end: 80px;
+        }
+
+        @include mobile {
+            padding-block-start: 2rem;
+            padding-block-end: 50px;
+            padding-inline: 14px;
+        }
+    }
+
+    @include mobile {
+        &-CreateAccountWrapper {
+            h3 {
+                margin-block-start: 0;
+            }
+        }
+    }
+
+    &-InnerWrapper {
+        @include desktop() {
+            display: grid;
+            justify-content: space-around;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 100px;
+        }
+
+        .MyAccountOverlay {
+            &-Additional {
+                display: none;
+            }
+        }
+
+        button {
+            margin-block-start: 20px;
+        }
+
+        > div {
+            flex: 1;
+            margin: 0 10px;
+
+            @include mobile {
+                margin: 0;
+            }
+        }
+
+        button,
+        input {
+            min-width: 250px;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            @include desktop {
+                width: 100%;
+            }
+        }
+
+        p {
+            margin-block-end: 20px;
+        }
+    }
+
+    .Loader {
+        margin: 0;
+    }
+
+    &-SignInWrapper {
+        button {
+            font-weight: 500;
+        }
+    }
+}

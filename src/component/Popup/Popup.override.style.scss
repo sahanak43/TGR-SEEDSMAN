@@ -1,0 +1,145 @@
+:root {
+    --popup-max-height: 100%;
+    --popup-background: #00000060;
+}
+
+.Popup {
+    inset-block-start: 0;
+
+    &-Header {
+        @include mobile {
+            display: block;
+        }
+    }
+
+    &-Content {
+        padding: 0 0 2rem 0;
+        overflow-y: unset;
+        border-radius: 0;
+        overscroll-behavior: none;
+
+        &::after {
+            content: '';
+            display: none;
+            padding-block-end: var(--popup-content-padding);
+        }
+
+        .NotificationList {
+            display: none;
+        }
+    }
+
+    & &-CloseBtn {
+        inset-block-start: -38px;
+        inset-inline-end: -9px;
+
+        @include mobile {
+            inset-inline-start: 0;
+            inset-inline-end: 0;
+            margin: auto;
+        }
+
+        .CloseIcon {
+            fill: var(--color-white);
+            cursor: pointer;
+        }
+    }
+
+    &_isVisible { 
+        @include mobile {
+            height: 100vh;
+            z-index: 801;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translate3d(0, 100%, 0);
+            visibility: visible;
+        }
+    
+        to {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+@include mobile {
+    .MyAccountPopup {
+        .Popup-Content {
+            position: fixed;
+            inset-block-start: 25%;
+            inset-block-end: 0;
+            animation: slideUp .5s cubic-bezier(.075,.82,.165,1);
+        }
+    }
+}
+
+.ProductReviews-Popup {
+    .Popup-Content {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+
+    .Popup-CloseBtn {
+        @include mobile {
+            inset-inline: unset 0px;
+            inset-block-start : 0px;
+        }
+
+        @include desktop {
+            inset-inline-end: 0px;
+            inset-block-start : 0px;
+        }
+
+        .CloseIcon {
+            fill: #9f9f9f;
+        }
+    }
+}
+
+.SelectCountryPopup {
+    @include desktop {
+        .Popup-Content {
+            max-width: unset;
+            max-height: unset;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include mobile {
+        inset-block-start: 0px;
+
+        &_isVisible {
+            height: 100vh;
+            z-index: 801;
+        }
+
+        .Popup-Content {
+            // inset-block-start: 25%;
+            overflow-x: hidden;
+            // animation: slideUp 1s cubic-bezier(.075,.82,.165,1);
+            // padding-inline: 14px;
+            padding-block-start: 14px;
+            padding-block-end: 0;
+        }
+    }
+}
+
+.scrollDisabled {
+    margin-block-start: 0;
+    width: 100%;
+
+    @include desktop {
+        position: fixed;
+        overflow-y: scroll;
+    }
+
+    @include mobile {
+        overflow-y: auto;
+    }
+
+    @include mobile-landscape {
+        position: inherit;
+    }
+}

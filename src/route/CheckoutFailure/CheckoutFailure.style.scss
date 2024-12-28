@@ -1,0 +1,78 @@
+.CheckoutFailure {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    margin-block: 4rem;
+    gap: 25px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        margin-block: 16px;
+    }
+
+    &-ContentWrapper {
+        display: grid;
+        gap: 2rem;
+    }
+
+    &-SuccessMessage {
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+
+    &-OrderNumberWrapper {
+        display: grid;
+        gap: 1rem;
+
+        .OrderNumber {
+            font-size: 20px;
+            font-weight: 600;
+
+            @include mobile {
+                font-size: 18px;
+            }
+    
+            span {
+                color: var(--primary-base-color);
+            }
+        }
+    }
+
+    &-Heading {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: inherit;
+
+        @include mobile {
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+
+    &-ButtonWrapper {
+        position: revert;
+        padding: 0;
+        width: 100%;
+        border: none;
+        background: unset;
+    }
+
+    &-ContinueButton {
+        font-weight: 500;
+        border-radius: 8px;
+
+        &:not([disabled]):hover {
+            border-radius: 8px;
+        }
+    }
+
+    &-ContactLink {
+        display: flex;
+        gap: 3px;
+
+        p, a {
+            font-size: 16px;
+        }
+    }
+}

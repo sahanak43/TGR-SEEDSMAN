@@ -1,0 +1,70 @@
+.CheckoutPayments {
+    &-Methods {
+        width: 50%;
+        margin-block: 2rem;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    .Field-Wrapper {
+        &_type {
+            &_checkbox {
+                padding: 10px 5px;
+            }
+        }
+    }
+    
+    .Checkout {
+        &-Heading {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+            margin: 0;
+            padding: 0;
+            border: none;
+            
+            @include mobile {
+                font-size: 16px;
+            }
+        }
+        
+        &-Default {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #F9F6F4;
+            padding: 16px;
+            border-radius: 8px;
+
+            h2 {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: capitalize;
+                margin: 0;
+
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+
+            button {
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: underline;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--hollow-button-hover-color);
+                }
+            }
+        }
+    }
+
+    &-CustomerNotesField {
+        .Field-Wrapper_type_textarea .Field-LabelContainer {
+            inset-block-end: 4rem;
+        }
+    }
+}

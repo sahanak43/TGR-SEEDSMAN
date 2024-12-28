@@ -1,0 +1,20 @@
+.Overlay {
+    &:not(.Overlay_isStatic) {
+        @include mobile {
+            padding-block-end: 0;
+        }
+    }
+}
+
+body {
+    &:has(.Header_name_search) {
+        .Overlay {
+            &:not(.Overlay_isStatic) {
+                @include mobile {
+                    inset-block-start: 8rem;
+                    height: calc(100% - 8rem);
+                }
+            }
+        }
+    }
+}

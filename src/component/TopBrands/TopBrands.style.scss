@@ -1,0 +1,343 @@
+.TopBrands {
+    max-width: 1280px;
+    margin: auto;
+    margin-block-end: 40px;
+
+    .img-notFound {
+        background-color: #e0e0e0e0;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background-size: cover;
+        background-position: center;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 300px;
+        height: 100%;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+
+        &-wrapper {
+            @include mobile {
+                padding-block-end: 0;
+            }
+        }
+
+        @include mobile {
+            padding: 0;
+            height: 100%;
+        }
+    }
+
+    .mySwiper2 {
+        height: 80%;
+        width: 100%;
+    }
+
+    .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+
+        .swiper-slide {
+            width: 25%;
+            height: 100%;
+            padding-block-end: 30px;
+            cursor: pointer;
+
+            &-thumb-active {
+                opacity: 1;
+                border-bottom: 2px solid #739536;
+            }
+        }
+    }
+
+    .Seeds-Products {
+        max-width: var(--content-wrapper-width);
+        margin-inline: auto;
+        background-color: #f2faf7;
+
+        @include mobile {
+            padding-inline: 16px;
+            padding-block-end: 6.4rem;
+        }
+
+        .Seeds-Products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 5.4rem 5.4rem 5.4rem 10.3rem;
+
+            @media only screen and (max-width: 810px) {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 0;
+            }
+
+            .Seeds-Products-Left {
+                display: flex;
+                flex-direction: column;
+                padding-block: 11.2rem 0;
+
+                @media only screen and (max-width: 810px) {
+                    gap: 10px;
+                    padding-inline: 14px;
+                    padding-block: 4rem 0;
+                }
+
+                .Seeds-Products-Left-Title {
+                    font-size: 24px;
+                    font-family: "Sora", sans-serif;
+                    color: #000000;
+                    font-weight: 600;
+                    margin-block-end: 3.4rem;
+                    text-align: start;
+
+                    @media only screen and (max-width: 810px) {
+                        font-size: 14px;
+                        margin-block-end: 0;
+                    }
+                }
+
+                .Seeds-Product-Left-Description {
+                    font-size: 14px;
+                    font-family: "Sora", sans-serif;
+                    color: #000000;
+                    line-height: 2.2rem;
+                    margin-block-end: 2.4rem;
+                    text-align: start;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+
+                    p {
+                        line-height: 22px;
+                        font-size: 14px;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+
+                    @media only screen and (max-width: 810px) {
+                        font-size: 12px;
+                        margin-block-end: 0;
+                        min-height: 250px;
+                        display: none;
+                    }
+                }
+
+                .view-all-buttom {
+                    width: 100%;
+                    text-align: start;
+                    margin-block-start: 24px;
+
+                    .Seeds-Products-Left-Btn {
+                        font-size: 14px;
+                        font-family: "Sora", sans-serif;
+                        color: #000000;
+                        border: 1px solid #000000;
+                        font-weight: 600;
+                        padding: 1.6rem 2.4rem;
+                        background-color: #f2faf7;
+
+                        @media only screen and (max-width: 810px) {
+                            font-size: 11px;
+                            padding: 1.3rem 2.4rem;
+                        }
+                    }
+                }
+            }
+
+            .Seeds-Products-Right {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+
+                @media only screen and (max-width: 810px) {
+                    grid-template-columns: repeat(4, 1fr);
+                    overflow: auto;
+                    gap: 10px;
+                    padding-block-end: 20px;
+
+                    &::-webkit-scrollbar-thumb {
+                        background-color: #739536;
+                        height: 3px;
+                    }
+
+                    &::-webkit-scrollbar {
+                        background: rgba(0, 0, 0, 0.08);
+                        height: 3px;
+                    }
+                }
+
+                .Seeds-Products-Right-Image {
+                    background-color: #ffffff;
+                    padding: 2.3rem 6.3rem;
+
+                    @media only screen and (max-width: 810px) {
+                        width: 169px;
+                        padding: 2.3rem 2.7rem;
+                    }
+
+                    .Image-Container {
+                        background-color: #ffffff;
+                        text-align: center;
+
+                        @media only screen and (max-width: 810px) {
+                            display: grid;
+                            justify-items: center;
+                            gap: 20px;
+                        }
+
+                        .Product-Image {
+                            height: 100px;
+                            width: 150px;
+                            object-fit: contain;
+
+                            @include mobile {
+                                width: 115px;
+                            }
+                        }
+
+                        .Image-Title {
+                            font-size: 16px;
+                            font-family: "Sora", sans-serif;
+                            color: #000000;
+                            margin-inline: auto;
+                            font-weight: 500;
+                            margin-block: 11px 0;
+
+                            @media only screen and (max-width: 810px) {
+                                margin-block-end: 5%;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Biggest-Deals {
+        max-width: var(--content-wrapper-width);
+        margin-inline: auto;
+        padding: 0;
+        margin-block-start: 8rem;
+
+        @include mobile {
+            margin-inline: 16px;
+            margin-block-start: 3.4rem;
+        }
+
+        .Biggest-Deals-Title {
+            display: flex;
+            justify-content: space-between;
+            margin-block-end: 6rem;
+            align-items: center;
+
+            @include mobile {
+                margin-block-end: 3.4rem;
+            }
+
+            .Biggest-Topbrands {
+                font-size: 30px;
+                font-family: "Sora", sans-serif;
+                color: #000000;
+                font-weight: 600;
+                margin-block-end: 0;
+                line-height: unset;
+
+                @media only screen and (max-width: 810px) {
+                    font-size: 18px;
+                    width: 70%;
+                }
+            }
+
+            .Biggest-Deal-View-All {
+                font-size: 14px;
+                font-family: "Sora", sans-serif;
+                color: #000000;
+                text-decoration: underline;
+                font-weight: 600;
+                margin-block-end: 0;
+
+                @media only screen and (max-width: 810px) {
+                    font-size: 12px;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .swiper-wrapper {
+            align-items: center;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            @include mobile {
+                display: block;
+            }
+        }
+
+        .swiper-slide {
+            text-align: center;
+
+            span {
+                width: 91px;
+                height: 91px;
+                display: flex;
+                margin: auto;
+                justify-content: center;
+            }
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        .Lables {
+            .Slider-Lable {
+                .brands {
+                    .swiper-wrapper {
+                        padding-block-end: 37px;
+                    }
+
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                        inset-block-start: 42%;
+                    }
+
+                    .swiper-pagination-progressbar {
+                        inset-inline-start: 0;
+                    }
+                }
+            }
+        }
+    }
+}

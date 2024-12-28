@@ -1,0 +1,28 @@
+.CheckoutBilling {
+    .Checkout {
+        &-NoPaymentMethod {
+            font-size: 15px;
+        }
+
+        &-StoreCredit {
+            margin-block: 2rem;
+
+            .Field-Wrapper_type_checkbox {
+                display: block;
+                padding-block-start: 0;
+            }
+        }
+
+        &-StoreCreditLabel {
+            font-size: 16px;
+            font-weight: bold;
+            margin-block-end: 20px;
+        }
+
+        &-StoreCreditData {
+            font-size: 14px;
+            color: var(--primary-base-color);
+            font-weight: 500;
+        }
+    }
+}

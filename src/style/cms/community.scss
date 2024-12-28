@@ -1,0 +1,507 @@
+.Main_Community_Container {
+    .Wrapper {
+        width: var(--content-wrapper-width);
+    }
+
+    .Weeds_community {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 3% auto;
+
+        .Weeds_community_image {
+            width: 484px;
+            height: 465px;
+
+            @include mobile {
+                padding: 20px;
+            }
+
+            .Weeds_community_image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .Weeds_community_text {
+            @include mobile {
+                padding: 20px;
+            }
+
+            .Weeds_community_header {
+                font-size: 30px;
+                letter-spacing: 0px;
+                line-height: 1;
+                color: #000000;
+
+                @include mobile {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+            }
+
+            .weeds_community_header_list {
+                font-size: 14px;
+                letter-spacing: 0px;
+                width: 80%;
+                margin-block-start: 28px;
+
+                @include mobile {
+                    width: 100%;
+                }
+
+                .weeds_budding {
+                    line-height: 20px;
+                    color: #000000;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .Weeds_context_countries {
+                display: flex;
+                column-gap: 12%;
+                margin: 0;
+                padding: 0;
+                justify-content: flex-start;
+
+                @include mobile {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .Weeds_comunity_context {
+                    line-height: 7px;
+
+                    .Weeds_header {
+                        font-size: 36px;
+                        color: #000000;
+
+                        @include mobile {
+                            font-size: 34px;
+                        }
+                    }
+
+                    p {
+                        color: #000000;
+                        margin-block-end: 10px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .Community_search_subscribe {
+        background-color: #f2faf7;
+        height: auto;
+        width: 100vw;
+        margin-inline-start: calc(50% - 50vw);
+    }
+
+    .Community_Subscribe_header {
+        text-align: center;
+        max-width: 800px;
+        width: 100%;
+        padding: 3% 0;
+        margin-block: 80px;
+        margin-inline: auto;
+
+        @include mobile {
+            margin-block: 20px;
+            padding: 20px;
+            text-align: start;
+        }
+
+        .Search_header {
+            font-size: 30px;
+            line-height: 40px;
+            margin: 18px 0;
+            color: #000000;
+
+            @include mobile {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+
+        .Search_para {
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+
+        .input_button {
+            @include mobile {
+                margin-block-start: 30px;
+            }
+
+            .NewsletterSubscription .FieldForm-Body {
+                width: 600px;
+                margin: auto;
+                display: flex;
+
+                @include mobile {
+                    flex-direction: column;
+                    width: 100%;
+                    row-gap: 10px;
+                }
+
+                .FieldForm-Fields {
+                    width: 100%;
+                }
+
+                .Field input:-webkit-autofill {
+                    /* stylelint-disable-next-line declaration-no-important */
+                    -webkit-box-shadow: 0 0 0 30px #f2faf7 inset !important;
+                    -webkit-text-fill-color: #000000;
+                }
+
+                .Button {
+                    width: auto;
+                    padding: 16px;
+
+                    &:hover {
+                        border-color: #739536;
+                        width: auto;
+                    }
+                }
+            }
+        }
+
+        .Subscribe_Search {
+            border: none;
+            border-bottom: 1px solid black;
+            width: 55%;
+            line-height: 3;
+            background: transparent;
+
+            @include mobile {
+                width: 100%;
+                margin-block-end: 20px;
+            }
+        }
+
+        .Subscribe_Search:focus,
+        input:focus {
+            outline: none;
+        }
+
+        .Subscribe_button {
+            background-color: #739536;
+            border: none;
+            color: white;
+            width: 109px;
+            height: 49px;
+            font-size: 14px;
+            margin: 0% 5%;
+
+            @include mobile {
+                margin: 0;
+            }
+        }
+    }
+
+    .Community_Social_grid {
+        margin: auto;
+        display: grid;
+        grid-template-columns: 65% 35%;
+        column-gap: 104px;
+        height: 538px;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .plant_grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+
+            @include mobile {
+                display: grid;
+                grid-template-columns: repeat(3, 250px);
+                grid-template-rows: 1fr;
+                padding: 20px;
+                overflow-x: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            .communityimg {
+                &.image1 {
+                    grid-row: 2 span;
+
+                    @include mobile {
+                        grid-row: 1;
+                    }
+
+                    @include mobile {
+                        height: 100%;
+                    }
+                }
+
+                .community_plant {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .Community_social_text {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .Community_social_text-inner {
+                width: 265px;
+
+                @include mobile {
+                    width: 100%;
+                    padding: 0 20px;
+                }
+
+                .Social_header {
+                    font-size: 30px;
+                    letter-spacing: 0px;
+                    line-height: 49px;
+                    color: #000000;
+
+                    @include mobile {
+                        font-size: 16px;
+                        margin: 0;
+                    }
+                }
+
+                .Social_text_para {
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #000000;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+
+                .Community_Social_icon {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include mobile {
+                        max-width: 70%;
+                    }
+                }
+            }
+        }
+    }
+
+    .Community_rewards_point {
+        background-color: #f4f4f4;
+        padding: 4%;
+        width: 100vw;
+        margin-inline-start: calc(50% - 50vw);
+        margin-block-start: 80px;
+
+        @include mobile {
+            margin-block-start: 0;
+        }
+
+        .Community_rewards_point-inner {
+            display: flex;
+            margin: auto;
+            column-gap: 134px;
+
+            @include mobile {
+                display: block;
+            }
+
+            .community_rewards {
+                width: 100%;
+                margin: auto;
+
+                .rewards_plant_img {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .reward_header {
+                    font-size: 30px;
+                    letter-spacing: 0px;
+                    width: 88%;
+                    line-height: 45px;
+
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                }
+
+                .reward_description {
+                    line-height: 22px;
+                    color: #000000;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+
+                .rewards_button {
+                    padding: 15px 21px;
+                    background-color: var(--primary-base-color);
+                    border: none;
+                    font-size: 16px;
+                    color: var(--color-white);
+                    cursor: pointer;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .rewards_signup {
+                width: 100%;
+
+                @include mobile {
+                    margin: 2rem 0;
+                }
+
+                .Sign-up {
+                    display: flex;
+                    gap: 4%;
+                    width: 100%;
+                    line-height: 28px;
+
+                    @include mobile {
+                        border-top: 1px solid var(--primary-divider-color);
+
+                        &:last-child {
+                            border-bottom: 1px solid var(--primary-divider-color);
+                        }
+                    }
+
+                    svg {
+                        margin: auto 0;
+
+                        @include mobile {
+                            width: 30px;
+                        }
+                    }
+
+                    .Sign-up_header {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #000000;
+
+                        @include mobile {
+                            font-size: 12px;
+                            line-height: 16px;
+                            margin-block: 18px 7px;
+
+                            & + p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .Sign-up_para {
+                        color: #000000;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .hashtag_content {
+                        color: #000000;
+
+                        p {
+                            color: #000000;
+                        }
+                    }
+
+                    .review_content {
+                        p {
+                            color: #000000;
+                        }
+                    }
+                }
+
+                .borderBottom {
+                    border-bottom: 1px solid #707070;
+                    opacity: 25%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .Main_Community_Container {
+        .Wrapper {
+            width: unset;
+        }
+
+        .Weeds_community {
+            display: block;
+            width: 100%;
+            margin: auto;
+            grid-gap: 12%;
+
+            .Weeds_community_image {
+                width: 100%;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .Weeds_context_countries {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .Community_search_subscribe {
+            .Community_Subscribe_header {
+                .Search_para {
+                    width: 90%;
+                }
+            }
+        }
+
+        .Community_Social_grid {
+            height: auto;
+        }
+
+        .Community_rewards_point {
+            display: block;
+
+            .community_rewards {
+                width: unset;
+                margin: auto;
+            }
+
+            .rewards_plant_img {
+                width: 100%;
+            }
+        }
+    }
+}

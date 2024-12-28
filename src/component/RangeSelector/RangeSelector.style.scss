@@ -1,0 +1,52 @@
+.RangeSelector {
+    visibility: visible;
+
+    &-Wrapper {
+        padding: 0 1.5rem;
+        padding-block-start: 1rem;
+
+        .input-range__label--min, .input-range__label--max, .input-range__label .input-range__label--min {
+            inset-block-end: -3rem;
+            font-size: 1rem;
+        }
+
+        .input-range__label--value {
+            display: none;
+        }
+
+
+        .input-range__track--active {
+            background-color: #000;
+        }
+
+        .input-range__slider {
+            background-color: #000;
+            border-color: #000;
+            margin-block-start: -0.8rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &-DetailsWrapper {
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-block-start: 2em;
+    }
+
+    &-PriceDivider {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    &-PriceItem {
+        display: inline-block;
+        width: 50%;
+        border: 1px solid #E2E2E2;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+}

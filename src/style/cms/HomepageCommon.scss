@@ -1,0 +1,134 @@
+.HomePage {
+    .CmsPage-Heading {
+        display: none;
+    }
+
+    .news-latter {
+        .pagebuilder-banner-wrapper {
+            .pagebuilder-poster-content {
+                .pagebuilder-banner-button {
+                    background: transparent linear-gradient(268deg, #FFFFFF26 0%, #5858585D 100%) 0% 0% no-repeat padding-box;
+                    -webkit-backdrop-filter: blur(24px);
+                    backdrop-filter: blur(24px);
+                    position: absolute;
+                    border: none;
+                    height: unset;
+                    padding: 10px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    cursor: none;
+                    text-transform: initial;
+
+                    @include mobile {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    .homepage-heading {
+        display: flex;
+        justify-content: space-between;
+        margin-block: 8rem 2.8rem;
+
+        @include mobile {
+            padding-inline: 16px;
+            margin-block: 4rem 2.4rem;
+        }
+
+        .heading {
+            font-size: 30px;
+
+            @include mobile {
+                font-size: 18px;
+            }
+        }
+
+        .viewall-button {
+            font-size: 14px;
+            font-family: "Sora", sans-serif;
+            color: #000000;
+            text-decoration: underline;
+            font-weight: 600;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            @include mobile {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .LatesNews-section {
+        .pagebuilder-column-group {
+            column-gap: 30px;
+
+            @include mobile {
+                display: flex;
+                overflow-x: scroll;
+                flex-wrap: unset;
+                padding-inline-start: 16px;
+                margin-block-end: 40px;
+                padding-block-end: 20px;
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #739536;
+                    height: 3px;
+                }
+
+                &::-webkit-scrollbar {
+                    background: rgba(0, 0, 0, 0.08);
+                    height: 3px;
+                }
+            }
+
+            .LatesNews-column {
+                .pagebuilder-banner-button {
+                    background: transparent linear-gradient(269deg,#FFFFFF26,#5858585D) 0 0 no-repeat padding-box;
+                    -webkit-backdrop-filter: blur(4px);
+                    backdrop-filter: blur(4px);
+                    border: none;
+                    height: auto;
+                    padding: 9px;
+                    position: absolute;
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    font-weight: 500;
+
+                    @include mobile {
+                        width: auto;
+                        font-size: 10px;
+                        inset-inline-start: -10px;
+                        inset-block-end: -66px;
+                    }
+                }
+
+                @include mobile {
+                    min-width: 297px;
+                    box-shadow: 4px 5px 16px rgba(0, 0, 0, 0.059);
+                }
+
+                .last-section {
+                    h1 {
+                        font-size: 20px;
+                        line-height: 29px;
+
+                        @include mobile {
+                            font-size: 14px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

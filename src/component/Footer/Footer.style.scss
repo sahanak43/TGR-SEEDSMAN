@@ -1,0 +1,424 @@
+.Footer {
+    @include mobile {
+        padding: 0 16px;
+    }
+
+    .Newsletter-Container {
+        background-color: #3E3D30;
+    
+        .Inner-container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            padding: 30px 0;
+    
+            @include narrow-desktop {
+                max-width: 90%;
+            }
+    
+            @include tablet {
+                max-width: 90%;
+            }
+    
+            @include mobile {
+                display: block;
+                max-width: 90%;
+            }
+    
+            .Left-Container {
+                flex: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                @include mobile {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
+                }
+    
+                .Left-heading {
+                    font-size: 30px;
+                    color: white;
+                    margin: 20px 0;
+    
+                    @include narrow-desktop {
+                        font-size: 24px;
+                    }
+    
+                    @include mobile {
+                        font-size: 18px;
+                        width: 50%;
+                        margin: 20px auto 0;
+                    }
+                }
+    
+                .Left-content {
+                    font-size: 14px;
+                    color: var(--color-white);
+    
+                    @include mobile {
+                        font-size: 12px;
+                        line-height: 30px;
+                        width: 60%;
+                    }
+                }
+            }
+    
+            .Right-container {
+                flex: 50%;
+    
+                .NewsletterSubscription {
+                    min-width: 230px;
+                    margin: 50px 0;
+    
+                    @include mobile {
+                        margin: 0;
+                    }
+    
+                    .FieldForm-Body {
+                        display: flex;
+                        align-items: flex-end;
+    
+                        @include mobile {
+                            flex-direction: column;
+                            align-items: center;
+                            row-gap: 2rem;
+                        }
+    
+                        .FieldForm-Fields {
+                            flex-basis: 80%;
+    
+                            @include mobile {
+                                width: 60%;
+    
+                                label {
+                                    font-size: 12px;
+                                }
+                            }
+    
+                            input[type="email"] {
+                                background-color: var(--color-black);
+                                border: none;
+                                border-bottom: 1px solid #fff;
+                                padding: 0;
+                                color: var(--color-white);
+                                border-radius: unset;
+                            }
+                        }
+    
+                        button.Button.Button_isHollow {
+                            background-color: var(--color-white);
+                            color: var(--color-black);
+                            border: none;
+                            margin: 0 25px;
+                            width: 25%;
+
+                            @include mobile {
+                                font-size: 12px;
+                                width: 40%;
+                                margin: 20px 25px;
+                                padding: 13px 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .footer {
+        max-width: 1200px;
+        margin: auto;
+    
+        .Footer-top {
+            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px;
+            padding: 2rem 0;
+    
+            @include narrow-desktop {
+                max-width: 90%;
+                margin: auto;
+            }
+    
+            @include tablet {
+                max-width: 90%;
+                margin: auto;
+            }
+    
+            @include mobile {
+                display: block;
+                padding: 3rem 0;
+            }
+    
+            .Footer-content1 {
+                display: flex;
+                column-gap: 30px;
+
+                @include mobile {
+                    box-shadow: #6e6e6e21 2px 4px 14px 0px;
+                    display: flex;
+                    padding: 0 16px;
+                    padding-block-end: 10px;
+                    gap: 16px;
+                    margin-block-end: 2rem;
+                }
+    
+                .left-container {
+                    display: flex;
+                    align-items: center;
+                    margin: 0;
+
+                    @include mobile {
+                        display: flex;
+                        align-items: center;
+                    }
+    
+                    img.KnowledgeIcon {
+                        width: 31px;
+                        height: 38px;
+                    }
+    
+                    img.CustomerIcon {
+                        width: 38px;
+                        height: 38px;
+                    }
+    
+                    img.TrackIcon {
+                        width: 36px;
+                        height: 38px;
+                    }
+                }
+            }
+    
+            .content-heading {
+                font-size: 16px;
+                font-weight: 500;
+                margin-block-end: 5px;
+    
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+    
+            .content {
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+        }
+    
+        .Footer-middle {
+            @include desktop {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                padding: 2rem 0;
+            }
+    
+            @include narrow-desktop {
+                max-width: 90%;
+                margin: auto;
+            }
+    
+            .Footer-content {
+                .Footer-heading {
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin: 40px 0 30px 0;
+
+                    @include mobile {
+                        font-size: 12px;
+                        margin-block-end: 10px;
+                    }
+                }
+    
+                .Footer-item {
+                    list-style: none;
+
+                    @include mobile {
+                        margin-block-end: 16px;
+                    }
+    
+                    &::before {
+                        display: none;
+                    }
+    
+                    a {
+                        font-size: 14px;
+                        color: var(--color-black);
+                        font-weight: 400;
+
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                @include mobile {
+                    .ExpandableContent {
+                        &.isDesktop {
+                            border: none;
+                            border-bottom: 1px solid var(--expandable-content-divider-color);
+                        }
+                    }
+                }
+            }
+        }
+    
+        .Footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 24px 0;
+    
+            @include narrow-desktop {
+                max-width: 90%;
+                margin: auto;
+            }
+    
+            @include mobile {
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                border: none;
+            }
+    
+            .Left-container {
+                display: flex;
+                align-items: center;
+
+                &.paymentMethods {
+                    flex-wrap: wrap;
+
+                    a {
+                        margin: 0px;
+                        display: block;
+                    }
+                }
+
+                @include mobile {
+                    border-bottom: 1px solid var(--expandable-content-divider-color);
+                    padding: 14px 0;
+                    column-gap: 2rem;
+                }
+
+                @include smallmobile {
+                    column-gap: 5px;
+                }
+    
+                span {
+                    font-size: 14px;
+                    font-weight: 600;
+
+                    @include mobile {
+                        font-size: 12px;
+                        font-weight: 500;
+                        white-space: pre;
+                    }
+                }
+    
+                a {
+                    margin: 0 10px;
+                    display: inline-flex;
+    
+                    img.InstaIcon.Image-WidthFull.Image-HeightFull {
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+    
+            .Right-container {
+                display: flex;
+                width: 100%;
+                align-items: baseline;
+                justify-content: flex-end;
+    
+                @include mobile {
+                    justify-content: space-between;
+                    margin: 0;
+                    padding: 20px 0;
+                }
+    
+                .Shipping-Dropdown {
+                    font-size: 14px;
+                    margin-inline-end: 10px;
+                    font-weight: 600;
+
+                    @include mobile {
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+    
+                .DropDown {
+                    select {
+                        border: none;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    
+        .Footer-About {
+            border-bottom: 1px solid #eee;
+    
+            @include narrow-desktop {
+                max-width: 90%;
+                margin: auto;
+            }
+
+            @include mobile {
+                border: none;
+            }
+        
+            .About-heading {
+                font-size: 14px;
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+    
+            .About-content {
+                font-size: 14px;
+                line-height: 22px;
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+        }
+    
+        .Copyright-block {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            margin: 15px 0;
+    
+            @include narrow-desktop {
+                max-width: 90%;
+                margin: auto;
+            }
+    
+            @include tablet {
+                max-width: 90%;
+                padding: 16px 0;
+                margin: auto;
+            }
+    
+            @include mobile {
+                row-gap: 20px;
+                padding: 16px 0 ;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}

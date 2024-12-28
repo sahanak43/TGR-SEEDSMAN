@@ -1,0 +1,13 @@
+.RadioButtonIcon {
+    &-Circle {
+        fill: var(--color-black);
+    }
+
+    &:hover, &_isActive {
+        .RadioButtonIcon-Circle {
+            fill: var(--color-black);
+        }
+
+        fill: var(--color-black);
+    }
+}

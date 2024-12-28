@@ -1,0 +1,707 @@
+.Reward {
+    width: 100%;
+
+    .Reward-Header {
+        max-width: var(--content-wrapper-width);
+        margin-inline: auto;
+        padding: 64px 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 120px;
+
+        @include mobile {
+            display: inherit;
+            padding: 30px 20px;
+        }
+
+        .Reward-Left {
+            .Reward-Left-Text {
+                font-size: 30px;
+                color: #000000;
+                font-weight: 600;
+                line-height: 49px;
+                margin-block-start: 0;
+                transform: unset;
+
+                @include mobile {
+                    font-size: 16px;
+                    margin-block-end: 5%;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .Reward-Right {
+            .Reward-Right-Text {
+                font-size: 14px;
+                color: #000000;
+                line-height: 22px;
+                margin-block-end: 2%;
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+
+            .Reward-Right-Text-Button {
+                background-color: #739536;
+                border: none;
+                color: white;
+                padding: 16px 30px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                cursor: pointer;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .Reward-Banner {
+        max-width: var(--content-wrapper-width);
+        margin-inline: auto;
+        padding-block: 2%;
+        padding-block-end: 60px;
+
+        @include mobile {
+            padding-inline: 20px;
+        }
+
+        .Reward-Banner-Img {
+            background-image: url("src/util/images/reward.png");
+            background-repeat: no-repeat ;
+            display: flex;
+            padding-inline: 103px;
+            padding-block: 50px;
+            column-gap: 100px;
+            align-items: center;
+
+            @media screen and   (min-width: 768px) {
+                flex-direction: row;
+            }
+
+            @media screen and   (max-width: 600px) {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+
+            @include mobile {
+                padding-inline: 20px;
+                padding-block: 21px;
+            }
+
+            .Reward-Inner-Img {
+                .Inner-Img-desktop {
+                    @include mobile {
+                        width: 100%;
+                    }
+
+                    @media screen and   (max-width: 600px) {
+                        display: none;
+                    }
+                }
+
+                .Inner-Img-Mobile {
+                    display: none;
+
+                    @media screen and   (max-width: 600px) {
+                        display: block;
+                    } 
+
+                    @include minimobile {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .Inner-Text {
+                width: 100%;
+
+                .Work {
+                    font-size: 30px;
+                    color: #ffffff;
+                    font-weight: 600;
+                    inset-block-end: 2rem;
+
+                    @include mobile {
+                        font-size: 16px;
+                        color: #ffffff;
+                        font-weight: 600;
+                        margin-block-end: 2%;
+                    }
+                }
+
+                .Register {
+                    font-size: 20px;
+                    color: #ffffff;
+                    
+                    // white-space: nowrap;
+
+                    @include mobile {
+                        font-size: 13px;
+                        color: #ffffff;
+                    }
+
+                    .Text-Number {
+                        font-size: 22px;
+                        color: #ffffff;
+                        border-radius: 50%;
+                        border: 1px solid #739536;
+                        background-color: #739536;
+                        line-height: 2;
+                        padding: 1% 3%;
+                        margin-inline-end: 5%;
+
+                        @include mobile {
+                            font-size: 12px;
+                            color: #ffffff;
+                            border-radius: 50%;
+                            border: 1px solid #739536;
+                            background-color: #739536;
+                            line-height: 2;
+                            padding: 2% 3%;
+                            margin-inline-end: 5%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Greenpoints {
+        padding: 80px 0 80px 0;
+        background-color: #f2faf7;
+
+        @include mobile {
+            padding: 30px 20px 30px 20px;
+        }
+
+        .Greenpoints-Header {
+            text-align: center;
+
+            @include mobile {
+                text-align: start;
+                padding-inline: 20px;
+            }
+
+            .Greenpoints-Earn {
+                font-size: 30px;
+                color: #000000;
+                font-weight: 600;
+
+                @include mobile {
+                    font-size: 16px;
+                }
+            }
+
+            .Greenpoints-Collect {
+                font-size: 14px;
+                color: #000000;
+                padding: 0% 30%;
+
+                @include mobile {
+                    font-size: 12px;
+                    padding: 0;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        .Greenpoints-Grid {
+            max-width: var(--content-wrapper-width);
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+            gap: 30px;
+            grid-row-gap: 60px;
+            row-gap: 70px;
+            margin-block-start: 60px;
+
+            @include mobile {
+                grid-template-columns: repeat(12, 1fr);
+                overflow: auto;
+                width: 100%;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            .Greenpoints-Items {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background-color: white;
+                    width: 250px;
+                    padding-inline-start: 5%;
+                    padding-block: 15px;
+                }
+
+                .Grid-Img {
+                    width: 100%;
+                    margin-block-end: 2%;
+
+                    @include mobile {
+                        width: 100%;
+                        margin-block-end: 2%;
+                        margin-block-start: 10%;
+                    }
+                }
+
+                .Img-Description-Point {
+                    font-size: 16px;
+                    color: #000000;
+                    text-align: center;
+                    margin-block-end: 2%;
+                    font-weight: 500;
+
+                    @include mobile {
+                        font-size: 16px;
+                        color: #000000;
+                        margin-block-end: 2%;
+                    }
+                }
+
+                .Img-Description {
+                    font-size: 14px;
+                    color: #000000;
+                    text-align: center;
+                    margin-block-end: 2%;
+
+                    @include mobile {
+                        font-size: 14px;
+                        color: #000000;
+                        margin-block-end: 10%;
+                    }
+                }
+            }
+        }
+    }
+
+    .Green {
+        max-width: var(--content-wrapper-width);
+        margin-inline: auto;
+        padding: 80px 0;
+
+        @include mobile {
+            padding: 30px 20px;
+        }
+
+        .Green-Header {
+            text-align: center;
+
+            @include mobile {
+                text-align: start;
+            }
+
+            .Green-Title {
+                font-size: 30px;
+                color: #000000;
+                font-weight: 600;
+                margin-block-end: 2%;
+
+                @include mobile {
+                    font-size: 16px;
+                    margin-block-end: 5%;
+                    margin-block-start: 0;
+                }
+            }
+
+            .Green-Description {
+                font-size: 14px;
+                color: #000000;
+                margin-block-end: 5%;
+                padding: 0% 15%;
+
+                @include mobile {
+                    font-size: 12px;
+                    padding: 0;
+                    line-height: 1.5;
+                }
+            }
+        }
+
+        .Green-Image {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+
+            @include mobile {
+                display: grid;
+                grid-template-columns: repeat(3, 80%);
+                overflow: auto;
+            }
+
+            .Green-Image-Grid-1 {
+                box-shadow: 4px 9px 39px #00000014;
+                border-top: 10px solid #739536;
+                border-bottom: 10px solid #739536;
+
+                .Green-Image-Grid {
+                    margin-block-start: 45px;
+                    margin-block-end: 2rem;
+
+                    @include mobile {
+                        padding: 5%;
+                    }
+
+                    .Image-Container {
+                        width: 100%;
+                        text-align: center;
+                        margin-block-start: 45px;
+
+                        @include mobile {
+                            text-align: start;
+                            margin-block-start: 0;
+                        }
+                    }
+
+                    .Green-Color {
+                        font-size: 21px;
+                        color: #000000;
+                        font-weight: 600;
+                        margin-block-end: 40px;
+                        text-align: center;
+                        margin-block-start: 30px;
+
+                        @include mobile {
+                            font-size: 12px;
+                            text-align: start;
+                        }
+                    }
+
+                    .Green-Desc {
+                        font-size: 14px;
+                        color: #000000;
+                        margin-block-end: 2%;
+                        line-height: 38px;
+                        text-align: center;
+
+                        @include mobile {
+                            font-size: 12px;
+                            text-align: start;
+                            padding: 0%;
+                        }
+                    }
+                }
+            }
+
+            .Green-Image-Grid-2 {
+                box-shadow: 4px 9px 39px #00000014;
+                border-top: 10px solid #489536;
+                border-bottom: 10px solid #489536;
+
+                .Green-Image-Grid {
+                    margin-block-start: 45px;
+                    margin-block-end: 2rem;
+
+                    @include mobile {
+                        padding: 5%;
+                    }
+
+                    .Image-Container {
+                        width: 100%;
+                        text-align: center;
+
+                        @include mobile {
+                            text-align: start;
+                        }
+                    }
+
+                    .Green-Color {
+                        font-size: 21px;
+                        color: #000000;
+                        font-weight: 600;
+                        margin-block-end: 40px;
+                        text-align: center;
+                        margin-block-start: 30px;
+
+                        @include mobile {
+                            font-size: 12px;
+                            text-align: start;
+                        }
+                    }
+
+                    .Green-Desc {
+                        font-size: 14px;
+                        color: #000000;
+                        margin-block-end: 2%;
+                        line-height: 38px;
+                        text-align: center;
+                        padding: 5%;
+
+                        @include mobile {
+                            font-size: 12px;
+                            text-align: start;
+                            padding: 0%;
+                        }
+                    }
+                }
+            }
+
+            .Green-Image-Grid-3 {
+                box-shadow: 4px 9px 39px #00000014;
+                border-top: 10px solid #63a532;
+                border-bottom: 10px solid #63a532;
+
+                .Green-Image-Grid {
+                    margin-block-start: 45px;
+                    margin-block-end: 2rem;
+
+                    @include mobile {
+                        padding: 5%;
+                    }
+
+                    .Image-Container {
+                        width: 100%;
+                        text-align: center;
+
+                        @include mobile {
+                            text-align: start;
+                        }
+                    }
+
+                    .Green-Color {
+                        font-size: 21px;
+                        color: #000000;
+                        font-weight: 600;
+                        margin-block-end: 40px;
+                        text-align: center;
+                        margin-block-start: 30px;
+
+                        @include mobile {
+                            font-size: 12px;
+                            text-align: start;
+                        }
+                    }
+
+                    .Green-Desc {
+                        font-size: 14px;
+                        color: #000000;
+                        margin-block-end: 2%;
+                        line-height: 38px;
+                        text-align: center;
+                        padding: 0 40px;
+
+                        @include mobile {
+                            font-size: 12px;
+                            text-align: start;
+                            padding: 0%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Invite {
+        background-color: #f4f4f4;
+
+        .Invite-Content {
+            max-width: var(--content-wrapper-width);
+            margin-inline: auto;
+            padding: 70px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            gap: 100px;
+
+            @include mobile {
+                grid-template-columns: repeat(1, 1fr);
+                padding: 20px;
+                gap: 20px;
+            }
+
+            .Invite-Left {
+                width: 100%;
+                padding: 30px;
+
+                @include mobile {
+                    padding: 0%;
+                }
+
+                .Invite-Img {
+                    width: 100%;
+                }
+            }
+
+            .Invite-Right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .Invite-Heading {
+                    font-size: 30px;
+                    color: #000000;
+                    font-weight: 600;
+                    margin-block: 0 26px;
+                    line-height: 49px;
+
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+
+                .Invite-Description {
+                    font-size: 14px;
+                    color: #000000;
+                    margin-block-end: 5%;
+                    line-height: 22px;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+
+                .Invite-Box {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    text-align: center;
+                    gap: 30px;
+
+                    @include mobile {
+                        justify-content: space-around;
+                    }
+
+                    .Invite-Box-Left {
+                        background-color: #739536;
+                        border: 1px solid #739536;
+                        padding: 15px 5%;
+                        margin-inline-end: 5%;
+
+                        @include mobile {
+                            margin-inline-end: inherit;
+                        }
+
+                        .Invite-Box-Txt {
+                            font-size: 12px;
+                            color: #ffffff;
+                            margin-block-end: 0;
+                            line-height: 22px;
+                        }
+                    }
+
+                    .Invite-Box-Right {
+                        background-color: #8a9536;
+                        border: 1px solid #8a9536;
+                        padding: 15px 5%;
+                        margin-inline-end: 5%;
+
+                        @include mobile {
+                            margin-inline-end: inherit;
+                        }
+
+                        .Invite-Box-Txt {
+                            font-size: 11px;
+                            color: #ffffff;
+                            margin-block-end: 0;
+                            line-height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .Help {
+        max-width: var(--content-wrapper-width);
+        margin-inline: auto;
+        padding-block: 80px 60px;
+
+        @include mobile {
+            padding-block: 20px;
+            padding-inline: 20px;
+        }
+
+        .Help-Title {
+            font-size: 30px;
+            color: #000000;
+            font-weight: 600;
+            margin-block-end: 40px;
+            text-align: center;
+            line-height: 49px;
+
+            @include mobile {
+                font-size: 16px;
+                margin-block-start: 5%;
+            }
+        }
+
+        .Help-Questions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 60px;
+
+            @include mobile {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .Question-Box {
+                @include desktop {
+                    border-top: 1px solid #e9e8ec;
+                    border-bottom: 1px solid #e9e8ec;
+                }
+
+                @include mobile {
+                    margin-block-end: -33px;
+                }
+
+                padding: 5% 2%;
+                display: flex;
+                justify-content: space-between;
+
+                .Question {
+                    font-size: 19px;
+                    color: #000000;
+                    margin-block-end: 0;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .ExpandableContent-Content {
+                margin-block-start: 12px;
+
+                p {
+                    color: #000000;
+
+                    @include mobile {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .ExpandableContent-Heading {
+                font-size: 19px;
+                font-weight: 500;
+                color: #000000;
+
+                @include mobile {
+                    font-size: 12px;
+                }
+            }
+
+            @include mobile {
+                .ExpandableContent:last-of-type {
+                    border-bottom: unset;
+                }
+
+                .ExpandableContent:first-of-type {
+                    border-bottom: unset;
+                }
+            }
+        }
+    }
+}

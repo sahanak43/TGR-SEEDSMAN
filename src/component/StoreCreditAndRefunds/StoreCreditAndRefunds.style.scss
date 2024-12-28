@@ -1,0 +1,352 @@
+.StoreCreditAndRefunds {
+    /* stylelint-disable number-max-precision */
+    /* stylelint-disable no-missing-end-of-source-newline */
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-block-start: 20px;
+    grid-row-gap: 1rem;
+
+
+    &-EnteredLabel {
+        td {
+            min-width: unset;
+        }
+    }
+
+    &-rewardPoint {
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+
+    &-RedeemCoupon {
+        margin-block-start: 20px;
+
+        @include desktop {
+            width: 50%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &-balanceHistoryDetails {
+        display: block;
+
+        @include desktop {
+            padding: 21px 30px;
+        }
+
+        @include mobile {
+            padding: 21px 17px;
+        }
+    
+        margin-block-start: 26px;
+        background-color: #F5F5F5;
+    }
+
+    &-balanceHistory {
+        color: #000000;
+        margin-block-start: 40px;
+        font-weight: 600;
+
+        @include mobile {
+            font-size: 16px;
+        }
+
+        @include desktop {
+            font-size: 20px;
+        }
+    }
+
+    &-pointBalanceInformation {
+        @include mobile {
+            font-size: 16px;
+        }
+
+        @include desktop {
+            font-size: 18px;
+        }
+    }
+
+    &-balanceHistoryTable {
+        width: 100%;
+
+        th {
+            background-color: unset;
+            border-radius: unset;
+            font-weight: 500;
+
+            @include desktop {
+                padding: 20px;
+            }
+
+            @include mobile {
+                padding-block: 10px;
+                padding-inline: unset;
+            }
+        }
+
+        td {
+            @include mobile {
+                text-align: end;
+            }
+
+            @include desktop {
+                border-top: 1px solid #AFAFAF;
+                padding: 20px;
+            }
+        }
+      
+
+        font-size: 14px;
+    }
+
+    &-DateTitle {
+        font-weight: 500;
+        margin-block-end: 10px;
+    }
+
+    &-Date {
+        text-align: end;
+    }
+
+    &-rewardPointTitle {
+        color: #000000;
+    }
+
+    &-emailNotification {
+        margin-block-start: 20px;
+    }
+
+    &-rewardPointContent {
+        color: #739536;
+
+        @include desktop {
+            margin-inline-start: 5px;
+        }
+    }
+
+    &-HeadingDate {
+        width: 200%;
+        display: grid;
+        grid-template-columns: 1.2fr 5.2fr 2.5fr;
+        grid-gap: 10px;
+
+        .RewardBorder {
+            @include mobile {
+                border-top: 0.5px solid #C5CBD5;
+                margin-block-start: 10px;
+            }
+        }
+    }
+
+    &-Border {
+        @include mobile {
+            border-bottom: 0.5px solid #C5CBD5;
+            margin-block: 10px 26px;
+            width: 197%;
+        }
+    }
+
+    &-Heading-Border {
+        @include desktop { 
+            border-bottom: 0.5px solid #8D8D8D;
+        }
+
+        @include mobile {
+            border-bottom: 0.5px solid #C5CBD5;
+        }
+
+        opacity: 100%;
+        margin-block-start: 18px;
+    }
+
+    &-noHistoryFound {
+        text-align: center;
+        background: #F5F5F5;
+        margin-block-start: 10px;
+    }
+
+    &-noHistoryFoundTitle {
+        padding: 10px;
+        font-weight: 500;
+    }
+}
+
+.StoreCoupon {
+    display: grid;
+    width: 100%;
+
+    @include mobile {
+        width: 100%;
+        padding: 5px 0 20px 0;
+    }
+
+    @include tablet-portrait {
+        width: 100%;
+    }
+
+    &-Message {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &-MessageText {
+        margin: 0;
+        word-break: break-word;
+        margin-inline-end: 24px;
+        display: inline-block;
+    }
+
+    .Field {
+        margin-block-start: 0;
+    }
+
+    .Form {
+        margin-block-start: 12px;
+        display: inline-flex;
+        justify-content: space-between;
+        border: 1px solid #c5c5c5;
+        padding: 1rem;
+
+        @include mobile {
+            width: 100%;
+            padding: 0 1rem;
+            border-radius: 4px;
+        }
+
+        button.StoreCoupon-Button.StoreCoupon-Button_isHollow {
+            border-right: none;
+            border-bottom: none;
+            border-top: none;
+            border-radius: 0;
+            font-weight: 500;
+            text-transform: capitalize;
+            color: #000;
+            height: unset;
+            // border-right: 1px solid black;
+
+            @include mobile {
+                width: fit-content;
+            }
+        }
+    }
+
+    input {
+        vertical-align: top;
+        border: unset;
+        padding: unset;
+        height: unset;
+
+        &::placeholder {
+            letter-spacing: 0px;
+            color: #222222;
+            opacity: 1;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+
+    button {
+        vertical-align: top;
+        border-radius: 0;
+        font-size: 14px;
+        font-weight: 500;
+        white-space: nowrap;
+        color: #000000;
+        border-color: #C5C5C5;
+
+        @include desktop {
+            height: unset;
+        }
+    }
+
+    &-Input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+
+        @include mobile {
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        .StoreCoupon {
+            &-CouponImg {
+                width: 25px;
+                height: 25px;
+                padding-inline-end: 5px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        input {
+            width: 100%;
+
+            &::placeholder {
+                font-weight: 500;
+                color: #222222;
+            }
+
+            @include mobile {
+                width: 100%;
+            }
+
+            @include tablet {
+                width: 100%;
+            }
+
+            @include tablet-portrait {
+                width: 100%;
+            }
+        }
+
+        @include mobile {
+            width: 100%;
+            margin-block-start: 0;
+        }
+
+        @include tablet-portrait {
+            width: 100%;
+            margin-block-start: 0;
+        }
+    }
+
+    &-Button {
+        color: #222222;
+        height: unset;
+
+        @include button;
+
+        @include mobile {
+            width: 100%;
+            margin-inline-start: 0;
+            margin-block: 14px 12px;
+        }
+
+        @include tablet-portrait {
+            margin-inline-start: 0;
+        }
+    }
+
+    &-Button[disabled] {
+        opacity: 1;
+        color: #000000;
+        height: unset;
+    }
+
+    &-Title {
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+        margin-block-end: 20px;
+    }
+}

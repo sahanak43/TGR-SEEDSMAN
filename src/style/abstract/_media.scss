@@ -1,0 +1,105 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+@mixin desktop {
+    @media (min-width: 811px) {
+        @content;
+    }
+}
+
+@mixin ultra-narrow-desktop {
+    @media (min-width: 810px)
+        and (max-width: 1160px) {
+        @content;
+    }
+}
+
+@mixin narrow-desktop {
+    @media (min-width: 1024px)
+        and (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin wide-desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 811px)
+        and (max-width: 1024px)
+        and (-webkit-min-device-pixel-ratio: 1) {
+        @content;
+    }
+}
+
+@mixin tablet-portrait {
+    @media (min-width: 811px)
+        and (max-width: 1023px)
+        and (-webkit-min-device-pixel-ratio: 1)
+        and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media(min-width: 811px)
+        and (max-width: 1023px)
+        and (-webkit-min-device-pixel-ratio: 1)
+        and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin tablet-air {
+    @media (min-width: 820px) and (max-width: 1180px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 810px) {
+        @content;
+    }
+}
+
+@mixin mobile-landscape {
+    @media (min-width: 580px) and (max-width: 1024px) and (orientation: landscape) {
+        @content;        
+    }
+}
+
+@mixin smallmobile {
+    @media screen and (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin standalone {
+    /* stylelint-disable-next-line media-feature-name-no-unknown */
+    @media all and (display-mode: standalone) {
+        @content;
+    }
+}
+
+@mixin hoverable {
+    @media (hover: hover) and (pointer: fine) { 
+        @content;
+    }
+}
+
+@mixin minimobile {
+    @media screen and (max-width: 360px) {
+        @content;
+    }
+}

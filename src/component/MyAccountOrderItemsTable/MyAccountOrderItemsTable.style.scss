@@ -1,0 +1,155 @@
+.MyAccountOrderItemsTable {
+    &-OrderActions {
+        display: flex;
+        align-items: center;
+        padding-block-end: 10px;
+        margin-block-start: 10px;
+    }
+
+    &-OrderTitle {
+        font-size: 22px;
+    }
+
+    &-PrintOrder {
+        font-weight: normal;
+        margin-inline-start: 10px;
+    }
+
+    &-Headings {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-ProductsWrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        margin-block-start: 3rem;
+        border: var(--table-body-border);
+        padding: 15px;
+
+        &:not(:first-of-type) {
+            margin-block-start: 0;
+            background-color: var(--color-white);
+        }
+    }
+
+    &-Products {
+        width: 100%;
+        font-size: 14px;
+        margin-block-start: 35px;
+
+        thead {
+            tr {
+                th,
+                td {
+                    &:nth-child(n+3) {
+                        text-align: end;
+                    }
+                }
+            }
+
+            @include mobile {
+                display: block;
+            }
+        }
+
+        tbody {
+            border-block-start: var(--table-body-border);
+
+            &:first-of-type {
+                border-block-start: none;
+            }
+
+
+            tr {
+                &:not(:last-child) {
+                    border-block-end: none;
+                }
+            }
+
+            .MyAccountOrderItemsTableRow {
+                &-Row {
+                    border-block-start: none;
+                }
+
+                &-EnteredLabel,
+                &-EnteredRow {
+                    border-block: unset;
+                }
+
+                @include mobile {
+                    &-Name {
+                        border-block: unset;
+                    }
+                }
+            }
+
+            @include mobile {
+                display: block;
+
+                tr {
+                    display: block;
+
+                    td {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        @include mobile {
+            display: block;
+        }
+    }
+
+    @include mobile {
+        table {
+            tbody {
+                tr,
+                td {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    &-Quantity,
+    &-Subtotal,
+    &-Price {
+        width: 15%;
+    }
+
+    &-Comments {
+        &Title {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.1;
+            margin-block-end: 10px;
+            margin-block-start: 20px;
+        }
+
+        &List {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &-Comment {
+        border-inline-start: var(--my-account-content-border);
+        margin-block-end: 30px;
+
+        dt {
+            font-weight: bold;
+            margin-block-end: 5px;
+            margin-inline-start: 10px;
+        }
+
+        dd {
+            margin-inline-start: 10px;
+            word-break: break-word;
+        }
+    }
+}

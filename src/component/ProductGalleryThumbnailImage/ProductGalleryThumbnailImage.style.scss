@@ -1,0 +1,12 @@
+.ProductGalleryThumbnailImage {
+    @include desktop {
+        height: 169px;
+        width: 100%;
+        background-color: var(--color-white);
+    }
+
+    img {
+        background-color: $white;
+        border-radius: 8px;
+    }
+}

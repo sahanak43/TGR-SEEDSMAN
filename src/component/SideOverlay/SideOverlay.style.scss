@@ -1,0 +1,103 @@
+.SideOverlay {
+    @include desktop {
+        background: #00000060 0% 0% no-repeat padding-box;
+        position: fixed;
+        inset-block: 0;
+        inset-inline-end: -100%;
+        height: 100vh;
+        z-index: 9999;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    @include mobile {
+        inset-inline: unset -100%;
+        inset-block-start: 0;
+        height: 100%;
+    }
+
+    &_isVisible {
+        @include desktop {
+            inset-inline: 0;
+            inset-inline-end: 0;
+        }
+
+        @include mobile {
+            z-index: 801;
+            inset-inline-start: unset !important; /* stylelint-disable-line declaration-no-important */
+            inset-inline-end: 0;
+            transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px, rgba(0, 0, 0, 0.14) 0px 16px 24px 2px, rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+            position: fixed;
+            inset-block-start: 0 !important; /* stylelint-disable-line declaration-no-important */
+            width: 100%;
+            max-width: 95% !important; /* stylelint-disable-line declaration-no-important */
+            overflow: scroll;
+            overflow-x: hidden;
+            height: 100% !important; /* stylelint-disable-line declaration-no-important */
+        }
+    }
+
+    &-Header {
+        border-bottom: 1px solid #F3F3F3;
+        padding-block-end: 16px;
+        margin-block-end: 16px;
+
+        .action-icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+
+            span {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            button {
+                cursor: pointer;
+
+                svg {
+                    fill: var(--color-black);
+                }
+            }
+        }
+    }
+
+    &-Wrapper {
+        position: absolute;
+        inset-inline-end: 0;
+        inset-block-start: 0;
+        width: 35%;
+        height: 100vh;
+        padding: 24px;
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    &-CloseButtonParent {
+        inset-block-end: 15px;
+        position: absolute;
+        inset-inline: 0;
+        margin-inline: 24px;    
+    }
+
+    &-CloseButtonButton {
+        background-color: #73A054;
+        color: #ffff;
+        border: 1px solid #73A054;
+        padding: 12px 16px 12px 16px;
+        width: 100%;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    &-CloseButtonButton:disabled {
+        background-color: #D1CECD;
+        border: #D1CECD;
+        cursor: unset;
+    }
+}

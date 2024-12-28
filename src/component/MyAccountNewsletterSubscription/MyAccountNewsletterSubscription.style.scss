@@ -1,0 +1,55 @@
+/* stylelint-disable number-max-precision */
+/* stylelint-disable no-missing-end-of-source-newline */
+
+.MyAccountNewsletterSubscription {
+    font-size: 14px;
+
+    @include desktop {
+        display: inline-block;
+    }
+
+    &-Title {
+        margin-block-start: 26px;
+
+        @include mobile {
+            tspan {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .Field-CheckboxLabel {
+        @include desktop {
+            color: #6F6F6F;
+        }
+
+        @include mobile {
+            color: #959595;
+            font-size: 12px;
+        }
+    }
+
+    .Field [type='checkbox']+.input-control,
+    .Field [type='radio']+.input-control {
+        border: 1px solid #959499;
+    }
+
+    &-Heading-Border {
+        @include mobile {
+            border-bottom: 0.5px solid #EDEDED;
+            margin-inline-start: -18px;
+        }
+    }
+
+    &-Button {
+        @include desktop {
+            margin-block-start: 26px;
+            width: 189px;
+        }
+
+        @include mobile {
+            margin-block: 10px;
+            width: 100%;
+        }
+    }
+}

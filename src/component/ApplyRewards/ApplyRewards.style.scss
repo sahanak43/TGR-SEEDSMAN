@@ -1,0 +1,135 @@
+.ApplyRewards {
+    padding-inline: 24px;
+
+    @include mobile {
+        padding-inline: 16px;
+    }
+
+    form {
+        border-block: 1px solid var(--primary-divider-color);
+        padding-block: 24px;
+
+        @include mobile {
+            padding-block: 16px;
+        }
+    }
+
+    &-Title {
+        font-size: 16px;
+        font-weight: 500;
+
+        h3 {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-block: 0 8px;
+            font-size: 20px;  
+            font-weight: 600;
+        }
+
+        svg {
+            cursor: pointer;
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .value {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &-FieldWrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-block-start: 1rem;
+        border: 2px solid var(--color-black);
+        border-radius: 8px;
+        padding: 10px;
+
+        .Field-Wrapper {
+            width: 100%;
+
+            .Field {
+                margin-block-start: 0;
+
+                &-ErrorMessages {
+                    inset-inline-start: -10px;
+                    margin-block-start: 10px;
+                }
+
+                input {
+                    background: transparent;
+                    border: none;
+
+                    &::placeholder {
+                        color: #7F7E7D;
+                        opacity: 1;
+                        font-size: 12px;
+            
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                input[type="text"]:disabled {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    &-Button {
+        border: 2px solid var(--color-black);
+        padding: 5px 20px;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 8px;
+        color: var(--color-black);
+
+        @include mobile {
+            padding: 4px 12px;
+        }
+
+        &:hover {
+            color: var(--primary-base-color);
+        }
+    }
+
+    &-errorLabel {
+        background-color: #EBCFCF;
+        padding: 10px;
+        text-align: center;
+        border-radius: 12px;
+        margin-block-start: 10px;
+
+        p {
+            margin-block-end: 0px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+
+    &-successLabel {
+        background-color: #D6EBCE;
+        padding: 10px;
+        text-align: center;
+        border-radius: 12px;
+        margin-block-start: 10px;
+
+        p {
+            margin-block-end: 0px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+
+.CheckoutArchFrom {
+    &-CheckoutArchContainer {
+        padding: 0px 10px 18px 10px;
+
+        input {
+            width: 100%;
+            z-index: 1;
+            background: #FAFAFA;
+            padding: 10px;
+            border: 2px solid #7F7E7D;
+            border-radius: 8px;
+        }
+
+        .Field-LabelContainer {
+            position: relative;
+            inset-block-end: none;  
+        }
+
+        input::placeholder {
+            opacity: 1;
+            color: #7F7E7D;
+        }
+        
+        .Field {
+            margin-block-start: 18px;
+
+            &-ErrorMessages {
+                padding-block-start: 0px;
+            }
+        }
+
+        .Field_type_text.Field_isValid input {
+            border: 2px solid #7F7E7D;
+        }
+
+        .Field_hasError input:not([type="number"]) {
+            border: 2px solid #7F7E7D;
+        }
+    }
+}

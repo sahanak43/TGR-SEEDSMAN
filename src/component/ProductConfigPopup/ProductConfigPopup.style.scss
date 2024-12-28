@@ -1,0 +1,115 @@
+.ProductConfigPopup {
+    position: fixed;
+    background: #4f4f4f82;
+    z-index: 900;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    display: flex;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    align-items: center;
+    justify-content: center;
+
+    .popup {
+        display: flex;
+        background: #fff;
+        flex-direction: column;
+        border-radius: 8px;
+        max-width: 360px;
+        width: 100%;
+
+        .ProductCard {
+            &-PriceWrapper {
+                padding: 0px;
+                justify-content: center;
+
+                @include mobile {
+                    border: none;
+                }
+
+                .ProductPrice {
+                    &_hasDiscount {
+                        flex-direction: row;
+                        gap: 5px;
+                        align-items: center;
+                    }
+
+                    height: unset;
+                    min-height: 40px;
+
+                    @include mobile {
+                        min-height: 24px;
+                    }
+                }
+            }
+
+            &-Attributes {
+                .Field-Wrapper {
+                    .ProductConfigurableAttributeDropdown {
+                        width: 100%;
+                        margin-block-end: 15px;
+                    }
+                }
+            }
+        }
+
+        @include mobile {
+            margin-inline: 2rem;
+        }
+    }
+
+    .ProductCard-Wrapper .ProductCard-Title {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        padding: 1.5rem;
+        width: 80%;
+    }
+
+    .ProductPrice-SubPrice {
+        display: none;
+    }
+
+    .ProductCard-Wrapper .ProductCard-Options {
+        padding-inline: 16px;
+    }
+
+    .ProductAttributeValue-String span, .ProductAttributeValue-Text span {
+        font-size: 16px;
+    }
+
+    .ProductCard-Price .ProductPrice-PriceValue {
+        font-size: 18px;
+    }
+
+    .ProductCard-AddToCart {
+        @include mobile {
+            margin-inline: 0px;
+        }
+    }
+
+    .Popup-CloseBtn {
+        inset-inline-end: 1rem;
+        inset-block-start: 1rem;
+        position: absolute;
+        cursor: pointer;
+        z-index: 99;
+        background-color: #ECECEC;
+        border-radius: 50%;
+
+        @include mobile {
+            inset-inline-end: 5px;
+            inset-block-start: 3px;
+            margin-block-start: 8px;
+            margin-inline-end: 8px;
+        }
+
+        svg {
+            width: 26px;
+            height: 24px;
+            fill: var(--color-black);
+            padding-block-start: 2px;
+        }
+    }
+}

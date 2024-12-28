@@ -1,0 +1,94 @@
+.Pagination {
+    @include desktop {
+        display: flex;
+    }
+
+    margin-block-start: unset;
+
+    .ChevronIcon {
+        cursor: pointer;
+        display: block;
+        height: 20px;
+        width: 12px;
+    }
+
+    &-NextButton {
+        display: flex;
+    }
+
+    &-NextButtonTitle {
+        text-transform: uppercase;
+        color: #739536;
+    }
+
+    &-PreviousButtonTitle {
+        text-transform: uppercase;
+        color: #739536;
+    }
+
+    &-NextDisabledButtonTitle {
+        pointer-events: none;
+        text-transform: uppercase;
+        color: #9B9B9B;
+    }
+
+    &-PreviousButton {
+        display: flex;
+    }
+
+    &-NextButtonIcon {
+        margin-inline-start: -30px;
+
+        @include mobile {
+            margin-inline-start: -44px;
+        }
+    }
+
+    &-PreviousButtonIcon {
+        display: flex;
+        margin: auto;
+        color: #739536;
+    }
+
+    &-content {
+        @include desktop {
+            display: flex;
+        }
+    }
+
+    &-totalPages {
+        margin-block: auto;
+        color: #606060;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    &-contentLink {
+        margin-inline-start: auto;
+    }
+
+    &-NextLink {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    &-PreviousLink {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    &-NextLink,
+    &-PreviousLink {
+        text-transform: uppercase;
+
+        &:hover {
+            .ChevronIcon {
+                fill: #739536;
+            }
+
+            span {
+                color: #739536;
+            }
+        }
+    }
+}

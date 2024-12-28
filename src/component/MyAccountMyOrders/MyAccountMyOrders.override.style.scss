@@ -1,0 +1,75 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+
+.MyAccountMyOrders {
+    &-NoOrders {
+        display: flex;
+        margin-block-start: 90px;
+    }
+
+    &-NoOrdersIcon {
+        img {
+            width: initial;
+        }
+    }
+
+    &-Heading {
+        margin-block: 40px 16px;
+    }
+
+    &-NoOrdersContent {
+        display: grid;
+        margin: auto;
+        text-align: center;
+    }
+
+    &-Sort {
+        inset-inline-end: 0;
+        position: absolute;
+        margin-block-start: -55px;
+        display: flex;
+        column-gap: 1rem;
+
+        .OrderSorting {
+            margin-block-start: -32px;
+        }
+
+        .OrderSorting .FieldSelect-Options {
+            inset-inline: 0 0;
+            inset-inline-start: auto;
+            width: 160px;
+            border: unset;
+            box-shadow: 0px 3px 11px #0000001c;
+
+            &_isExpanded {
+                padding: 20px 30px;
+
+                li {
+                    padding-inline-start: 0;
+                    
+                    &:hover {
+                        background: none;
+                        color: var(--primary-base-color);
+                    }
+                }
+            }
+        }
+
+        .OrderSorting .FieldSelect-OptionsWrapper_isExpanded {
+            max-height: unset;
+        }
+
+        .OrderSorting select {
+            border-bottom: unset;
+            padding-inline-end: 10px;
+        }
+
+        .OrderSorting .ChevronIcon {
+            display: inline-block;
+            inset-inline-end: -5px;
+        }
+    }
+
+    &-NoOrdersButton {
+        margin-block-start: 33px;
+    }
+}

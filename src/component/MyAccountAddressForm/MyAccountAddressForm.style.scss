@@ -1,0 +1,68 @@
+.FieldGroup-Wrapper {
+    .FieldGroup-Wrapper_address,
+    .FieldGroup-Wrapper_nameGroup {
+        .FieldGroup {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.MyAccount-Button,
+.MyAccount-Button_Cancel {
+    @include desktop {
+        min-width: 189px;
+    }
+}
+
+.MyAccount-Button {
+    background-color: #739536;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.MyAccount-Button_Cancel {
+    border: 1px solid #000000;
+    color: #000000;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.MyAccountAddressForm {
+    &-Title {
+        display: flex;
+        grid-column-gap: 70px;
+        column-gap: 70px;
+        border-block-end: 1px solid #e0e0e0;
+        padding-block-end: 30px;
+        align-items: center;
+        font-weight: 500;
+        font-size: 24px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-searchToggle {
+        font-size: 14px;
+        font-weight: 600;
+        margin-block-start: 2rem;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.GoogleMap {
+    &-AddressSugestion {
+        padding-block-start: 16px;
+    }
+
+    .Form {
+        padding-block: 0px;
+    }
+}
+
+.Field-Wrapper.isPreFilled .Field.Field .Field-LabelContainer .Field-Label {
+    margin-block-end: 20px;
+}

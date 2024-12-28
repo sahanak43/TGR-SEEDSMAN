@@ -1,0 +1,183 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+.MyAccountAddressBook {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .AddressHeading {
+        margin: 3rem 0 2rem 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .OtherAddress {
+        padding: 2rem 0;
+    }
+
+    &-Address_Empty {
+        text-align: center;
+        margin-block-start: 80px;
+
+        img {
+            width: 65px;
+            height: 102px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-block-end: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000000;
+            margin-block-end: 3rem;
+        }
+    }
+
+    .DefaultAddress {
+        border-bottom: 1px solid #e0e0e0;
+        padding-block-end: 30px;
+    }
+
+    .Address-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+
+        .Address-Action {
+            .Action-Buttons {
+                @include mobile {
+                    display: flex;
+                }
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .ShippingAddress,
+        .BillingAddress {
+            .MyAccountAddressTable {
+                .AddressContainer-Active {
+                    background: #f2faf7;
+                    border: 1px solid #fff;
+                }
+
+                .AddressContainer {
+                    border: solid 1px #e0e0e0;
+                }
+
+                .AddressContainer,
+                .AddressContainer-Active {
+                    padding: 20px;
+
+                    .AddressContent {
+                        display: flex;
+
+                        div {
+                            input {
+                                height: 17px;
+                                margin-block-start: 6px;
+                            }
+
+                            input[type="radio"] {
+                                appearance: auto;
+                                accent-color: #000;
+                            }
+                        }
+                    }
+
+                    .KeyValueTable-Wrapper {
+                        .KeyValueTable {
+                            tr {
+                                border: none;
+                                font-size: 14px;
+                                font-weight: 600;
+
+                                td {
+                                    padding: 5px;
+                                }
+                            }
+                        }
+                    }
+
+                    .Button_isHollow {
+                        color: #565959;
+                        font-size: 14px;
+
+                        @include mobile {
+                            width: 40%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-Button_EmptyAddress {
+        color: #ffffff;
+        background: #739536;
+        border: 1px solid #739536;
+        width: 206px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &-action-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block-end: 14px;
+        border-bottom: 1px solid #d8d8d8;
+
+        h3 {
+            font-size: 20px;
+
+            @include desktop {
+                margin-block-start: 0px;
+            }
+
+            @include mobile {
+                font-size: 16px;
+                width: 80%;
+            }
+        }
+    }
+
+    &-Button_NewAddress {
+        color: #000;
+        border-color: #000000;
+        max-width: 214px;
+
+        @include  mobile {
+            max-width: none;
+            padding-inline: 10px;
+            font-size: 12px;
+        }
+
+        button {
+            margin-inline-start: 12px;
+
+            @include mobile {
+                margin-block-start: 14px;
+                margin-inline-start: 0;
+                font-size: 12px;
+            }
+        }
+    }
+}

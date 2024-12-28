@@ -1,0 +1,314 @@
+.SeedsmanProductGallery {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-gap: 20px;
+
+    @include desktop {
+        position: sticky;
+        inset-block-start: 140px;
+        z-index: 99;
+        height: 500px;
+        background: var(--color-white);
+    }
+
+    .ProductWishlistButton {
+        position: absolute;
+        inset-inline-end: 1rem;
+        inset-block-start: 1rem;
+        z-index: 2;
+        background: #E8E7E7;
+        padding: 2.2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_isInWishlist {
+            svg {
+                path {
+                    fill: var(--primary-base-color);
+                    stroke: none;
+                }
+            }
+        }
+    }
+
+    &-ProductImages {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 20px;
+        overflow-y: scroll;
+
+        @include mobile {
+            overflow: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &-Image-coloum {
+        transition: padding 300ms;
+        border-radius: 8px;
+
+        &:hover {
+            cursor: pointer;
+            padding: 4px;
+            border: 1px solid #b1adad;
+
+            > div {
+                border-radius: 8px;
+            }
+        }
+
+        .img-section {
+            object-fit: contain;
+            padding-block-end: 100%;
+
+            img {
+                height: 100%;
+                position: absolute;
+                object-fit: contain;
+            }
+        }
+
+        &-isActive {
+            padding: 8px;
+            border-radius: 8px;
+            border: 1px solid var(--color-black);
+            transition: padding 300ms;
+
+            > div {
+                border-radius: 8px;
+            }
+
+            .img-section {
+                padding-block-end: 100%;
+
+                img {
+                    height: 100%;
+                    position: absolute;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    &-Content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            inset-block-start: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--image-default-background);
+        }
+
+        .SeedsmanProductGallery-slides-active {
+            display: block;
+            height: 100%;
+            padding-block-end: 0;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        .mpproductlabel-label {
+            display: block !important; /* stylelint-disable-line declaration-no-important */
+        }
+    }
+
+    &-ProductSlider {
+        padding-block-end: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    &-PopUp-slider {
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: #00000060 0% 0% no-repeat padding-box;
+
+        @include mobile {
+            z-index: 4;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &-Hide {
+            display: none;
+        }
+    }
+
+    &-PopUp-ProductSlider {
+        width: 751px;
+        margin: auto;
+    }
+
+    &-PopUp-Content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        inset-block-start: 0;
+        max-width: 583px;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-slides-active {
+        display: block;
+        height: 100%;
+        padding-block-end: 100%;
+
+        img {
+            position: absolute;
+            height: 100%;
+        }
+    }
+
+    &-slides {
+        display: none;
+    }
+
+    &-prev,
+    &-next {
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        background: var(--color-white) 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000014;
+        border-radius: 36px;
+        opacity: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+        inset-block-start: 50%;
+        cursor: pointer;
+
+        @include mobile {
+            background: none;
+            box-shadow: none;
+            height: 0;
+        }
+
+        img {
+            width: 7px;
+            height: 14px;
+        }
+    }
+
+    &-prev {
+        @include desktop {
+            inset-inline-start: 0;
+        }
+
+        @include mobile {
+            inset-inline-start: 1.7rem;
+        }
+    }
+
+    &-next {
+        @include desktop {
+            inset-inline-end: 0;
+        }
+
+        @include mobile {
+            inset-inline-end: 1.7rem;
+        }
+    }
+
+    &-close-cursor {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        inset-inline-end: 0;
+        inset-block-start: 0;
+        color: var(--color-white);
+        font-size: 30px;
+        padding: 0 0;
+        margin-block-end: 11px;
+
+        @include mobile {
+            position: absolute;
+            inset-inline-end: 26px;
+            inset-block-start: 17px;
+            z-index: 2;
+        }
+
+        .close-img {
+            width: 30px;
+            height: 30px;
+            background-color: var(--color-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            @include mobile {
+                width: 31px;
+                height: 31px;
+                padding: 4px;
+                border: 1px solid #b4b5b4;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-GerminationPromise {
+        li {
+            list-style: revert;
+
+            &::marker {
+                color: #739536;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &-SliderImage {
+        height: 585px;
+        width: 100%;
+        background: var(--image-default-background)
+    }
+}

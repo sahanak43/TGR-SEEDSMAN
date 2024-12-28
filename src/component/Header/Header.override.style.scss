@@ -1,0 +1,592 @@
+/* stylelint-disable declaration-no-important */
+
+:root {
+    --header-logo-width: 194px;
+    --header-logo-height: 24px;
+
+    --header-height: 80px;
+    --header-nav-height: 60px;
+    --header-total-height: calc(
+        var(--header-height) + var(--offline-notice-height) + var(--demo-notice-height) + env(safe-area-inset-top)
+    );
+
+    @include desktop {
+        --header-top-menu-height: 32px;
+        --header-height: calc(var(--header-nav-height) + var(--header-top-menu-height) + var(--menu-total-height));
+    }
+
+    @include mobile {
+        --header-top-menu-height: 16px;
+        --header-height: calc(var(--header-nav-height) + var(--header-top-menu-height) + var(--menu-total-height));
+    }
+}
+
+.Header {
+    border-block-end: unset;
+    position: inherit;
+
+    &-Wrapper {
+        margin-block-end: 1rem;
+
+        .OfflineNotice {
+            position: initial;
+            inset-block-start: 0px;
+            max-width: unset;
+        }
+
+        &:has(.Header_name_search) {
+            @include mobile {
+                .Header-TopMenu {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &_isCheckout {
+        .Header {
+            &-Nav {
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &-ContinueButton {
+        color: var(--color-black);
+        font-size: 14px;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
+    &Wrapper {
+        box-shadow: 0px 3px 11px #0000000d;
+
+        @include mobile {
+            .Header-Nav {
+                .Logo {
+                    height: var(--header-logo-height);
+                    padding-block-end: 35%;
+                }
+            }
+        }
+    }
+
+    .MobileMenu {
+        background: #fff;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow-y: auto;
+        overscroll-behavior: none;
+        z-index: 1002;
+        inset-inline-end: 0;
+        inset-block-start: 0;
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px, rgba(0, 0, 0, 0.14) 0px 16px 24px 2px,
+            rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+
+        &-hide {
+            visibility: hidden;
+            inset-inline-start: -100%;
+        }
+
+        &-visible {
+            visibility: visible;
+            inset-inline-start: 0;
+
+            .MobileMenu-logo-section {
+                position: sticky;
+                inset-block-start: 0;
+                background-color: #ffffff;
+                z-index: 1002;
+
+                .logo {
+                    max-width: 100%;
+                    width: 160px;
+                }
+            }
+
+            .Menu-ProfileSection {
+                position: sticky;
+                inset-block-start: 58px;
+                background-color: #f8f8f8;
+                z-index: 100;
+            }
+
+            .Image {
+                height: 100%;
+            }
+
+            .Logo-Placeholder .Image {
+                height: 39px;
+            }
+
+            .Menu-MainCategories {
+                margin-block-end: 0rem;
+            }
+
+            .Menu-MenuWrapper {
+                padding: 0 0 14px 0;
+                // margin-block-start: 60px;
+            }
+
+            .Menu-Item {
+                margin: 0;
+            }
+
+            .Menu-ItemCaption {
+                padding-block: 1.5rem;
+                font-size: 14px;
+
+                @include tablet {
+                    font-size: 12px;
+                }
+            }
+
+            .Header-MenuIcons {
+                padding-block: 1rem 3rem;
+
+                .MenuIcon {
+                    padding: 1rem 0;
+                    height: 4.3rem;
+
+                    .Header-TrackOrder a {
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .topBar-content {
+                padding-block-end: 4rem;
+
+                @include mobile {
+                    padding-block-end: 6rem;
+                }
+            }
+
+            .topBar-content div {
+                padding: 1rem 0;
+                height: 4.3rem;
+            }
+        }
+
+        &-logo-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1.4rem;
+
+            svg {
+                fill: black;
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+    }
+
+    &-LogoWrapper {
+        @include desktop {
+            position: absolute;
+            height: 59px;
+        }
+
+        grid-column: 1 / 2;
+        min-height: unset;
+        opacity: 1;
+        max-width: 100%;
+        width: 160px;
+        margin: 0;
+        inset-inline-start: 1rem;
+
+        @include mobile {
+            height: unset;
+            inset-inline-start: 0;
+        }
+
+        @include minimobile {
+            img {
+                width: 80%;
+            }
+        }
+    }
+
+    &-HeartIcon {
+        cursor: pointer;
+    }
+
+    &-MyAccountContainer {
+        display: flex;
+        margin-inline-start: unset;
+        padding-block-start: 0.5rem;
+
+        @include mobile {
+            padding-block-start: 0;
+        }
+    }
+
+    &-MyAccountWrapper {
+        cursor: pointer;
+        display: flex;
+        column-gap: 5px;
+    }
+
+    &-MyAccountTitle {
+        margin-inline-start: 5px;
+    }
+
+    &-NavbarBorder {
+        border-bottom: 1px solid var(--primary-divider-color);
+        margin-block-start: 8px;
+        max-width: initial;
+    }
+
+    &-Nav {
+        @include desktop {
+            margin-block-start: 10px;
+            grid-template-columns: minmax(var(--header-logo-width), 1fr) minmax(auto, 366px) 4fr;
+            padding: 0;
+
+            .LanguageSwitcher .FieldSelect-Select,
+            .StoreSwitcher .StoreSwitcher-Title {
+                font-weight: 500;
+            }
+        }
+
+        @include mobile {
+            padding: 4rem 14px;
+        }
+    }
+
+    &-IconsWrapper {
+        display: inline-flex;
+        white-space: nowrap;
+        margin-inline-start: auto;
+        gap: 1.6rem;
+        align-items: center;
+
+        @include mobile {
+            gap: 2.2rem;
+            align-items: baseline;
+            justify-content: flex-end;
+        }
+    }
+
+    &-Button_type_minicart {
+        @include desktop {
+            padding-block-start: 0.6rem;
+        }
+
+        margin-inline-start: unset;
+    }
+
+    &-SeedFinder {
+        a {
+            color: #000000;
+            font-weight: 500;
+            font-size: 13px;
+        }
+    }
+
+    &-TrackOrder {
+        a {
+            color: #000000;
+            font-weight: 500;
+            font-size: 13px;
+        }
+    }
+
+    &-MinicartItemCount {
+        background-color: var(--primary-base-color);
+        inset-inline-end: 1px;
+
+        @include mobile {
+            inset-block-start: 0px;
+        }
+    }
+
+    &-TopMenu {
+        display: unset;
+        justify-content: unset;
+        height: unset;
+        max-width: unset;
+        margin-inline-start: auto;
+        margin: 0;
+        background-color: #f8f8f8;
+        padding: 0 0;
+
+        .footer {
+            display: none;
+        }
+    }
+
+    &-MobileTopMenu {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &-MenuButtonSideBar {
+        margin-block-start: 10px;
+
+        .Header-MenuButton {
+            width: 35px;
+            height: 35px;
+        }
+
+        .CloseIcon {
+            fill: black;
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    .topBar-content {
+        display: flex;
+        flex-direction: row;
+        gap: 47px;
+
+        @include tablet {
+            gap: 25px;
+        }
+
+        margin: auto;
+        max-width: var(--content-wrapper-width);
+        justify-content: flex-end;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-inline: 16px 36px;
+            grid-gap: 0;
+        }
+
+        .Hotline-Link {
+            text-align: center;
+            display: flex;
+
+            a {
+                color: #151515;
+            }
+
+            .contact-no {
+                font-weight: 600;
+            }
+        }
+
+        .Wholesale-Link {
+            background-color: #e6d93b;
+            padding: 10px 12px 9px 12px;
+
+            a {
+                color: #000000;
+            }
+        }
+
+        .topBar-OrderHotline {
+            display: grid;
+        }
+
+        a {
+            color: #464646;
+            font-weight: 400;
+            font-size: 13px;
+
+            @include mobile {
+                color: #000000;
+                font-weight: 600;
+                font-size: 12px;
+                display: inline-block;
+                width: 100%;
+            }
+
+            @include tablet {
+                font-size: 12px;
+            }
+        }
+
+        div {
+            @include mobile {
+                padding-block: 18px;
+                width: 100%;
+                border-bottom: 1px solid #dddddd;
+            }
+        }
+
+        div:last-child {
+            @include mobile {
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    &-MenuIcons {
+        padding-inline: 16px 36px;
+        background-color: #f8f8f8;
+        padding-block-end: 20px;
+
+        .MenuIcon {
+            padding-block: 18px;
+            width: 100%;
+            border-bottom: 1px solid #dddddd;
+            display: flex;
+            justify-content: space-between;
+
+            select {
+                text-align: end;
+                padding-inline-end: 20px;
+                font-weight: 600;
+            }
+
+            .FieldSelect-Select {
+                padding: 0;
+                background-color: #f8f8f8;
+                font-size: 13px;
+            }
+
+            .title {
+                font-size: 12px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+            }
+
+            .LanguageSwitcher {
+                border-bottom: unset;
+                margin: 0 0;
+                font-weight: 500;
+            }
+
+            .StoreSwitcher {
+                margin: 0 0;
+                font-weight: 500;
+            }
+
+            .CurrencySwitcher {
+                margin: 0 0;
+                font-weight: 500;
+
+                @include mobile {
+                    width: auto;
+                }
+
+                .ChevronIcon {
+                    inset-inline-end: 0;
+                }
+            }
+        }
+    }
+
+    &_name_search {
+        .SearchField {
+            &_isActive {
+                @include mobile {
+                    display: block;
+                    width: 100%;
+                    margin-block-start: 8px;
+                }
+            }
+        }
+
+        @include mobile {
+            .Header {
+                &-LogoWrapper,
+                &-IconsWrapper {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .topbar-cms-content {
+        color: #000;
+
+        @include mobile {
+            display: none !important;
+        }
+
+        .d-flex {
+            display: flex;
+            font-size: 10px;
+            padding: 0 2rem;
+
+            @include tablet {
+                font-size: 8px;
+                margin-inline-start: 10px;
+            }
+
+            .w-60 {
+                width: 60%;
+
+                a {
+                    color: #fff;
+                    font-size: 10px;
+                    font-weight: normal;
+                }
+
+                @include tablet {
+                    width: 50%;
+                }
+            }
+
+            .w-40 {
+                width: 40%;
+                margin-inline-start: 35px;
+
+                a {
+                    color: #fff;
+                    font-size: 10px;
+                    font-weight: normal;
+                }
+
+                @include tablet {
+                    width: 50%;
+                }
+            }
+        }
+    }
+
+    .Header_mobile_topBar {
+        @include mobile {
+            .d-flex {
+                > div {
+                    font-size: 12px;
+                }
+
+                a {
+                    color: #fff;
+                    font-size: 10px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+    
+    &-Button_type_back {
+        .ChevronIcon {
+            @include mobile {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                inset-block-end: 3px;
+            }
+        }
+    }
+
+    @include desktop {
+        .HeaderWrapper {
+            width: 100%;
+            max-width: unset;
+        }
+    }
+
+    &-Switcher {
+        border-bottom: 1px solid #f4f4f4;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 25px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 56px;
+    }
+}

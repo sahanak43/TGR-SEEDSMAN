@@ -1,0 +1,128 @@
+.SearchOverlayProduct {
+    border-top: 1px solid var(--primary-divider-color);
+    padding: 1rem 0;
+    margin-block-end: 0;
+
+    &:last-child {
+        border-bottom: 1px solid var(--primary-divider-color);
+        margin-block-end: 0;
+    }
+
+    &-Heading {
+        width: 45%;
+    }
+
+    &-Name {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+        -webkit-margin-after: 0;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &-ProductInfo {
+        display: flex;
+        column-gap: 20px;
+
+        .Image {
+            display: none;
+        }
+    }
+
+    &-Product {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    &-PriceWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-block-start: 6px;
+    }
+
+    &-StockStatus {
+        font-weight: 500;
+        border-radius: 20px;
+        padding: 7px;
+        font-size: 12px;
+
+        &.OUT_OF_STOCK {
+            background-color: #fff5f4;
+            color: #e73b25;
+        }
+
+        &.IN_STOCK {
+            background: #e8f6d0;
+            color: #00741b;
+        }
+    }
+
+    &-Price {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &-Offers {
+        color: var(--primary-base-color);
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: end;
+        width: 100%;
+        margin-block: 3rem 1rem;
+
+        @include mobile {
+            width: fit-content;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+
+    &-OwnerName {
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        gap: 0.3rem;
+        margin-block-start: 1rem;
+
+        @include mobile {
+            display: none;
+        }
+
+        span {
+            color: #9b9b9b;
+        }
+
+        h4 {
+            color: var(--primary-base-color);
+            font-weight: 500;
+        }
+    }
+
+    &-Image {
+        width: 16%;
+        height: 100%;
+        padding-block-end: 16%;
+        background-color: #e0e0e0;
+
+        img {
+            object-fit: contain;
+            height: 100%;
+            position: absolute;
+            font-size: 7px;
+            overflow: hidden;
+        }   
+    }
+
+    &::before {
+        display: none;
+    }
+}

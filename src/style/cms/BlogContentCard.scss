@@ -1,0 +1,32 @@
+.BlogContentCardWrapper {
+    .BlogContentCardDate {
+        color: #807E7D;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0.24px;/* stylelint-disable-line number-max-precision */
+        padding: 16px 0px 0px 24px;
+
+        p {
+            font-size: 12px;
+        }
+
+        @include mobile {
+            padding: 16px 0px 0px 16px;
+        }
+    }
+
+    .BlogContentCardTitle {
+        color: #000;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 5px 24px 94px 24px;
+        margin-block: 0px;
+
+        @include mobile {
+            padding: 5px 12px 94px 12px;
+        }
+    }
+}

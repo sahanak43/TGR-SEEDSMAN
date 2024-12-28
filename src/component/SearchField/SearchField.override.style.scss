@@ -1,0 +1,87 @@
+.SearchField {
+    @include desktop {
+        width: 90%;
+        max-width: 366px;
+        grid-column: 2 / 3;
+        margin: unset;
+        display: block;
+    }
+
+    @include mobile {
+        max-width: unset;
+        width: unset;
+        margin-block-start: -9px;
+    }
+
+    &-SearchIcon {
+        position: absolute;
+        inset-inline-end: 0px;
+        height: 50px;
+        inset-block-start: calc(30% - 15px);
+
+        @include desktop {
+            width: 58px;
+            background-color: #739536;
+        }
+
+        @include mobile {
+            height: unset;
+            inset-block-start: calc(30% - 21px);
+        }
+
+        cursor: pointer;
+    }
+
+    &-CloseIcon {
+        inset-inline-end: 6px;
+
+        svg {
+            fill: var(--color-black);
+            cursor: pointer;
+        }
+    }
+
+    &-Input {
+        width: 100%;
+        height: 50px;
+        background: #FAFAFA;
+        border-bottom: unset;
+        padding: 16px 30px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    input:focus {
+        border-bottom: unset;
+    }
+
+    &_isActive {
+        @include mobile {
+            display: block;
+
+            .SearchField-SearchIcon { 
+                display: none;
+            }
+
+            input { 
+                display: block;
+                background: none;
+            }
+
+            .SearchField-SearchInnerWrapper {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("src/util/images/search.svg");
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    inset-block-start: 15px;
+                }
+            }
+        }
+    }
+}

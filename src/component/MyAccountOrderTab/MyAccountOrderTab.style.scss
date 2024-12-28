@@ -1,0 +1,55 @@
+/* stylelint-disable no-missing-end-of-source-newline */
+
+.MyAccountOrderTab {
+    &-Item {
+        margin: 0;
+        padding-inline-start: 0;
+        background-color: #f3f3f3;
+        border: var(--table-body-border);
+        border-right: none;
+        opacity: 0.6;
+
+        @include mobile {
+            flex-basis: 33.33%;
+            white-space: nowrap;
+        }
+
+        &:last-child {
+            margin: 0;
+            padding: 0;
+            border-right: var(--table-body-border);
+        }
+
+        &::before {
+            content: '';
+        }
+
+        &_isActive {
+            background-color: var(--color-white);
+            border-bottom: none;
+            opacity: 1;
+        }
+
+        &:hover {
+            background-color: var(--color-white);
+        }
+    }
+
+    &-Button {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 20px;
+        margin: 0;
+        padding: 16px 10px;
+        cursor: pointer;
+
+        @include mobile {
+            width: 100%;
+            padding: 16px 6px;
+        }
+
+        @include desktop {
+            padding: 16px 24px;
+        }
+    }
+}

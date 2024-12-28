@@ -1,0 +1,354 @@
+
+.SelectCountry {
+    &-Wrapper {
+        @include desktop {
+            max-width: 465px;
+            width: 100%;
+            margin: 2rem;
+        }
+
+        @include mobile {
+            padding: 2rem;
+        }
+
+        .Form {
+            .Field-Wrapper {
+                .Field_type_select {
+                    .FieldSelect-Clickable {
+                        .FieldSelect-Select {
+                            padding-inline: 10px;
+                            border: 2px solid var(--color-black);
+                            border-radius: 7px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .Field-Wrapper_type_checkbox {
+            display: flex;
+            justify-content: center;
+
+            .Field {
+                margin-block-start: 2px;
+                
+                @include mobile {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .Button {
+            width: 100%;
+            border-radius: 7px;
+            margin-block-start: 2rem;
+            background-color: #4B6937;
+            border-color: #4B6937;
+
+            &[disabled] {
+                background-color: #9F9D9C;
+                border-color: #9F9D9C;
+            }
+
+            &:hover {
+                border-radius: 7px;
+                background-color: #5D8144;
+                border-color: #5D8144;
+            }
+        }
+    }
+
+    &-HeaderContent {
+        h4 {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            margin-block-end: 2rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+    }
+
+    &-selectCountryLogo {
+        background: #4B6937;
+        width: 100%;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        padding-block: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .Logo {
+            width: 150px;
+            display: flex;
+            margin: 0 auto;
+            height: 55px;
+            background: transparent;
+
+            img {
+                position: initial;
+            }
+        }
+    }
+
+    &-ageSelection,
+    &-usAgeSelection {
+        margin-block-start: 2rem;
+        padding: 2rem 1rem;
+        border-radius: 10px;
+
+        &.error {
+            background: #F3B7B7;
+        }
+
+        h4 {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            margin-block-end: 1rem;
+        }
+
+        p {
+            text-align: center;
+
+            @include mobile {
+                line-height: 22px;
+            }
+
+            a {
+                color: var(--color-black);
+                text-decoration: underline;
+            }
+        }
+
+        .not18Btn {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+
+    &-ageSelection {
+        background: #D6EBCE;
+    }
+
+    &-usAgeSelection {
+        background: #eeb950;
+    }
+
+    &-notePoints {
+        margin-block-start: 2rem;
+
+        p {
+            text-align: center;
+
+            @include mobile {
+                line-height: 22px;
+            }
+
+            a {
+                color: var(--color-black);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-checkBoxLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-block-start: 10px;
+
+        @include mobile {
+            gap: 3px;
+        }
+    }
+
+    &-checkBoxLinks {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        gap: 5px;
+
+        @include mobile {
+            gap: 3px;
+        }
+
+        .Field {
+            margin-block-start: 2px;
+        }
+
+        a {
+            color: var(--color-black);
+            text-decoration: underline;
+
+            @include mobile {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &-Footer {
+        position: fixed;
+        inset-block-end: 0;
+        text-align: center;
+        background: #F4F4F4;
+        width: 100%;
+        padding-block: 22px;
+
+        p {
+            font-size: 12px;
+            margin: 0;
+            color: #9B9B9B;
+        }
+    }
+
+    &-NoteContent {
+        p {
+            text-align: center;
+            margin-block-end: 0;
+            padding-block: 20px;
+            color: #707070;
+            border-block: 2px solid #f4f4f4;
+        }
+    }
+
+    &-CountryCheckBox {
+        .Field-CheckboxLabel {
+            font-size: 14px;
+
+            &:not([class*='_isDisabled']):hover {
+                color: var(--color-black);
+            }
+
+            .input-control {
+                border: 2px solid #959499;
+            }
+
+            p {
+                margin-block-end: 0px;
+
+                a {
+                    color: var(--color-black);
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    &-continueButton {
+        margin-block: 30px;
+
+        .Button {
+            width: 100%;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+    }
+
+    &-FooterContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-block-start: 30px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    
+        p {
+            margin-block-end: 0;
+        }
+    }
+
+    &-Link {
+        font-weight: 500;
+    }
+
+    &-SearchDropDown {
+        margin-block-start: 1rem;
+
+        .css-b62m3t-container {
+            .css-t3ipsp-control {
+                border: 2px solid var(--color-black);
+                box-shadow: none;
+                border-radius: 7px;
+
+                &:hover {
+                    border: 2px solid var(--color-black);
+                }
+            }
+        }
+
+        .css-166bipr-Input {
+            #react-select-2-input {
+                font-size: 14px !important; /* stylelint-disable-line declaration-no-important */
+                color: var(--color-black) !important; /* stylelint-disable-line declaration-no-important */
+                min-width: 200px !important; /* stylelint-disable-line declaration-no-important */
+            }  
+        }
+
+        .css-1dimb5e-singleValue {
+            font-size: 14px;
+            color: var(--color-black);
+        }
+
+        .css-10wo9uf-option, 
+        .css-tr4s17-option, 
+        .css-d7l1ni-option {
+            font-size: 14px;
+
+            &:hover {
+                font-size: 14px !important; /* stylelint-disable-line declaration-no-important */
+            }
+        }
+
+        .css-tr4s17-option {
+            background-color: #73A054;
+        }
+
+        .css-d7l1ni-option {
+            background-color: #D6EBCE;
+
+            &:hover {
+                background-color: #D6EBCE;
+            }
+        }
+
+        .css-1jqq78o-placeholder {
+            font-size: 14px;
+            color: var(--input-color);
+        }
+
+        .css-13cymwt-control {
+            border: 2px solid var(--color-black);
+            border-radius: 7px;
+
+            &:hover {
+                border: 2px solid var(--color-black);
+            }
+
+            .css-1hb7zxy-IndicatorsContainer {
+                .css-1u9des2-indicatorSeparator {
+                    background-color: var(--color-black);
+                }
+
+                .css-1xc3v61-indicatorContainer {
+                    color: var(--color-black);
+                }
+            }
+        }
+    }
+}

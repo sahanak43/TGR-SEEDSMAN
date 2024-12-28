@@ -1,0 +1,229 @@
+
+:root {
+    --category-filter-overlay-desktop-color: #979797;
+    --category-filter-overlay-selected-color: var(--primary-base-color);
+    --category-filter-overlay-hover-color: var(--primary-light-color);
+}
+
+.CategoryFilterOverlay {
+    &-MobileWrapper {
+        margin-inline-start: 16px;
+        padding-block-end: 100px;
+
+        @include mobile {
+            column-count: 2;
+        }
+    }
+
+    &-MainHeading {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--expandable-content-divider-color);
+        width: 100%;
+        padding-block-end: 1rem;
+        align-items: center;
+        margin-block-start: 3rem;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+
+
+    @include mobile {
+        transition: transform 200ms ease-in-out;
+        transform: translateX(100%);
+        will-change: transform;
+        overflow-y: hidden;
+
+        &-Wrapper {
+            display: grid;
+            grid-template-rows: min-content auto min-content;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+    
+
+        &-FilterHeader {
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem 16px;
+            align-items: center;
+            z-index: 1;
+            border-bottom: 1px solid var(--primary-divider-color);
+            position: sticky;
+            inset-block-start: 0;
+            background: var(--color-white);
+
+            .action-icons {
+                display: flex;
+                align-items: flex-start;
+                column-gap: 23px;
+
+                span {
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                }
+
+                button {
+                    color: var(--color-black);
+                }
+            }
+
+            button {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+    }
+
+   
+
+ 
+
+    &.CategoryFilterOverlay {
+        &_isVisible {
+            transform: translateX(0%);
+    
+            @include mobile {
+                inset: 0;
+                z-index: 999;
+                opacity: 1;
+                height: auto;
+            }
+        }
+    }
+
+
+
+    &-Heading {
+        text-transform: uppercase;
+        margin-block-end: 0;
+        font-weight: 500;
+        font-size: 14px;
+        margin-block-start: 0;
+
+        @include mobile {
+            display: none;
+        }
+
+        &_isContentFiltered {
+            display: none;
+        }
+    }
+
+
+    &-Placeholder {
+        padding: 12px;
+
+        @include mobile {
+            padding: 14px;
+        }
+    }
+
+
+    &-Filter {
+        order: 50;
+
+        @include desktop {
+            margin-block-end: 12px;
+        }
+    }
+
+    &-ResetSection {
+        display: flex;
+        justify-content: space-between;
+        margin-block-start: 0;
+        border-bottom: none;
+        padding-block-end: 0;
+
+        @include mobile {
+            padding: 0 16px 20px 16px;
+        }
+
+        .ResetButton-Button {
+            border: none;
+            font-size: 12px;
+            color: #9b9b9b;
+            height: 15px;
+            padding-inline-end: unset;
+            text-transform: unset;
+
+            @include mobile {
+                width: unset;
+            }
+
+            &:hover {
+                color: #9b9b9b;
+                height: 15px;
+            }
+        }
+    }
+
+    &-ResetSectionTitle {
+        font-size: 14px;
+        color: #000000;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-SeeResults {
+        @include desktop {
+            display: none;
+        }
+
+        @include mobile {
+            position: fixed;
+            inset-block-end: 0;
+            background-color: var(--color-white);
+            -webkit-border-before: 1px solid var(--primary-divider-color);
+            border-top: 1px solid var(--primary-divider-color);
+            width: 100%;
+            padding: 16px;
+            height: fit-content;
+        }
+    }
+
+    &-Button.Button {
+        width: 100%;
+
+        @include mobile {
+            font-size: 12px;
+            font-weight: normal;
+        }
+    }
+
+    &-ResetButton {
+        @include desktop {
+            margin-block-end: unset;
+        }
+
+        .CategoryFilterOverlay-NoResults ~ & {
+            @include mobile {
+                display: block;
+            }
+        }
+    }
+
+    li {
+        padding-inline-start: 0;
+
+        &::before {
+            content: none;
+        }
+
+        &:last-child {
+            @include mobile {
+                margin-block-end: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.SeedsFindercard {
+    .product-container {
+        .product {
+            display: flex;
+            width: auto;
+            border: 1px solid #739536;
+            padding: 15px;
+            position: relative;
+            justify-content: space-between;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .image-wrapper {
+                width: 100%;
+
+                .product-image {
+                    margin: 0px;
+                    display: flex;
+                    padding: 0px;
+                    max-width: 100%;
+                    height: 230px;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #eee;
+
+                    img {
+                        height: 100%;
+                        object-fit: contain;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .info-details {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                width: 100%;
+                row-gap: 20px;
+
+                .product-details {
+                    display: flex;
+                    row-gap: 15px;
+                    flex-direction: column;
+
+                    .product-name {
+                        font-size: 16px;
+                        color: #000;
+                        font-weight: 600;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        height: 40px;
+                        text-align: start;
+                        cursor: pointer;
+                    }
+
+                    .properties-title {
+                        font-size: 15px;
+                        margin-block-end: 0;
+                    }
+
+                    .product-properties {
+                        li {
+                            margin-block-end: 10px;
+
+                            @include mobile {
+                                margin-block-end: 12px;
+                            }
+
+                            .attribut-status { 
+                                border-radius: 50%;
+                                padding-inline: 3px;
+                                margin-inline-end: 10px;
+
+                                svg {
+                                    width: 12px;
+                                    height: 8px;
+                                    object-fit: contain;
+                                    inset-block-start: -1px;
+                                    stroke: white;
+                                }
+                            }
+                            
+                            .property {
+                                &-negative {
+                                    background-color: red;
+                                }
+
+                                &-positive {
+                                    background-color: green;
+                                }
+                            }
+
+                            .attribute-name {
+                                font-size: 15px;
+                                color: #a39b96;
+                            }
+                        }
+                    }
+                }
+
+                .button-wrapper {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 20px;
+                    flex-direction: column;
+                    row-gap: 10px;
+
+                    .product-price {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+                        margin-inline-end: auto;
+                    }
+
+                    .go-to-product-button {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        font-weight: 700;
+                        padding-block: 15px;
+                        background-color: #739536;
+                        border: 1px solid #739536;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

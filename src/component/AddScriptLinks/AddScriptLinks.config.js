@@ -1,0 +1,10 @@
+export const REVIEWS_WIDGET_URL = 'https://widget.reviews.io/polaris/build.js';
+export const RATINGS_WIDGET_URL = 'https://widget.reviews.io/rating-snippet/dist.js';
+export const COMPANY_REVIEWS = 'https://widget.reviews.io/carousel-inline-iframeless/dist.js?_t=2022121906';
+export const REVIEWS_PRECONNECT_URL = 'https://widget.reviews.io/';
+export const RATINGS_CSS_URL = 'https://widget.reviews.io/rating-snippet/dist.css';
+export const REVIEWS_CSS_URL = 'https://assets.reviews.io/css/widgets/carousel-widget.css?_t=2022121906';
+export const REVIEWS_ICON_URL = 'https://assets.reviews.io/iconfont/reviewsio-icons/style.css?_t=2022121906';
+export const TIMEOUT = 1000;
+export const INSIDER_URL = '//seedsman.api.useinsider.com/ins.js?id=10007713';
+export const SDK_TRACKER_URL = 'https://sdk.trackcb.com/track.js?site_key=ee970a4ceee44c818a0149949e93b442';

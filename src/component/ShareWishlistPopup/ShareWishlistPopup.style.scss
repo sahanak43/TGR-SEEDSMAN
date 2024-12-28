@@ -1,0 +1,53 @@
+/**
+ * ScandiPWA - Progressive Web App for Magento
+ *
+ * Copyright © Scandiweb, Inc. All rights reserved.
+ * See LICENSE for license details.
+ *
+ * @license OSL-3.0 (Open Software License ("OSL") v. 3.0)
+ * @package scandipwa/base-theme
+ * @link https://github.com/scandipwa/base-theme
+ */
+
+.ShareWishlistPopup {
+    textarea {
+        width: 100%;
+    }
+
+    .Popup-CloseBtn {
+        inset-block-start: -50px;
+        inset-inline-end: -36px;
+    }
+
+    .Popup-Content {
+        padding-inline: 30px;
+        padding-block: 20px;
+
+        textarea {
+            height: 4rem;
+        }
+
+        .isPreFilled_type_textarea {
+            .Field {
+                &.Field {
+                    .Field-LabelContainer {
+                        inset-block: -2rem 3rem;
+                        padding-block-end: 10px;
+
+                        .Field-Label {
+                            transform: scale(0.8);
+
+                            @include mobile {
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+
+                    textarea {
+                        margin-block-start: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

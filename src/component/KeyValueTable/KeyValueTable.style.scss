@@ -1,0 +1,46 @@
+.KeyValueTable {
+    display: flex;
+    padding: 2rem 0;
+
+    tbody {
+        text-align: start;
+
+        tr:first-child {
+            font-weight: 600;
+        }
+    }
+
+    thead {
+        width: 20%;
+
+        tr {
+            border-bottom: none;
+
+            th {
+                padding: 0;
+            }
+        }
+
+        svg {
+            inset-inline-start: 25px;
+        }
+    }
+
+    &-Heading {
+        background-color: transparent;
+    }
+
+    &-Wrapper {
+        button {
+            color: var(--color-black);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .Button_isHollow {
+            border: none;
+            text-transform: capitalize;
+            padding-inline-start: 10px;
+        }
+    }
+}

@@ -1,0 +1,201 @@
+/* stylelint-disable number-max-precision */
+/* stylelint-disable no-missing-end-of-source-newline */
+
+:root {
+    --my-account-content-background: #{$white};
+    --my-account-wrapper-margin-mobile: 16px;
+    --my-account-content-border: 1px solid rgba(10, 9, 3, 0.16);
+    --my-account-order-subheading-border: 2px solid #ccc;
+    --my-account-order-subheading-color: #333;
+}
+
+.MyAccount {
+    background: var(--my-account-background);
+
+    &-WhishlistHeading {
+        display: none;
+    }
+
+    &-HeadingSection {
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    .Profile {
+        @include mobile {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &-Wrapper {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 0;
+        padding-block-start: 12px;
+        padding-block-end: 12px;
+
+        @include mobile {
+            grid-column-gap: 28px;
+            padding: 0;
+            grid-template-columns: 1fr;
+        }
+
+        .MyAccountTabList {
+            border: none;
+            border-right: 1px solid #d4d4d4;
+        }
+    }
+
+    &-TabContent {
+        background: var(--my-account-content-background);
+
+        &_activeTab {
+            &_my-account {
+                .MyAccount-HeadingSection {
+                    display: none;
+                }
+            }
+
+            &_my-wishlist {
+                .MyAccount-HeadingSection {
+                    display: none;
+                }
+            }
+
+            &_address {
+                .MyAccount-HeadingSection {
+                    display: none;
+                }
+            }
+
+            &_my-orders {
+                .MyAccount {
+                    &-Heading {
+                        @include desktop {
+                            display: flex;
+                            column-gap: 3rem;
+                        }
+                    }
+
+                    &-SubHeading {
+                        display: block;
+                        color: #959595;
+                        font-size: 14px;
+                        font-weight: 400;
+
+                        @include mobile {
+                            font-size: 11px;
+                            margin: 0;
+                        }
+
+                        padding: 5px 10px;
+                        line-height: 13px;
+                    }
+                }
+            }
+        }
+
+        @include mobile {
+            margin-inline: var(--my-account-wrapper-margin-mobile);
+            margin-block-start: 10px;
+            margin-block-end: 2rem;
+        }
+
+        @include desktop {
+            border: none;
+            grid-row: span 2;
+            padding: 24px;
+        }
+    }
+
+    &-Heading {
+        text-transform: none;
+        margin: 0;
+        margin-block-end: 24px;
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        color: #000000;
+
+        @include mobile {
+            font-size: 16px;
+            margin-block-end: 28px;
+            justify-content: space-between;
+        }
+    }
+
+    &-Heading-Border {
+        border-bottom: 1px solid #d4d4d4;
+        opacity: 100%;
+    }
+
+    &-SubHeading {
+        color: var(--secondary-dark-color);
+        font-size: 16px;
+    }
+
+    .MyAccountTabListItem {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #fff;
+
+        &:hover {
+            .MyAccountTabListItem-Button {
+                font-weight: 500;
+                color: #739536;
+            }
+        }
+
+        .MyAccountTabList {
+            border: 2px solid black;
+
+            &-Separator {
+                display: none;
+            }
+        }
+
+        &-Button {
+            color: #000000;
+            opacity: 1;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0;
+            line-height: 4rem;
+
+            &:active {
+                color: #739536;
+            }
+        }
+    }
+
+    .MyAccountTabListItem_isActive {
+        border-bottom: 1px solid #739536;
+
+        .MyAccountTabListItem-Button {
+            font-weight: 500;
+        }
+
+        &:hover {
+            .MyAccountTabListItem-Button {
+                font-weight: 500;
+            }
+        }
+
+        button {
+            color: #739536;
+
+            @include mobile {
+                border-bottom: 0.5px solid #739536;
+                margin-inline: 16px;
+                display: none;
+            }
+        }
+    }
+
+    .ChevronIcon {
+        display: none;
+    }
+}
